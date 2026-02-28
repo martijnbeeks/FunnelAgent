@@ -1,5 +1,5 @@
 {
-  "name": "FunnelAgent",
-  "description": "FunnelAgent plugin — a skeleton for building funnel-related skills.",
-  "version": "0.1.0"
+  "name": "funnel-agent",
+  "description": "Generates direct-response advertorials through a 4-step pipeline: deep market research (ChatGPT API), avatar/angle synthesis, strategic brief creation, and HTML advertorial output. Run /funnel-agent:funnel-orchestrator to start.",
+  "version": "1.0.0"
 }
