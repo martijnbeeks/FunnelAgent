@@ -1,0 +1,13 @@
+{
+  "name": "funnel-agent-marketplace",
+  "owner": {
+    "name": "Martijn"
+  },
+  "plugins": [
+    {
+      "name": "FunnelAgent",
+      "source": ".",
+      "description": "FunnelAgent plugin — a skeleton for building funnel-related skills."
+    }
+  ]
+}
