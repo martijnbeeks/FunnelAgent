@@ -1,5 +1,5 @@
 {
   "name": "funnel-agent",
-  "description": "Generates direct-response advertorials through a 4-step pipeline: deep market research (ChatGPT API), avatar/angle synthesis, strategic brief creation, and HTML advertorial output. Run /funnel-agent:funnel-orchestrator to start.",
-  "version": "1.0.0"
+  "description": "Generates direct-response sales funnels through a 5-step pipeline: deep market research, avatar/angle synthesis, branding, HTML advertorial + images, and HTML sales page + images. Run /funnel-agent:funnel-orchestrator to start.",
+  "version": "2.0.0"
 }

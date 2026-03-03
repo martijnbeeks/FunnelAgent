@@ -9,7 +9,7 @@ You execute Step 1 of the FunnelAgent pipeline: deep market research via the Ope
 
 ## PREREQUISITES
 
-- `OPENAI_API_KEY` must be set in `.env` or environment
+- `OPENAI_API_KEY` must be set in `.env` or environment  
 - Python 3.8+ with `openai` and `python-dotenv` packages installed
 - The user must have provided: Product Name, Product Description, Target Market, Problem, Key Ingredients
 - **OR** a sales page URL (product info will be extracted first)

@@ -1,0 +1,3603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Gumiva™ - Natural Gum Health Support for Adults 55+</title>
+    <meta name="description" content="80% of adults over 55 report firmer, healthier gums in just 4 weeks. Clinically studied collagen peptides for natural gum tissue repair. 90-day money-back guarantee.">
+    
+    <!-- 
+    ████████████████████████████████████████████████████████████████████████████████
+    
+    55+ SALES PAGE TEMPLATE (WITH EXAMPLE: SunVita D3)
+    
+    ████████████████████████████████████████████████████████████████████████████████
+    
+    This file contains a working example (SunVita D3).
+    
+    FOR A BLANK TEMPLATE: Use "55-plus-sales-page-template-BLANK.html"
+    
+    HOW TO USE THE BLANK TEMPLATE:
+    ───────────────────────────────
+    1. Open the BLANK template
+    2. Find the line: const CONFIG = {};
+    3. REPLACE that line with your CONFIG from the SOP
+    4. Save — done!
+    
+    ████████████████████████████████████████████████████████████████████████████████
+    -->
+
+    <!--
+    ╔══════════════════════════════════════════════════════════════════════════════╗
+    ║                                                                              ║
+    ║   🛒 OFFER SETTINGS - EDIT YOUR BUNDLES & GIFTS HERE                         ║
+    ║                                                                              ║
+    ║   Instructions:                                                              ║
+    ║   1. Edit the text between the quotation marks " "                           ║
+    ║   2. For prices, just enter the number (no currency sign needed)             ║
+    ║   3. Don't delete the quotation marks or commas                              ║
+    ║   4. Save the file and refresh your page to see changes                      ║
+    ║                                                                              ║
+    ╚══════════════════════════════════════════════════════════════════════════════╝
+    -->
+
+    <script>
+    const OFFER_SETTINGS = {
+
+        // ═══════════════════════════════════════════════════════════════════════
+        // 💱 CURRENCY - Pick one: "USD", "GBP", "EUR", "ILS"
+        //    This sets the symbol, position, and decimal automatically.
+        //    Or use "CUSTOM" and fill in the custom fields below.
+        // ═══════════════════════════════════════════════════════════════════════
+        
+        currency: "GBP",
+
+        // Only used when currency is "CUSTOM":
+        customCurrency: {
+            symbol:   "$",
+            position: "before",
+            decimal:  ".",
+        },
+
+
+        // ═══════════════════════════════════════════════════════════════════════
+        // 📦 BUNDLE OPTIONS - Your 3 product bundles
+        //    name:          Display name shown on the card
+        //    description:   Subtitle in brackets (leave "" for no subtitle)
+        //    originalPrice: Full price before discount (number only)
+        //    salePrice:     Discounted price (number only)
+        //    perUnitPrice:  Price per unit text shown on card
+        //    image:         Product image URL (leave "" for placeholder)
+        //    checkoutUrl:   Funnelish checkout link for this bundle
+        // ═══════════════════════════════════════════════════════════════════════
+        
+        bundles: [
+            {
+                name:             "1 Month Supply",
+                description:      "",
+                originalPrice:    79,
+                salePrice:        39,
+                perUnitPrice:     "£39.00/unit",
+                image:            "",
+                checkoutUrl:      "#order",
+            },
+            {
+                name:             "3 Month Supply",
+                description:      "Most Popular",
+                originalPrice:    237,
+                salePrice:        99,
+                perUnitPrice:     "£33.00/unit",
+                image:            "",
+                checkoutUrl:      "#order",
+            },
+            {
+                name:             "6 Month Supply",
+                description:      "Best Value",
+                originalPrice:    474,
+                salePrice:        174,
+                perUnitPrice:     "£29.00/unit",
+                image:            "",
+                checkoutUrl:      "#order",
+            },
+        ],
+
+
+        // ═══════════════════════════════════════════════════════════════════════
+        // 🎁 FREE GIFTS - Bonus items unlocked by bundle tier
+        //    unlocksAtBundle: 1 = all bundles, 2 = bundle 2+, 3 = bundle 3 only
+        // ═══════════════════════════════════════════════════════════════════════
+        
+        gifts: [
+            {
+                name:             "FREE Express Delivery",
+                value:            7.95,
+                image:            "https://img.funnelish.com/79782/0/1769414726-4c24ca14-0f7a-42ac-af80-0158160c9185.png",
+                unlocksAtBundle:  1,
+            },
+            {
+                name:             "£10 Gift Card",
+                value:            10,
+                image:            "https://img.funnelish.com/79782/0/1769412752-ChatGPT%20Image%20Jan%2026%2C%202025%2C%2001_00_16%20PM.png",
+                unlocksAtBundle:  2,
+            },
+            {
+                name:             "FREE Mystery Gift",
+                value:            24.95,
+                image:            "https://img.funnelish.com/79782/0/1769412749-4c24ca14-0f7a-42ac-af80-0158160c9185%20%281%29.png",
+                unlocksAtBundle:  3,
+            },
+        ],
+
+
+        // ═══════════════════════════════════════════════════════════════════════
+        // ⏰ COUNTDOWN - Timer in sticky bar
+        //    mode: "midnight" (counts to midnight) or "fixed" (fixed duration)
+        //    fixedMinutes: only used when mode is "fixed" (e.g., 30 = 30 min timer)
+        // ═══════════════════════════════════════════════════════════════════════
+        
+        countdown: {
+            mode:         "midnight",
+            fixedMinutes: 30,
+        },
+
+    };
+    // ═══════════════════════════════════════════════════════════════════════════
+    // 🛑 END OF OFFER SETTINGS — Don't edit below unless you know what you're doing
+    // ═══════════════════════════════════════════════════════════════════════════
+    </script>
+    
+    <script>
+    // ████████████████████████████████████████████████████████████████████████████
+    //
+    //   ▼▼▼ PASTE CONFIG HERE ▼▼▼
+    //
+    //   Replace everything between the START and END markers with your CONFIG
+    //
+    // ████████████████████████████████████████████████████████████████████████████
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // CONFIG START — PASTE YOUR CONFIG BELOW THIS LINE
+    // ═══════════════════════════════════════════════════════════════════════════
+    
+    // ⚠️ PASTE YOUR PRODUCT COLOR OVERRIDES HERE (optional — leave empty to use theme defaults)
+    const PRODUCT_COLORS = {
+        primary: "#4BA8A8", primaryDark: "#1B6E6E", primaryLight: "#ECF7F7", accent: "#1B6E6E"
+    };
+
+    const CONFIG = {
+    // ============ BRAND & THEME ============
+    BRAND_NAME: "Urowell",
+    THEME: "health",
+
+    // ============ URGENCY BANNER ============
+    URGENCY: {
+        HERO_INGREDIENT: "Saw Palmetto",
+        BOTTLE_COUNT: "214",
+        DISCOUNT_PERCENT: "50"
+    },
+
+    // ============ HERO ============
+    HERO: {
+        HEADLINE: "The Hidden Reason You're Up <span class='hero__headline-highlight'>5 Times a Night</span> (And How to Stop It)",
+        BADGE: "Urologist Formulated",
+        SUBHEADLINE: "Without prescription drugs, invasive procedures, or embarrassing doctor visits",
+        BENEFITS: [
+            "Reduces nighttime bathroom trips naturally",
+            "Supports healthy prostate size and function",
+            "Restores uninterrupted sleep and daily confidence"
+        ],
+        IMAGE: ""
+    },
+
+    // ============ TRUST BAR ============
+    TRUST_BAR: {
+        RATING: "4.8",
+        REVIEW_COUNT: "17,432"
+    },
+
+    // ============ DEMOGRAPHIC CALLOUT ============
+    DEMOGRAPHIC: {
+        LINE_1: "The Natural Prostate Support Formula Men Over 55 <span style='text-decoration: underline;'>Actually Trust</span>",
+        LINE_2: "You've tried cutting back on water. You've tried ignoring it. Nothing worked — until now."
+    },
+
+    // ============ AGITATION (Section 6 — HEALTH: Agitation approach) ============
+    AGITATION: {
+        TITLE: "The Real Reason It's Getting Worse After 50",
+        UMP_TEXT: "After age 50, your body <strong>overproduces an enzyme</strong> called 5-alpha-reductase. This enzyme turns normal testosterone into <strong>DHT</strong> — a hormone that makes your <strong>prostate tissue swell</strong>. As it grows, it <strong>squeezes your urethra shut</strong>.",
+        FAILED_ATTEMPTS: "Cutting back on fluids <strong>doesn't fix</strong> a swollen prostate. And most supplements use <strong>weak doses</strong> that never reach the root cause.",
+        IMAGE: ""
+    },
+
+    // ============ DOCTOR (Section 7) ============
+    DOCTOR: {
+        NAME: "Dr. James Whitfield",
+        TITLE: "Board-Certified Urologist",
+        YEARS: "22",
+        QUOTE: "I developed [BRAND] because my patients deserved better. Real ingredients. Clinical doses. Real results.",
+        IMAGE: ""
+    },
+
+    // ============ MECHANISM + INGREDIENTS (Section 8) ============
+    MECHANISM: {
+        TITLE: "How DHT Blocking Stops Prostate Swelling at the Source",
+        DIAGRAM_IMAGE: "",
+        UMP: {
+            LABEL: "Why Bathroom Trips Get Worse After 50",
+            TEXT: "After 50, your body produces <strong>excess 5-alpha-reductase</strong>. This enzyme converts testosterone into <strong>DHT</strong> — a hormone that causes <strong>prostate tissue to swell</strong>. The swollen prostate <strong>compresses your urethra</strong>, making it harder to empty your bladder fully."
+        },
+        UMS: {
+            LABEL: "How [BRAND] Addresses the Root Cause",
+            TEXT: "[BRAND] <strong>targets the root cause</strong> with a <strong>dual-action approach</strong>. Saw Palmetto <strong>blocks the enzyme</strong> that creates DHT. Beta-Sitosterol <strong>reduces the existing swelling</strong> that's already compressing your urethra."
+        },
+        INGREDIENTS: [
+            {
+                NAME: "Saw Palmetto Extract (85-95% Fatty Acids)",
+                BENEFIT: "Blocks the enzyme that triggers prostate swelling",
+                DESCRIPTION: "Saw Palmetto is a palm berry extract used for decades in prostate health. It works by blocking 5-alpha-reductase — the enzyme that converts testosterone into DHT, the hormone directly responsible for prostate tissue growth.",
+                STAT: "Harvard research shows Saw Palmetto reduces nighttime urination frequency by 38% in study participants."
+            },
+            {
+                NAME: "Beta-Sitosterol (Plant Sterol Complex)",
+                BENEFIT: "Reduces existing prostate swelling and improves flow",
+                DESCRIPTION: "Beta-Sitosterol is a plant-based compound that reduces inflammation in prostate tissue. It works alongside Saw Palmetto by addressing the swelling that's already happened — improving urine flow and reducing urgency.",
+                STAT: "University of California research shows 56% improvement in urinary flow in men taking Beta-Sitosterol."
+            },
+            {
+                NAME: "Zinc (Citrate Form)",
+                BENEFIT: "Supports healthy prostate cell function",
+                DESCRIPTION: "Zinc is essential for normal prostate function. Prostate tissue contains more zinc than almost any other organ. After 50, zinc levels in the prostate decline significantly, leaving cells vulnerable to abnormal growth.",
+                STAT: "Men with healthy zinc levels show significantly lower rates of prostate enlargement."
+            },
+            {
+                NAME: "Pygeum Africanum (Bark Extract)",
+                BENEFIT: "Calms urinary urgency and incomplete emptying",
+                DESCRIPTION: "Pygeum is an African bark extract that reduces the inflammation signals in bladder and prostate tissue. It specifically addresses the 'urgency' sensation — the feeling that you need to go even when your bladder isn't full.",
+                STAT: "Clinical trials show Pygeum reduces residual urine volume and nighttime frequency within 6-8 weeks."
+            }
+        ],
+        TRANSITION: "Together, these ingredients work as a complete system — not just masking symptoms, but targeting the root cause of prostate swelling.",
+        NO_CLAIMS: ["NO Artificial Fillers", "NO GMOs", "NO Gluten", "NO Soy", "NO Synthetic Dyes"]
+    },
+
+    // ============ TESTIMONIALS (Section 9A + 9B) ============
+    TESTIMONIALS: {
+        TITLE: "Real Results From Men Who Were **Ready to Give Up**",
+        SUBTITLE: "You're not alone. Here's what others like you are saying.",
+        TITLE_B: "More Stories From **Real Customers**",
+        REVIEWS_A: [
+            { NAME: "Sam T.", TEXT: "I was getting up four, sometimes five times a night. My wife moved to the spare room because I kept waking her. I'd tried cutting back on tea after 6pm, tried those supermarket supplements, tried just toughing it out. Nothing worked. Started this about three weeks ago and I noticed I was only getting up twice. By week six, most nights I'm down to once. My wife's back in our room. I honestly didn't think anything would make a difference at my age. Should have tried this years ago.", IMAGE: "" },
+            { NAME: "Alex K.", TEXT: "After years of this getting worse, I'd almost accepted it was just part of getting older. My GP kept saying it was normal for my age, but normal shouldn't mean dreading every car journey or avoiding the cinema. Three weeks in, the urgency started easing off. By month two, I went to my grandson's football match and didn't have to leave at half-time. My daughter said she hadn't seen me that relaxed in years. Wish I'd found this sooner.", IMAGE: "gemini" },
+            { NAME: "Jordan M.", TEXT: "I was sceptical — I've tried everything. But this actually works. Sleeping through most nights now. That alone is worth it.", IMAGE: "" }
+        ],
+        REVIEWS_B: [
+            { NAME: "Casey H.", TEXT: "I read about the DHT research and thought it was worth a go. Didn't expect much honestly. But by week two, the nighttime trips dropped from four to two. Now at month two and I actually went on a coach trip with the wife without mapping every service station. That's something I haven't done in three years.", IMAGE: "" },
+            { NAME: "Robin D.", TEXT: "My urologist said we'd need to discuss surgical options within the year. I started this as a last resort. Six months later, he said my flow readings had improved enough to hold off. His exact words were 'whatever you're doing, keep doing it.' I nearly fell off the chair.", IMAGE: "" },
+            { NAME: "Taylor S.", TEXT: "Finally something that works from the inside. The urgency is almost gone and I can walk the dog without planning the route around public loos. That's everything.", IMAGE: "gemini" }
+        ]
+    },
+
+    // ============ ALTERNATIVES (Section 10) ============
+    ALTERNATIVES: {
+        TITLE: "Why Other Solutions Fall Short",
+        SUBTITLE: "You've probably tried some of these before. Here's why they didn't work:",
+        DIAGRAM_IMAGE: "",
+        ITEMS: [
+            { NAME: "Prescription Medications", TEXT: "<strong>Mask symptoms</strong> but come with <strong>dizziness, fatigue, and sexual side effects</strong> that many men can't tolerate." },
+            { NAME: "Generic Prostate Supplements", TEXT: "Use <strong>under-dosed ingredients</strong> in forms your body <strong>can't absorb</strong> properly." },
+            { NAME: "Cutting Back on Fluids", TEXT: "Doesn't address the <strong>physical swelling</strong>. You're just dehydrating yourself while the prostate <strong>keeps growing</strong>." }
+        ],
+        SOLUTION_TEXT: "Combines <strong>clinically dosed Saw Palmetto and Beta-Sitosterol</strong> — <strong>blocking DHT production AND reducing existing swelling</strong>."
+    },
+
+    // ============ TIMELINE (Section 11) ============
+    TIMELINE: {
+        TITLE: "What to Expect: Your [BRAND] Journey",
+        PHASES: [
+            { PERIOD: "Week 1-2", NAME: "The Foundation", TEXT: "Active ingredients begin blocking 5-alpha-reductase and reducing prostate inflammation at the cellular level." },
+            { PERIOD: "Week 3-4", NAME: "First Signs", TEXT: "Nighttime bathroom trips start to decrease. You notice you're sleeping longer stretches." },
+            { PERIOD: "Month 2", NAME: "Real Results", TEXT: "Significant improvement in flow and urgency. You start saying yes to outings again." },
+            { PERIOD: "Month 3+", NAME: "New Normal", TEXT: "Your prostate no longer controls your schedule. Sleep. Travel. Live." }
+        ]
+    },
+
+    // ============ PRICING (Section 13) ============
+    PRICING: {
+        TITLE: "Choose Your Supply",
+        OPTIONS: [
+            { SUPPLY: "1 Month", BOTTLES: "1", ORIGINAL: "£79", PRICE: "£44", SAVINGS: "Save £35", SHIPPING: "£4.95 shipping", POPULAR: false },
+            { SUPPLY: "3 Months", BOTTLES: "3", ORIGINAL: "£237", PRICE: "£105", SAVINGS: "56% OFF — Save £132", SHIPPING: "FREE shipping", POPULAR: true },
+            { SUPPLY: "6 Months", BOTTLES: "6", ORIGINAL: "£474", PRICE: "£179", SAVINGS: "62% OFF — Save £295", SHIPPING: "FREE shipping + Bonus", POPULAR: false }
+        ],
+        ORDER_URL: "#order"
+    },
+
+    // ============ GUARANTEE (Section 14) ============
+    GUARANTEE: {
+        NAME: "Sleep Better"
+    },
+
+    // ============ FAQ (Section 15) ============
+    FAQ: {
+        TITLE: "Common Questions",
+        ITEMS: [
+            { Q: "How do I take it?", A: "Take <strong>2 capsules daily</strong> with food, ideally in the morning. [BRAND] works best when taken <strong>consistently</strong>. Most men notice changes within <strong>2-3 weeks</strong>." },
+            { Q: "How long before I see results?", A: "Many men notice <strong>fewer nighttime trips within 2-3 weeks</strong>. Full benefits develop over <strong>6-8 weeks</strong> as DHT levels reduce. Everyone responds differently, which is why we offer a <strong>90-day guarantee</strong>." },
+            { Q: "I'm in my 60s/70s — is it too late?", A: "Absolutely not. [BRAND] was specifically formulated for men over 55. Our oldest customers are in their <strong>80s</strong> and report real improvement. It's never too late to address the root cause." },
+            { Q: "Is it safe with my other medications?", A: "[BRAND] uses <strong>natural ingredients</strong> at safe therapeutic doses. Thousands of men take it alongside their regular medications. As always, you can share the ingredient list with your GP." },
+            { Q: "What if it doesn't work for me?", A: "That's what our <strong>90-day guarantee</strong> is for. Try the entire bottle. If you're not satisfied, contact us for a <strong>full refund</strong>. No questions asked." }
+        ]
+    },
+
+    // ============ WHAT YOU'LL MISS (Section 16) ============
+    MISS: {
+        TITLE: "Two Paths Forward",
+        WITHOUT: [
+            "Still getting up 4-5 times every night",
+            "Still planning every outing around the nearest toilet",
+            "Still watching your prostate symptoms get worse",
+            "Still wondering 'what if I'd done something sooner?'"
+        ],
+        WITH: [
+            "Sleeping through the night — waking up rested",
+            "Travelling, socialising, living without bathroom anxiety",
+            "Addressing the root cause, not just the symptoms",
+            "Taking back control of your body and your life"
+        ],
+        WITHOUT_IMAGE: "",
+        WITH_IMAGE: "",
+        CLOSING: "The choice is yours. But your prostate won't wait."
+    },
+
+    // ============ FINAL CTA (Section 17) ============
+    FINAL_CTA: {
+        TITLE: "Ready to Sleep Through the Night?",
+        SUBTITLE: "Join over 17,000 men aged 55+ who've already experienced the difference.",
+        TRUST_LINE: "90-Day Guarantee • Free Shipping on 3+ Bottles • Secure Checkout"
+    }
+};
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // CONFIG END — DO NOT EDIT BELOW THIS LINE
+    // ═══════════════════════════════════════════════════════════════════════════
+    
+    // ████████████████████████████████████████████████████████████████████████████
+    // THEME DEFINITIONS - DO NOT EDIT
+    // ████████████████████████████████████████████████████████████████████████████
+    const THEMES = {
+        health: {
+            primary: "#1a5f4a",
+            primaryDark: "#134436",
+            primaryLight: "#e8f5f0",
+            accent: "#c2410c",
+            logos: ["WebMD", "Healthline", "Men's Health", "Prevention", "AARP"]
+        },
+        beauty: {
+            primary: "#b4838d",
+            primaryDark: "#8f6369",
+            primaryLight: "#fdf2f4",
+            accent: "#c2410c",
+            logos: ["Allure", "Vogue", "Harper's Bazaar", "Elle", "Women's Health"]
+        },
+        other: {
+            primary: "#1e40af",
+            primaryDark: "#1e3a8a",
+            primaryLight: "#eff6ff",
+            accent: "#c2410c",
+            logos: ["Forbes", "TechCrunch", "Wired", "Fast Company", "Inc."]
+        }
+    };
+
+    // ████████████████████████████████████████████████████████████████████████████
+    // RESOLVED THEME — Custom colors override theme defaults
+    // ████████████████████████████████████████████████████████████████████████████
+    const baseTheme = THEMES[CONFIG.THEME] || THEMES.other;
+    const THEME = {
+        primary: PRODUCT_COLORS.primary || baseTheme.primary,
+        primaryDark: PRODUCT_COLORS.primaryDark || baseTheme.primaryDark,
+        primaryLight: PRODUCT_COLORS.primaryLight || baseTheme.primaryLight,
+        accent: PRODUCT_COLORS.accent || baseTheme.accent,
+        logos: baseTheme.logos
+    };
+
+    // ████████████████████████████████████████████████████████████████████████████
+    // CURRENCY RESOLVER — Converts "USD"/"GBP"/"EUR"/"ILS" to symbol/position/decimal
+    // ████████████████████████████████████████████████████████████████████████████
+    const CURRENCY_PRESETS = {
+        USD: { symbol: "$",  position: "before", decimal: "." },
+        GBP: { symbol: "£",  position: "before", decimal: "." },
+        EUR: { symbol: "€",  position: "after",  decimal: "," },
+        ILS: { symbol: "₪",  position: "before", decimal: "." },
+    };
+    const SETTINGS_CURRENCY = (typeof OFFER_SETTINGS.currency === 'string')
+        ? (CURRENCY_PRESETS[OFFER_SETTINGS.currency.toUpperCase()] || CURRENCY_PRESETS.USD)
+        : (OFFER_SETTINGS.currency || CURRENCY_PRESETS.USD);
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <style>
+        
+        :root {
+            
+            --brand-name: "FlexiRelief™";
+            
+            
+            --theme-primary: #1a5f4a;
+            --theme-primary-dark: #134436;
+            --theme-primary-light: #e8f5f0;
+            --theme-accent: #c2410c;
+            
+            
+            
+            
+            
+            
+            --text-dark: #1a1a2e;
+            --text-medium: #3d3d4d;
+            --text-light: #5a5a6a;
+            
+            
+            --bg-white: #ffffff;
+            --bg-light: #f8f9fa;
+            --bg-cream: #fdfbf7;
+            --border-light: #e5e7eb;
+            
+            
+            --font-heading: 'Merriweather', Georgia, serif;
+            --font-body: 'Source Sans Pro', -apple-system, sans-serif;
+            
+            
+            --section-padding: 80px;
+            --container-max: 1100px;
+        }
+        
+        
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 40px;
+            }
+        }
+        
+        
+        @media (min-width: 1200px) {
+            :root {
+                --container-max: 1200px;
+            }
+        }
+        
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+        section, .section, div[class*="section"] {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        
+        /* Protect images from being stretched by page builder overrides */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        html {
+            font-size: 16px; 
+        }
+        
+        @media (min-width: 768px) {
+            html {
+                font-size: 18px; 
+            }
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--bg-white);
+        }
+        
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            line-height: 1.25;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 48px;
+            }
+        }
+        
+        
+        .container--full {
+            max-width: 100%;
+            padding: 0;
+        }
+        
+        
+        .container--full .container-inner {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .container--full .container-inner {
+                padding: 0 48px;
+            }
+        }
+        
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        
+        .urgency-banner {
+            background: var(--theme-accent);
+            color: white;
+            text-align: center;
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .urgency-banner {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+        }
+        
+        .urgency-banner__full {
+            display: none;
+        }
+        
+        .urgency-banner__mobile {
+            display: inline;
+        }
+        
+        @media (min-width: 768px) {
+            .urgency-banner__full {
+                display: inline;
+            }
+            .urgency-banner__mobile {
+                display: none;
+            }
+        }
+        
+        
+        .hero {
+            padding: 80px 0 100px;
+            background: var(--bg-cream);
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 10px 0 60px;
+            }
+        }
+        
+        .hero__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        @media (max-width: 900px) {
+            .hero__grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+        
+        
+        .hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--theme-primary-light);
+            color: var(--theme-primary-dark);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 16px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero__badge {
+                font-size: 14px;
+                padding: 6px 12px;
+                margin: 10px 0;
+            }
+        }
+        
+        
+        .hero__headline {
+            font-size: 2.4rem;
+            color: var(--text-dark);
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        
+        @media (min-width: 768px) {
+            .hero__headline {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero__headline {
+                font-size: 32px;
+                line-height: 1.2;
+            }
+        }
+        
+        .hero__headline-highlight {
+            color: var(--theme-primary-dark);
+        }
+        
+        
+        .section-highlight {
+            color: var(--theme-accent);
+        }
+        
+        
+        .hero__subheadline {
+            font-size: 1.2rem;
+            color: var(--theme-accent);
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero__subheadline {
+                font-size: 20px;
+                margin-bottom: 16px;
+                line-height: 1.4;
+            }
+        }
+        
+        
+        .hero__benefits {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        
+        .hero__benefits li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+        
+        .hero__benefits li::before {
+            content: "✓";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--theme-primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero__benefits {
+                margin-bottom: 20px;
+            }
+            
+            .hero__benefits li {
+                font-size: 19px;
+                gap: 10px;
+                margin-bottom: 10px;
+                line-height: 1.3;
+            }
+            
+            .hero__benefits li::before {
+                width: 22px;
+                height: 22px;
+                font-size: 12px;
+            }
+        }
+        
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--theme-accent);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(194, 65, 12, 0.35);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .cta-button {
+                padding: 12px 20px;
+                font-size: 14px;
+                border-radius: 8px;
+                width: 100%;
+                white-space: nowrap;
+            }
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(194, 65, 12, 0.45);
+        }
+        
+        .cta-button--primary {
+            background: var(--theme-primary);
+            box-shadow: 0 4px 14px rgba(26, 95, 74, 0.35);
+        }
+        
+        
+        .hero__trust {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: var(--text-medium);
+        }
+        
+        @media (max-width: 768px) {
+            .hero__trust {
+                font-size: 14px;
+                margin-top: 12px;
+                white-space: nowrap;
+                text-align: center;
+            }
+        }
+        
+        
+        .hero__image {
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .hero__image {
+                border-radius: 12px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .hero__image-wrapper {
+                order: -1;
+            }
+        }
+        
+        
+        .hero__cta-mobile {
+            display: block;
+        }
+        
+        .hero__cta-desktop {
+            display: none;
+        }
+        
+        @media (min-width: 901px) {
+            .hero__cta-mobile {
+                display: none;
+            }
+            
+            .hero__cta-desktop {
+                display: block;
+                margin-top: 32px;
+                text-align: center;
+            }
+            
+            .hero__cta-desktop .hero__trust {
+                margin-top: 16px;
+            }
+        }
+        
+        
+        .trust-bar {
+            background: var(--theme-primary);
+            color: white;
+            padding: 28px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .trust-bar {
+                display: none;
+            }
+        }
+        
+        .trust-bar__items {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-bar__item {
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+        
+        .trust-bar__item span {
+            margin: 0 2px;
+        }
+        
+        
+        .media-logos {
+            padding: 48px 0;
+            background: white;
+            border-bottom: 1px solid var(--border-light);
+            text-align: center;
+        }
+        
+        .media-logos .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .media-logos__label {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 24px;
+        }
+        
+        .media-logos__grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 56px;
+            flex-wrap: wrap;
+            opacity: 0.5;
+            filter: grayscale(100%);
+        }
+        
+        .media-logos__grid img {
+            height: 32px;
+        }
+        
+        
+        .agitation {
+            padding: var(--section-padding) 0;
+            background: #fef7f7; 
+        }
+        
+        .agitation__content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .agitation__content {
+                max-width: 1000px;
+            }
+        }
+        
+        .agitation__title {
+            font-size: 2.2rem;
+            margin-bottom: 32px;
+            color: var(--text-dark);
+            text-align: center;
+        }
+        
+        
+        .agitation__grid {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .agitation__image-wrapper {
+            order: 1; 
+        }
+        
+        .agitation__text-content {
+            order: 2; 
+            text-align: center;
+        }
+        
+        .agitation__image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 16px;
+            margin: 0 auto 32px;
+            display: block;
+        }
+        
+        
+        @media (min-width: 768px) {
+            .agitation__grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+            
+            .agitation__text-content {
+                text-align: left;
+                order: 1;
+            }
+            
+            .agitation__image-wrapper {
+                order: 2;
+            }
+            
+            .agitation__image {
+                max-width: 100%;
+                margin: 0;
+            }
+        }
+        
+        .agitation__text {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+        
+        .agitation__highlight {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 28px 32px;
+            margin: 0 0 24px 0;
+            text-align: left;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .agitation__highlight p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 0;
+        }
+        
+        .agitation__transition {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--theme-primary-dark);
+            margin-top: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            .agitation__transition {
+                text-align: left;
+            }
+        }
+        
+        
+        .mechanism {
+            padding: var(--section-padding) 0;
+            background: white;
+        }
+        
+        .mechanism__content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .mechanism__content {
+                max-width: 1000px;
+            }
+        }
+        
+        .mechanism__title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .mechanism__subtitle {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            text-align: center;
+            margin-bottom: 56px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .mechanism__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .mechanism__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .mechanism__box {
+            padding: 40px;
+            border-radius: 16px;
+        }
+        
+        .mechanism__box--problem {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+        }
+        
+        .mechanism__box--solution {
+            background: var(--theme-primary-light);
+            border: 2px solid var(--theme-primary);
+        }
+        
+        .mechanism__box-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+        
+        .mechanism__box--problem .mechanism__box-label {
+            color: #dc2626;
+        }
+        
+        .mechanism__box--solution .mechanism__box-label {
+            color: var(--theme-primary-dark);
+        }
+        
+        .mechanism__box-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .mechanism__box-text {
+            font-size: 1.05rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+        
+        
+        .miss-out {
+            padding: var(--section-padding) 0;
+            background: #fffbeb; 
+        }
+        
+        .miss-out__content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        @media (min-width: 768px) {
+            .miss-out__content {
+                max-width: 1000px;
+            }
+        }
+        
+        .miss-out__title,
+        .miss__title {
+            font-size: 2.2rem;
+            margin-bottom: 32px;
+            color: var(--text-dark);
+        }
+        
+        .miss-out__text {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+        
+        .miss-out__scenarios {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 48px 0;
+            text-align: left;
+        }
+        
+        @media (max-width: 768px) {
+            .miss-out__scenarios {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin: 24px 0;
+            }
+            
+            .miss-out__title,
+            .miss__title {
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+            }
+        }
+        
+        .miss-out__scenario {
+            padding: 32px;
+            border-radius: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .miss-out__scenario {
+                padding: 20px;
+                border-radius: 12px;
+            }
+        }
+        
+        .miss-out__scenario--without {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+        }
+        
+        .miss-out__scenario--with {
+            background: var(--theme-primary-light);
+            border: 2px solid var(--theme-primary);
+        }
+        
+        .miss-out__scenario-label,
+        .miss__without-label,
+        .miss__with-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+        
+        .miss-out__scenario--without .miss-out__scenario-label,
+        .miss__without-label {
+            color: #dc2626;
+        }
+        
+        .miss-out__scenario--with .miss-out__scenario-label,
+        .miss__with-label {
+            color: var(--theme-primary-dark);
+        }
+        
+        .miss-out__scenario ul,
+        .miss__without-list,
+        .miss__with-list {
+            list-style: none;
+        }
+        
+        .miss-out__scenario li,
+        .miss__without-list li,
+        .miss__with-list li {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+            font-size: 1.05rem;
+            color: var(--text-medium);
+        }
+        
+        @media (max-width: 768px) {
+            .miss-out__scenario li,
+            .miss__without-list li,
+            .miss__with-list li {
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+                padding-left: 24px;
+            }
+        }
+        
+        .miss-out__scenario--without li::before,
+        .miss__without-list li::before {
+            content: "✕";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: 700;
+        }
+        
+        .miss-out__scenario--with li::before,
+        .miss__with-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--theme-primary-dark);
+            font-weight: 700;
+        }
+        
+        .miss-out__cta,
+        .miss__cta {
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .miss-out__cta,
+            .miss__cta {
+                margin-top: 24px;
+            }
+            
+            .miss__closing {
+                font-size: 1rem !important;
+                margin: 24px 0 16px !important;
+            }
+        }
+        
+        
+        .doctor-section {
+            padding: var(--section-padding) 0;
+            background: var(--bg-light);
+        }
+        
+        .doctor-section__grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 48px;
+            align-items: start;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .doctor-section__grid {
+                grid-template-columns: 350px 1fr;
+                gap: 64px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .doctor-section__grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+        }
+        
+        .doctor-section__image {
+            border-radius: 16px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .doctor-section__credentials {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+        }
+        
+        .doctor-section__name {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        
+        .doctor-section__title {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+        }
+        
+        .doctor-section__narrative h2 {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            color: var(--text-dark);
+        }
+        
+        .doctor-section__narrative p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            color: var(--text-medium);
+        }
+        
+        .doctor-section__quote {
+            background: var(--theme-primary-light);
+            border-left: 4px solid var(--theme-primary);
+            padding: 28px 32px;
+            margin: 36px 0;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-dark);
+        }
+        
+        
+        .testimonials {
+            padding: var(--section-padding) 0;
+            background: var(--bg-cream);
+        }
+        
+        .testimonials__header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .testimonials__title {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+        
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        @media (max-width: 900px) {
+            .testimonials__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .testimonial-card__image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .testimonial-card__placeholder {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            padding: 20px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .testimonial-card__body {
+            padding: 24px 28px 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .testimonial-card__name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-card__stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+        
+        .testimonial-card__text {
+            font-size: 1.05rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-card__body {
+                padding: 20px;
+            }
+            
+            .testimonial-card__text {
+                font-size: 0.95rem;
+            }
+        }
+        
+        
+        .alternatives {
+            padding: var(--section-padding) 0;
+            background: white;
+        }
+        
+        .alternatives__header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .alternatives__title {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+        
+        .alternatives__subtitle {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .alternatives__list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .alternatives__list {
+                max-width: 900px;
+            }
+        }
+        
+        .alternative-item {
+            display: flex;
+            gap: 24px;
+            padding: 32px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+        
+        .alternative-item__icon {
+            width: 48px;
+            height: 48px;
+            background: #fef2f2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ef4444;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .alternative-item__content p {
+            color: var(--text-medium);
+        }
+        
+        
+        .our-solution {
+            background: var(--theme-primary);
+            color: white;
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+            margin-top: 48px;
+        }
+        
+        .our-solution h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+        
+        .our-solution__benefits {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+        
+        .our-solution__benefit {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        
+        .timeline {
+            padding: var(--section-padding) 0;
+            background: var(--bg-light);
+        }
+        
+        .timeline__header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .timeline__title {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+        
+        .timeline__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        
+        @media (max-width: 900px) {
+            .timeline__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .timeline__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .timeline-phase {
+            background: white;
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+        }
+        
+        .timeline-phase__period {
+            font-size: 0.85rem;
+            color: var(--theme-primary-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+        
+        .timeline-phase__name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .timeline-phase__description {
+            font-size: 1rem;
+            color: var(--text-medium);
+        }
+        
+        
+        .ingredients-section {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .ingredients-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+        
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .ingredient-card {
+            text-align: center;
+            padding: 24px;
+            background: var(--bg-light);
+            border-radius: 12px;
+        }
+        
+        .ingredient-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 12px;
+        }
+        
+        .ingredient-name {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        
+        .ingredient-benefit {
+            font-size: 0.95rem;
+            color: var(--theme-primary-dark);
+            font-weight: 600;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .ingredients-section {
+                padding: 40px 0;
+            }
+            
+            .ingredients-title {
+                font-size: 1.5rem;
+                margin-bottom: 24px;
+            }
+            
+            .ingredients-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .ingredient-card {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                text-align: left;
+                padding: 16px 20px;
+            }
+            
+            .ingredient-img {
+                width: 48px;
+                height: 48px;
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            
+            .ingredient-name {
+                font-size: 1rem;
+                margin-bottom: 2px;
+            }
+            
+            .ingredient-benefit {
+                font-size: 0.85rem;
+            }
+        }
+        
+        
+        .ingredient-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .ingredient-accordion details {
+            border-bottom: 1px solid var(--border-light);
+            padding: 0;
+        }
+        
+        .ingredient-accordion details:first-child {
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .ingredient-accordion summary {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            font-weight: 600;
+            list-style: none;
+        }
+        
+        .ingredient-accordion summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .ingredient-accordion summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--theme-primary-dark);
+            font-weight: 300;
+            transition: transform 0.2s ease;
+        }
+        
+        .ingredient-accordion details[open] summary::after {
+            content: '−';
+        }
+        
+        .ingredient-accordion .ing-header {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .ingredient-accordion .ing-name {
+            color: var(--theme-primary-dark);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .ingredient-accordion .ing-benefit {
+            color: var(--text-medium);
+            font-weight: 400;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        
+        .ingredient-accordion .ing-content {
+            padding: 0 0 24px 0;
+            color: var(--text-medium);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        
+        .ingredient-accordion .ing-content p {
+            margin-bottom: 12px;
+        }
+        
+        .ingredient-accordion .ing-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .ingredient-accordion .ing-stat {
+            color: var(--theme-primary-dark);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .ingredient-accordion summary {
+                padding: 16px 0;
+            }
+            
+            .ingredient-accordion .ing-name {
+                font-size: 1rem;
+            }
+            
+            .ingredient-accordion .ing-benefit {
+                font-size: 0.85rem;
+            }
+            
+            .ingredient-accordion .ing-content {
+                font-size: 0.95rem;
+                padding-bottom: 20px;
+            }
+        }
+        
+        
+        .pricing {
+            padding: 40px 0 var(--section-padding);
+            background: var(--bg-cream);
+        }
+        
+        .pricing__header {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        
+        .pricing__title {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing__header {
+                margin-bottom: 4px;
+                text-align: center !important;
+            }
+            .pricing__title {
+                font-size: 1.5rem;
+                text-align: center !important;
+                width: 100% !important;
+            }
+        }
+
+        
+        .du-bundle-wrapper * { margin: 0; padding: 0; box-sizing: border-box; }
+        .du-bundle-wrapper { width: 100%; max-width: 500px; margin: 0 auto !important; margin-left: auto !important; margin-right: auto !important; padding: 0; background: transparent; }
+        
+        
+        #du-bundle-root { display: flex !important; justify-content: center !important; width: 100% !important; }
+        .du-product-options { width: 100%; padding-top: 6px; }
+
+        .du-product-option { display: flex; flex-direction: column; padding: 10px 12px; border: 2px solid #e0e0e0; border-radius: 10px; margin-bottom: 12px; cursor: pointer; transition: all 0.2s ease; background: #fff; position: relative; }
+        .du-product-option:first-child { margin-top: 0; }
+        .du-product-option:last-child { margin-bottom: 4px; }
+        .du-product-option:hover { border-color: var(--theme-primary); }
+        .du-product-option:active { transform: scale(0.98); }
+        .du-product-option.selected { border-color: var(--theme-primary); background: var(--theme-primary-light); }
+        .du-product-option[data-tier="2"] { border-width: 3px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+
+        .du-benefit-tag { position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--theme-primary); color: #fff; font-size: 9px; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; }
+        .du-product-option[data-tier="2"] .du-benefit-tag { background: var(--theme-primary); font-size: 10px; padding: 5px 12px; }
+        .du-product-option[data-tier="3"] .du-benefit-tag { background: #f5a623; }
+
+        .du-option-content { display: flex; align-items: center; width: 100%; }
+        .du-checkbox-wrapper { margin-right: 4px; flex-shrink: 0; }
+        .du-checkbox { width: 16px; height: 16px; border: 2px solid #ccc; border-radius: 3px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; }
+        .du-product-option.selected .du-checkbox { background: var(--theme-primary); border-color: var(--theme-primary); }
+        .du-checkbox svg { width: 10px; height: 10px; fill: #fff; opacity: 0; }
+        .du-product-option.selected .du-checkbox svg { opacity: 1; }
+
+        .du-product-image { width: 75px; height: 75px; margin-right: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+        .du-product-image img { max-width: 100%; max-height: 100%; object-fit: contain; width: auto; height: auto; }
+        .du-product-image-placeholder { width: 75px; height: 75px; margin-right: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--bg-light); border-radius: 8px; font-size: 9px; color: #999; text-align: center; line-height: 1.3; flex-direction: column; }
+
+        .du-product-info { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+        .du-product-info.no-description .du-offer-name { margin-bottom: 0; }
+        .du-offer-name { font-size: 14px; font-weight: 700; color: #333; line-height: 1.2; margin-bottom: 1px; }
+        .du-supply-duration { font-size: 11px; color: #888; }
+        .du-supply-duration:empty { display: none; }
+
+        .du-pricing-block { text-align: right; flex-shrink: 0; min-width: 85px; }
+        .du-original-price { font-size: 12px; color: #e53935; text-decoration: line-through; font-weight: 600; }
+        .du-discount-percent { font-size: 11px; color: #27ae60; font-weight: 700; }
+        .du-per-unit-price { font-size: 13px; font-weight: 700; color: #333; }
+
+        
+        .du-free-gifts-section { padding: 0; margin-top: 8px; margin-bottom: 0; overflow: visible; }
+        .du-free-gifts-row { display: flex; gap: 6px; overflow: visible; }
+        .du-free-gift { flex: 1; text-align: center; position: relative; transition: all 0.3s ease; min-width: 0; display: flex; flex-direction: column; align-items: center; }
+        .du-gift-box { width: 100%; border: 2px dashed #ccc; border-radius: 8px; padding: 14px 4px 8px; position: relative; background: #fff; transition: all 0.3s ease; }
+        .du-free-gift.locked .du-gift-box { opacity: 0.4; filter: grayscale(100%); }
+        .du-free-gift.unlocked .du-gift-box { border-color: var(--theme-primary); border-style: solid; background: var(--theme-primary-light); }
+
+        
+        .du-gift-stamp { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-12deg); z-index: 2; background: rgba(39, 174, 96, 0.65); color: #fff; font-size: 12px; font-weight: 900; padding: 3px 8px; border-radius: 4px; letter-spacing: 1.5px; text-transform: uppercase; box-shadow: 0 1px 4px rgba(39, 174, 96, 0.25); pointer-events: none; border: 1.5px solid rgba(255,255,255,0.4); }
+        .du-free-gift.unlocked .du-gift-stamp { display: block; animation: du-stamp-pop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        @keyframes du-stamp-pop { 0% { transform: translate(-50%, -50%) rotate(-12deg) scale(0); opacity: 0; } 60% { transform: translate(-50%, -50%) rotate(-12deg) scale(1.15); opacity: 1; } 100% { transform: translate(-50%, -50%) rotate(-12deg) scale(1); opacity: 1; } }
+
+        .du-gift-badge { position: absolute; top: -9px; left: 50%; transform: translateX(-50%); background: #f5a623; color: #fff; font-size: 10px; font-weight: 700; padding: 3px 7px; border-radius: 7px; white-space: nowrap; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+        .du-gift-badge .du-strike-price { text-decoration: line-through; text-decoration-color: rgba(255,255,255,0.5); }
+        .du-free-gift.locked .du-gift-badge { background: #999; }
+        .du-free-gift.unlocked .du-gift-badge { background: #27ae60; }
+
+        .du-gift-image { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto; flex-shrink: 0; }
+        .du-gift-image img { max-width: 100%; max-height: 100%; object-fit: contain; width: auto; height: auto; }
+        .du-gift-image-placeholder { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto; background: #f0f0f0; border-radius: 8px; font-size: 8px; color: #aaa; }
+        .du-gift-name { font-size: 12px; color: #333; font-weight: 600; line-height: 1.3; margin-top: 8px; margin-bottom: 0; padding: 0 4px; }
+        .du-free-gift.locked .du-gift-name { opacity: 0.5; }
+
+        
+        @media (min-width: 900px) {
+            .du-bundle-wrapper {
+                max-width: 1000px !important;
+            }
+
+            
+            .du-product-options {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 24px !important;
+                padding-top: 16px !important;
+                align-items: stretch !important;
+            }
+
+            
+            .du-product-option {
+                padding: 20px 16px 20px !important;
+                margin-bottom: 0 !important;
+                border-radius: 16px !important;
+                text-align: center !important;
+                display: flex !important;
+                flex-direction: column !important;
+                height: 100% !important;
+            }
+
+            
+            .du-product-info.no-description::after {
+                content: '\00a0' !important;
+                display: block !important;
+                font-size: 0.85rem !important;
+                line-height: 1 !important;
+                visibility: hidden !important;
+            }
+
+            
+            .du-product-option[data-tier="2"] {
+                transform: scale(1.05) !important;
+                z-index: 1;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.12) !important;
+            }
+
+            
+            .du-option-content {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 0 !important;
+                flex: 1 !important;
+                justify-content: center !important;
+            }
+
+            
+            .du-checkbox-wrapper {
+                display: none !important;
+            }
+
+            
+            .du-product-image,
+            .du-product-image-placeholder {
+                width: 160px !important;
+                height: 160px !important;
+                margin-right: 0 !important;
+                margin-bottom: 8px !important;
+            }
+
+            
+            .du-product-info {
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            .du-product-info.no-description {
+                justify-content: center !important;
+            }
+
+            .du-offer-name {
+                font-size: 1.15rem !important;
+                margin-bottom: 2px !important;
+            }
+
+            .du-supply-duration {
+                font-size: 0.85rem !important;
+                margin-bottom: 0 !important;
+            }
+
+            
+            .du-pricing-block {
+                text-align: center !important;
+                min-width: auto !important;
+                margin-top: 4px !important;
+            }
+
+            .du-original-price {
+                font-size: 1rem !important;
+                margin-bottom: 0 !important;
+            }
+
+            .du-discount-percent {
+                font-size: 0.95rem !important;
+                margin: 2px 0 !important;
+            }
+
+            .du-per-unit-price {
+                font-size: 1.05rem !important;
+                color: var(--theme-primary-dark) !important;
+            }
+
+            
+            .du-benefit-tag {
+                font-size: 0.75rem !important;
+                padding: 6px 16px !important;
+            }
+
+            .du-product-option[data-tier="2"] .du-benefit-tag {
+                font-size: 0.8rem !important;
+                padding: 7px 20px !important;
+            }
+
+            
+            .du-free-gifts-section {
+                margin-top: 32px !important;
+            }
+
+            .du-free-gifts-row {
+                gap: 24px !important;
+                justify-content: center !important;
+            }
+
+            .du-free-gift {
+                max-width: 200px !important;
+            }
+
+            .du-gift-box {
+                padding: 20px 12px 14px !important;
+                border-radius: 12px !important;
+            }
+
+            .du-gift-image,
+            .du-gift-image-placeholder {
+                width: 100px !important;
+                height: 100px !important;
+            }
+
+            .du-gift-name {
+                font-size: 14px !important;
+                margin-top: 10px !important;
+            }
+
+            .du-gift-badge {
+                font-size: 12px !important;
+                padding: 5px 12px !important;
+                top: -10px !important;
+            }
+
+            .du-gift-stamp {
+                font-size: 14px !important;
+                padding: 4px 10px !important;
+            }
+        }
+
+        
+        .du-inline-cta { margin-top: 16px; text-align: center; }
+        .du-btn-inline { display: block; width: 100%; padding: 16px 24px; background: var(--theme-accent); color: #fff; border: none; border-radius: 10px; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 14px rgba(194, 65, 12, 0.35); font-family: inherit; }
+        .du-btn-inline:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(194, 65, 12, 0.45); }
+        .du-btn-inline:active { transform: scale(0.97); }
+        .du-inline-guarantee { font-size: 10px; color: #888; margin-top: 6px; }
+
+        
+        .du-sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 10px 15px; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); transform: translateY(100%); transition: transform 0.3s ease; z-index: 9999; }
+        .du-sticky-cta.visible { transform: translateY(0); }
+        .du-sticky-inner { max-width: 500px; margin: 0 auto; }
+        .du-sticky-savings-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px dashed #e0e0e0; }
+        .du-sticky-countdown { display: flex; align-items: center; gap: 5px; }
+        .du-sticky-countdown-icon { font-size: 12px; }
+        .du-sticky-countdown-text { font-size: 10px; color: #555; }
+        .du-sticky-countdown-time { font-size: 12px; font-weight: 700; color: #e53935; }
+        .du-sticky-savings-right { display: flex; align-items: center; gap: 4px; }
+        .du-sticky-you-saved { color: #555; font-size: 10px; font-weight: 600; }
+        .du-sticky-savings-amount { color: #27ae60; font-size: 14px; font-weight: 800; }
+        .du-sticky-action-row { display: flex; align-items: center; gap: 10px; }
+        .du-sticky-price-block { flex-shrink: 0; }
+        .du-sticky-price-block .original { font-size: 10px; color: #999; text-decoration: line-through; }
+        .du-sticky-price-block .price { font-size: 20px; font-weight: 800; color: var(--theme-accent); line-height: 1; }
+        .du-btn-checkout { flex: 1; display: block; padding: 12px 16px; background: var(--theme-accent); color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 14px rgba(194, 65, 12, 0.35); font-family: inherit; text-decoration: none; text-align: center; }
+        .du-btn-checkout:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(194, 65, 12, 0.45); }
+        .du-btn-checkout:active { transform: scale(0.97); }
+
+        
+        @media (min-width: 900px) {
+            .du-sticky-cta { padding: 16px 32px; }
+            .du-sticky-inner { max-width: 1000px !important; display: flex !important; flex-direction: row !important; align-items: center !important; gap: 24px !important; }
+            .du-sticky-savings-row { order: 3 !important; margin-bottom: 0 !important; padding-bottom: 0 !important; border-bottom: none !important; flex-direction: row-reverse; gap: 24px; flex-shrink: 0; }
+            .du-sticky-countdown { order: 1; }
+            .du-sticky-savings-right { order: 2; }
+            .du-sticky-countdown-icon { font-size: 20px !important; }
+            .du-sticky-countdown-text { font-size: 16px !important; }
+            .du-sticky-countdown-time { font-size: 20px !important; }
+            .du-sticky-you-saved { font-size: 16px !important; }
+            .du-sticky-savings-amount { font-size: 22px !important; }
+            .du-sticky-action-row { order: 1 !important; flex: 1; gap: 20px !important; justify-content: center !important; }
+            .du-sticky-price-block { order: -1 !important; }
+            .du-sticky-price-block .original { font-size: 16px !important; }
+            .du-sticky-price-block .price { font-size: 36px !important; }
+            .du-btn-checkout { flex: 0 1 auto !important; padding: 18px 48px !important; font-size: 20px !important; border-radius: 10px !important; letter-spacing: 1px !important; }
+        }
+        
+        
+        .guarantee {
+            padding: var(--section-padding) 0;
+            background: white;
+        }
+        
+        .guarantee__content {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 48px;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 56px;
+        }
+        
+        @media (min-width: 768px) {
+            .guarantee__content {
+                max-width: 1000px;
+                gap: 64px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .guarantee__content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 40px;
+            }
+        }
+        
+        .guarantee__badge {
+            text-align: center;
+        }
+        
+        .guarantee__badge-text {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--theme-primary-dark);
+            line-height: 1;
+        }
+        
+        .guarantee__badge-label {
+            font-size: 1rem;
+            color: var(--theme-primary-dark);
+            font-weight: 700;
+        }
+        
+        .guarantee__title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .guarantee__text {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            margin-bottom: 16px;
+        }
+        
+        .guarantee__promise {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--theme-primary-dark);
+        }
+        
+        
+        .faq {
+            padding: var(--section-padding) 0;
+            background: var(--bg-cream);
+        }
+        
+        .faq__header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .faq__title {
+            font-size: 2.2rem;
+        }
+        
+        .faq__list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .faq__list {
+                max-width: 900px;
+            }
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        
+        .faq-item__question {
+            width: 100%;
+            padding: 28px 32px;
+            background: white;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-body);
+        }
+        
+        .faq-item__question:hover {
+            background: var(--bg-light);
+        }
+        
+        .faq-item__icon {
+            font-size: 1.5rem;
+            color: var(--theme-primary-dark);
+        }
+        
+        .faq-item__answer {
+            padding: 0 32px 28px;
+            font-size: 1.05rem;
+            color: var(--text-medium);
+            line-height: 1.7;
+            display: none;
+        }
+        
+        .faq-item.active .faq-item__answer {
+            display: block;
+        }
+        
+        .faq-item.active .faq-item__icon {
+            transform: rotate(45deg);
+        }
+        
+        
+        .final-cta {
+            padding: var(--section-padding) 0;
+            background: var(--theme-primary);
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta__title {
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta__subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 36px;
+        }
+        
+        .final-cta__button {
+            display: inline-block;
+            background: white;
+            color: var(--theme-primary-dark);
+            padding: 18px 48px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .final-cta__trust {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+        
+        @media (max-width: 768px) {
+            .final-cta__title {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .final-cta__subtitle {
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+            
+            .final-cta__button {
+                padding: 12px 20px;
+                font-size: 14px;
+                border-radius: 8px;
+                white-space: nowrap;
+            }
+            
+            .final-cta__trust {
+                font-size: 11px;
+                margin-top: 12px;
+                white-space: nowrap;
+            }
+        }
+        
+        
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 10px 24px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            display: block;
+            z-index: 1000;
+        }
+        
+        .sticky-cta__inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        .sticky-cta__text-left,
+        .sticky-cta__text-right {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            display: none;
+            white-space: nowrap;
+        }
+        
+        @media (min-width: 768px) {
+            .sticky-cta__inner {
+                justify-content: space-between;
+            }
+            
+            .sticky-cta__text-left,
+            .sticky-cta__text-right {
+                display: block;
+                flex: 1;
+            }
+            
+            .sticky-cta__text-left {
+                text-align: left;
+            }
+            
+            .sticky-cta__text-right {
+                text-align: right;
+            }
+        }
+        
+        .sticky-cta__button {
+            text-align: center;
+            white-space: nowrap;
+            padding: 12px 24px;
+            font-size: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .sticky-cta__button {
+                width: 100%;
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+        }
+        
+        body {
+            padding-bottom: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 55px;
+            }
+        }
+        
+        
+        
+        
+        html, body {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        
+        .funnel-page-content,
+        .funnel-page,
+        .page-content,
+        .fp-content,
+        .page-body,
+        [class*="funnel"],
+        [class*="page-wrapper"],
+        [class*="content-wrapper"],
+        body > div {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        
+        
+        .hero,
+        .agitation,
+        .doctor-section,
+        .mechanism,
+        .testimonials,
+        .alternatives,
+        .timeline,
+        .ingredients-section,
+        .pricing,
+        .guarantee,
+        .faq,
+        .miss-out,
+        .final-cta,
+        .media-logos,
+        .trust-bar,
+        .urgency-banner,
+        footer {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            box-sizing: border-box !important;
+        }
+        
+        
+        @media (min-width: 768px) {
+            
+            .container {
+                width: 100% !important;
+                max-width: var(--container-max) !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding-left: 48px !important;
+                padding-right: 48px !important;
+                box-sizing: border-box !important;
+            }
+            
+            
+            .trust-bar {
+                display: flex !important;
+                justify-content: center !important;
+            }
+            
+            .trust-bar .container {
+                display: flex !important;
+                justify-content: center !important;
+            }
+            
+            .trust-bar__items {
+                display: flex !important;
+                justify-content: center !important;
+                gap: 48px !important;
+                width: 100% !important;
+            }
+            
+            
+            .media-logos {
+                display: flex !important;
+                justify-content: center !important;
+            }
+            
+            .media-logos .container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            
+            
+            .testimonials__header,
+            .alternatives__header,
+            .timeline__header,
+            .pricing__header,
+            .faq__header,
+            .guarantee__header {
+                text-align: center !important;
+                width: 100% !important;
+            }
+            
+            
+            .testimonials__subtitle,
+            .alternatives__subtitle {
+                text-align: center !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            
+            .pricing__grid {
+                justify-content: center !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            
+            .ingredient-accordion {
+                max-width: 800px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                text-align: left !important;
+            }
+            
+            
+            footer {
+                display: flex !important;
+                justify-content: center !important;
+            }
+            
+            footer .container {
+                text-align: center !important;
+            }
+            
+            footer p {
+                text-align: center !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            
+            .alternatives__solution {
+                max-width: 800px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            
+            section[style*="background: var(--theme-primary)"] {
+                display: flex !important;
+                justify-content: center !important;
+            }
+            
+            section[style*="background: var(--theme-primary)"] .container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+            
+            
+            .final-cta {
+                display: flex !important;
+                justify-content: center !important;
+                text-align: center !important;
+            }
+            
+            .final-cta .container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+            
+            
+            .timeline__grid {
+                max-width: 1000px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            
+            .guarantee__content {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        
+        
+        @media (max-width: 768px) {
+            
+            html, body {
+                font-size: 16px !important;
+            }
+            
+            
+            .hero__headline {
+                font-size: 32px !important;
+            }
+            
+            .hero__subheadline {
+                font-size: 20px !important;
+            }
+            
+            .hero__badge {
+                font-size: 14px !important;
+            }
+            
+            .hero__benefits li {
+                font-size: 19px !important;
+            }
+            
+            .hero__trust {
+                font-size: 14px !important;
+            }
+            
+            
+            .cta-button {
+                font-size: 15px !important;
+                padding: 14px 24px !important;
+            }
+            
+            .sticky-cta__button {
+                font-size: 14px !important;
+                padding: 12px 16px !important;
+            }
+            
+            .final-cta__button {
+                font-size: 15px !important;
+            }
+            
+            .final-cta__trust {
+                font-size: 12px !important;
+            }
+            
+            .pricing-card .cta-button {
+                font-size: 14px !important;
+                padding: 12px 16px !important;
+            }
+            
+            
+            .urgency-banner {
+                font-size: 13px !important;
+            }
+        }
+        
+        
+        h2, h3 {
+            text-align: center;
+        }
+        
+        .agitation__title,
+        .mechanism__title,
+        .testimonials__title,
+        .testimonials-b__title,
+        .alternatives__title,
+        .timeline__title,
+        .pricing__title,
+        .guarantee__title,
+        .faq__title,
+        .miss__title,
+        .miss-out__title,
+        .final-cta__title,
+        .doctor-section h2 {
+            text-align: center !important;
+            width: 100% !important;
+            display: block !important;
+        }
+        
+        .testimonials__header,
+        .alternatives__header,
+        .timeline__header,
+        .pricing__header,
+        .faq__header,
+        .agitation__content,
+        .mechanism__content {
+            text-align: center !important;
+        }
+        
+        
+        .doctor-section__narrative h2 {
+            text-align: left !important;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================================
+         URGENCY BANNER
+         
+         FRAMEWORK: "Reason Why" (Claude Hopkins)
+         - Always give a BELIEVABLE reason for the discount/urgency
+         - "Limited time" alone is weak — explain WHY it's limited
+         
+         EXAMPLES:
+         - "Save 50% — Limited Batch: Only 500 units due to high-quality sourcing"
+         - "Factory Direct Sale: We're clearing warehouse space — 50% off this week only"
+         - "New Year Special: Dr. [Name] is offering 50% off for the first 200 orders"
+    ============================================================================ -->
+    <div class="urgency-banner" id="urgency-banner">
+        <!-- Mobile: Short version -->
+        <span class="urgency-banner__mobile">
+            🔥 <span class="urgency-month"></span>&nbsp;Sale: Save <span class="urgency-discount"></span>% — Limited Batch
+        </span>
+        <!-- Desktop: Full version -->
+        <span class="urgency-banner__full">
+            🔥 <span class="urgency-month"></span>&nbsp;Sale: Save <span class="urgency-discount"></span>% — Limited Batch: Only <span class="urgency-count"></span>&nbsp;bottles available (<span class="urgency-ingredient"></span>&nbsp;sourcing limits production)
+        </span>
+    </div>
+
+    <!-- ============================================================================
+         HERO SECTION - PROBLEM-FIRST APPROACH
+         
+         FRAMEWORKS APPLIED:
+         - PASTOR: Person → Problem → Pain (before benefits)
+         - 4 U's: Useful, Urgent, Unique, Ultra-specific
+         
+         HEADLINE OPTIONS (choose based on awareness level):
+         
+         PROBLEM-AWARE (cold traffic):
+         "Tired of [Pain Point] After 55?"
+         "Still Struggling with [Problem]? Here's Why."
+         "Why [Problem] Gets Worse After 50 — And What to Do About It"
+         
+         SOLUTION-AWARE (warmer traffic):
+         "[X]% of Adults Over 55 Report [Specific Result] in Just [Timeframe]"
+         "The [Mechanism] Breakthrough That's Helping 60,000+ Adults Over 55"
+         
+         4 U's CHECKLIST:
+         ☐ Useful — Does headline promise a clear benefit?
+         ☐ Urgent — Is there timing/scarcity implied?
+         ☐ Unique — Is this different from competitors?
+         ☐ Ultra-specific — Are there numbers, percentages, timeframes?
+         
+         AIM FOR 3 OF 4 U's MINIMUM
+    ============================================================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__grid">
+                
+                <div class="hero__content">
+                    
+                    <h1 class="hero__headline" id="hero-headline"></h1>
+                    
+                    <div class="hero__badge" id="hero-badge"></div>
+                    
+                    <p class="hero__subheadline" id="hero-subheadline"></p>
+                    
+                    <ul class="hero__benefits" id="hero-benefits"></ul>
+                    
+                    <!-- CTA shows here on MOBILE only -->
+                    <div class="hero__cta-mobile">
+                        <a href="#pricing" class="cta-button hero-cta"></a>
+                        <p class="hero__trust">90-Day Money-Back Guarantee • Free Shipping</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="hero__image-wrapper">
+                    <img src="" alt="" class="hero__image" id="hero-image" width="500" height="500">
+                    
+                    <!-- CTA shows here on DESKTOP only -->
+                    <div class="hero__cta-desktop">
+                        <a href="#pricing" class="cta-button hero-cta"></a>
+                        <p class="hero__trust">
+                            90-Day Money-Back Guarantee • Free Shipping
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         TRUST BAR
+    ============================================================================ -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-bar__items" id="trust-bar-items">
+                <span class="trust-bar__item">★★★★★ <span id="trust-rating"></span>/5 from <span id="trust-count"></span> Reviews</span>
+                <span class="trust-bar__item">🛡️ 90-Day Guarantee</span>
+                <span class="trust-bar__item">🚚 Free Shipping</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================================
+         SECTION 5: DEMOGRAPHIC CALLOUT
+    ============================================================================ -->
+    <section style="padding: 48px 0; background: var(--theme-primary); color: white; text-align: center;">
+        <div class="container" style="text-align: center;">
+            <p style="font-size: 1.4rem; font-weight: 700; margin: 0; text-align: center;" id="demo-line1"></p>
+            <p style="font-size: 1.1rem; opacity: 0.9; margin-top: 12px; text-align: center;" id="demo-line2"></p>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 6: AGITATION (HEALTH CATEGORY)
+         
+         FRAMEWORK: PAS "Twist the Knife"
+         PURPOSE: Make the problem HURT before offering the solution.
+         
+         55+ RULE: Let the IMAGE do the heavy lifting. 
+         Text should be 3-4 short sentences MAX, not paragraphs.
+         
+         IMAGE GUIDANCE:
+         - Person 55-70 holding knee/hip with visible discomfort
+         - Frustrated expression, not performative pain
+         - Morning setting (getting out of bed, or sitting on couch)
+         - Warm indoor lighting
+         - Tool: Nanobanan | Aspect: 1:1
+    ============================================================================ -->
+    <section class="agitation">
+        <div class="container">
+            <div class="agitation__content">
+                
+                <h2 class="agitation__title"></h2>
+                
+                <div class="agitation__grid">
+                    <div class="agitation__text-content">
+                        <div class="agitation__highlight">
+                            <p></p>
+                        </div>
+                        
+                        <p class="agitation__text"></p>
+                        
+                        <p class="agitation__transition"></p>
+                    </div>
+                    
+                    <div class="agitation__image-wrapper">
+                        <img src="" loading="lazy" alt="" class="agitation__image" width="500" height="500">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 7: DOCTOR STORY
+    ============================================================================ -->
+    <section class="doctor-section">
+        <div class="container">
+            <div class="doctor-section__grid">
+                
+                <div class="doctor-section__image-wrapper">
+                    <img src="" loading="lazy" alt="" class="doctor-section__image" width="350" height="350">
+                    <div class="doctor-section__credentials">
+                        <p class="doctor-section__name"></p>
+                        <p class="doctor-section__title"></p>
+                    </div>
+                </div>
+                
+                <div class="doctor-section__narrative"></div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 8: MECHANISM + INGREDIENTS
+    ============================================================================ -->
+    <section class="mechanism">
+        <div class="container">
+            <div class="mechanism__content" style="text-align: center;">
+                
+                <h2 class="mechanism__title" style="text-align: center;"></h2>
+                
+                <!-- UMS DIAGRAM -->
+                <img class="mechanism__diagram" src="" 
+                     loading="lazy" 
+                     alt="How product works" 
+                     width="800" height="400"
+                     style="width: 100%; max-width: 800px; border-radius: 16px; margin: 0 auto 48px; display: block; border: 1px solid #e5e7eb;">
+                
+                <!-- UMP/UMS Explanation -->
+                <div style="max-width: 800px; margin: 0 auto 48px; text-align: center;">
+                    
+                    <!-- UMP: Why the Problem Exists -->
+                    <div class="ump-box" style="background: #fef2f2; border-left: 4px solid #dc2626; padding: 24px; border-radius: 8px; margin-bottom: 24px; text-align: left;">
+                        <p class="mechanism__box-label" style="font-weight: 700; color: #991b1b; margin-bottom: 8px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;"></p>
+                        <p class="mechanism__box-text" style="color: #7f1d1d; line-height: 1.7; margin: 0;"></p>
+                    </div>
+                    
+                    <!-- UMS: How the Solution Works -->
+                    <div class="ums-box" style="background: #f0fdf4; border-left: 4px solid #16a34a; padding: 24px; border-radius: 8px; text-align: left;">
+                        <p class="mechanism__box-label" style="font-weight: 700; color: #166534; margin-bottom: 8px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;"></p>
+                        <p class="mechanism__box-text" style="color: #14532d; line-height: 1.7; margin: 0;"></p>
+                    </div>
+                    
+                </div>
+                
+                <!-- Ingredient Accordion -->
+                <div class="ingredient-accordion" style="max-width: 800px; margin: 0 auto;"></div>
+                
+                <!-- Transition -->
+                <p class="mechanism__transition" style="text-align: center; font-size: 1.1rem; color: var(--text-medium); margin-top: 32px; max-width: 700px; margin-left: auto; margin-right: auto;"></p>
+                
+                <!-- NO Claims -->
+                <div class="mechanism__no-claims" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 32px; font-size: 0.9rem; color: var(--text-light);"></div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 9: TESTIMONIALS
+    ============================================================================ -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials__header" style="text-align: center;">
+                <h2 class="testimonials__title" style="text-align: center;"></h2>
+                <p class="testimonials__subtitle" style="font-size: 1.1rem; color: var(--text-medium); margin-top: 12px; text-align: center;"></p>
+            </div>
+            
+            <div class="testimonials__grid"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 10: ALTERNATIVES
+    ============================================================================ -->
+    <section class="alternatives">
+        <div class="container">
+            <div class="alternatives__header" style="text-align: center;">
+                <h2 class="alternatives__title" style="text-align: center;"></h2>
+                <p class="alternatives__subtitle" style="font-size: 1.1rem; color: var(--text-medium); margin-top: 12px; text-align: center;"></p>
+            </div>
+            
+            <img class="alternatives__image" src="" loading="lazy" alt="Comparison" 
+                 width="800" height="400"
+                 style="width: 100%; max-width: 800px; border-radius: 16px; margin: 0 auto 48px; display: block; border: 1px solid #e5e7eb;">
+            
+            <div class="alternatives__list"></div>
+            
+            <div class="alternatives__solution" style="background: #f0fdf4; border-left: 4px solid var(--theme-primary); padding: 32px 36px; border-radius: 8px; margin-top: 32px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h3 style="color: var(--theme-primary-dark); margin-bottom: 12px; font-size: 1.5rem;"></h3>
+                <p style="margin: 0; font-size: 1.15rem; line-height: 1.6;"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 11: TIMELINE
+    ============================================================================ -->
+    <section class="timeline">
+        <div class="container">
+            <div class="timeline__header" style="text-align: center;">
+                <h2 class="timeline__title" style="text-align: center;"></h2>
+            </div>
+            
+            <div class="timeline__grid"></div>
+        </div>
+    </section>
+
+    <!-- INGREDIENTS SECTION REMOVED - Now merged into Section 8 (Mechanism + Ingredients) per SOP v1.4 -->
+
+    <!-- NO CLAIMS SECTION REMOVED - Now integrated into Section 8 (Mechanism + Ingredients) -->
+
+    <!-- ============================================================================
+         SECTION 13: PRICING (Bundle Selector)
+    ============================================================================ -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing__header" style="text-align: center;">
+                <h2 class="pricing__title" style="text-align: center;"></h2>
+            </div>
+            
+            <div id="du-bundle-root"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         GUARANTEE
+    ============================================================================ -->
+    
+    <!-- ============================================================================
+         SECTION 9B: MORE REVIEWS (after pricing, before guarantee)
+    ============================================================================ -->
+    <section class="testimonials testimonials--b">
+        <div class="container">
+            <div class="testimonials__header" style="text-align: center;">
+                <h2 class="testimonials__title testimonials-b__title" style="text-align: center;"></h2>
+            </div>
+            
+            <div class="testimonials__grid testimonials-b__grid"></div>
+        </div>
+    </section>
+
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee__content">
+                
+                <div class="guarantee__badge">
+                    <div class="guarantee__badge-text">90</div>
+                    <div class="guarantee__badge-label">DAY GUARANTEE</div>
+                </div>
+                
+                <div class="guarantee__text-content">
+                    <h3 class="guarantee__title"></h3>
+                    <p class="guarantee__text"></p>
+                    <p class="guarantee__promise">
+                        We offer this guarantee because <strong>we've seen the results</strong>. And we want you to experience them <strong>risk-free</strong>.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 15: FAQ
+    ============================================================================ -->
+    <section class="faq">
+        <div class="container">
+            <div class="faq__header">
+                <h2 class="faq__title"></h2>
+            </div>
+            
+            <div class="faq__list"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 16: WHAT YOU'LL MISS
+    ============================================================================ -->
+    <section class="miss-out">
+        <div class="container">
+            <div class="miss-out__content">
+                
+                <h2 class="miss__title"></h2>
+                
+                <div class="miss-out__scenarios">
+                    
+                    <div class="miss-out__scenario miss-out__scenario--without">
+                        <p class="miss__without-label"></p>
+                        <img class="miss__without-image" src="" loading="lazy" alt="Without product" width="400" height="400"
+                             style="width: 100%; border-radius: 12px; margin-bottom: 20px; filter: saturate(0.7);">
+                        <ul class="miss__without-list"></ul>
+                    </div>
+                    
+                    <div class="miss-out__scenario miss-out__scenario--with">
+                        <p class="miss__with-label"></p>
+                        <img class="miss__with-image" src="" loading="lazy" alt="With product" width="400" height="400"
+                             style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+                        <ul class="miss__with-list"></ul>
+                    </div>
+                    
+                </div>
+                
+                <p class="miss__closing" style="text-align: center; font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin: 40px 0 24px;"></p>
+                
+                <div class="miss__cta" style="text-align: center;">
+                    <a href="#pricing" class="cta-button miss__cta-button"></a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 17: FINAL CTA
+    ============================================================================ -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="final-cta__title"></h2>
+            <p class="final-cta__subtitle"></p>
+            <a href="#pricing" class="cta-button final-cta__button"></a>
+            <p class="final-cta__trust"></p>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         SECTION 18: STICKY CTA
+    ============================================================================ -->
+    <div class="sticky-cta">
+        <div class="sticky-cta__inner">
+            <span class="sticky-cta__text-left">🛡️ 90-Day Guarantee</span>
+            <a href="#pricing" class="cta-button sticky-cta__button"></a>
+            <span class="sticky-cta__text-right">🚚 Free Shipping</span>
+        </div>
+    </div>
+
+    <!-- ============================================================================
+         SECTION 19: DISCLAIMER FOOTER
+    ============================================================================ -->
+    <footer style="padding: 24px 0; background: #f9fafb; border-top: 1px solid #e5e7eb;">
+        <div class="container" style="text-align: center;">
+            <p style="font-size: 0.75rem; color: #9ca3af; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                *These statements have not been evaluated by the Food and Drug Administration. 
+                This product is not intended to diagnose, treat, cure, or prevent any disease. 
+                Results may vary. Consult your physician before starting any supplement program.
+            </p>
+            <p class="footer__copyright" style="font-size: 0.75rem; color: #9ca3af; text-align: center; margin: 16px auto 0 auto;"></p>
+        </div>
+    </footer>
+
+    <!-- ============================================================================
+         JAVASCRIPT - CONFIG RENDER + FAQ
+    ============================================================================ -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const brand = CONFIG.BRAND_NAME;
+        const theme = THEME; // Uses resolved THEME (PRODUCT_COLORS override → theme defaults)
+        
+        // Apply theme colors dynamically
+        document.documentElement.style.setProperty('--theme-primary', theme.primary);
+        document.documentElement.style.setProperty('--theme-primary-dark', theme.primaryDark);
+        document.documentElement.style.setProperty('--theme-primary-light', theme.primaryLight);
+        document.documentElement.style.setProperty('--theme-accent', theme.accent);
+        
+        // Helper to replace [BRAND] placeholders
+        const r = (text) => text ? text.replace(/\[BRAND\]/g, brand) : '';
+        
+        // Helper to apply accent color highlights to section titles
+        // Supports: <span class='section-highlight'>word</span> in CONFIG
+        // Auto-highlight: wraps text between **double asterisks** in accent color
+        const h = (text) => {
+            if (!text) return '';
+            let result = r(text);
+            // Convert **word** markers to accent-colored spans
+            result = result.replace(/\*\*(.*?)\*\*/g, '<span class="section-highlight">$1</span>');
+            return result;
+        };
+        
+        // Helper for image URLs - returns placeholder if empty
+        const img = (url, size, label) => url || `https://placehold.co/${size}/${theme.primaryLight.slice(1)}/${theme.primary.slice(1)}?text=${encodeURIComponent(label)}`;
+        
+        // Dynamic month
+        const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        const currentMonth = months[new Date().getMonth()];
+        
+        // ============ PAGE TITLE ============
+        document.getElementById('page-title').textContent = `${brand}™ - Sales Page`;
+        
+        // ============ URGENCY BANNER ============
+        document.querySelectorAll('.urgency-month').forEach(el => el.textContent = currentMonth);
+        document.querySelectorAll('.urgency-discount').forEach(el => el.textContent = CONFIG.URGENCY.DISCOUNT_PERCENT);
+        document.querySelectorAll('.urgency-count').forEach(el => el.textContent = CONFIG.URGENCY.BOTTLE_COUNT);
+        document.querySelectorAll('.urgency-ingredient').forEach(el => el.textContent = CONFIG.URGENCY.HERO_INGREDIENT);
+        
+        // ============ HERO ============
+        const heroHeadline = document.getElementById('hero-headline');
+        if (heroHeadline) heroHeadline.innerHTML = CONFIG.HERO.HEADLINE;
+        
+        const heroBadge = document.getElementById('hero-badge');
+        if (heroBadge) heroBadge.textContent = `⭐ ${CONFIG.HERO.BADGE}`;
+        
+        const heroSubheadline = document.getElementById('hero-subheadline');
+        if (heroSubheadline) heroSubheadline.textContent = CONFIG.HERO.SUBHEADLINE;
+        
+        const heroBenefits = document.getElementById('hero-benefits');
+        if (heroBenefits) heroBenefits.innerHTML = CONFIG.HERO.BENEFITS.map(b => `<li>${b}</li>`).join('');
+        
+        const heroImage = document.getElementById('hero-image');
+        if (heroImage) {
+            heroImage.src = img(CONFIG.HERO.IMAGE, '500x500', 'Product');
+            heroImage.alt = brand + '™';
+        }
+        
+        // Hero CTAs
+        document.querySelectorAll('.hero-cta').forEach(el => {
+            el.textContent = `Try ${brand}™ Risk-Free →`;
+        });
+        
+        // ============ TRUST BAR ============
+        const trustRating = document.getElementById('trust-rating');
+        if (trustRating) trustRating.textContent = CONFIG.TRUST_BAR.RATING;
+        
+        const trustCount = document.getElementById('trust-count');
+        if (trustCount) trustCount.textContent = CONFIG.TRUST_BAR.REVIEW_COUNT;
+        
+        // ============ DEMOGRAPHIC ============
+        const demoLine1 = document.getElementById('demo-line1');
+        if (demoLine1) demoLine1.innerHTML = CONFIG.DEMOGRAPHIC.LINE_1;
+        
+        const demoLine2 = document.getElementById('demo-line2');
+        if (demoLine2) demoLine2.textContent = CONFIG.DEMOGRAPHIC.LINE_2;
+        
+        // ============ AGITATION ============
+        const agitationTitle = document.querySelector('.agitation__title');
+        if (agitationTitle) agitationTitle.innerHTML = h(CONFIG.AGITATION.TITLE);
+        
+        const agitationHighlight = document.querySelector('.agitation__highlight p');
+        if (agitationHighlight) agitationHighlight.innerHTML = CONFIG.AGITATION.UMP_TEXT;
+        
+        const agitationText = document.querySelector('.agitation__text');
+        if (agitationText) agitationText.innerHTML = CONFIG.AGITATION.FAILED_ATTEMPTS;
+        
+        const agitationTransition = document.querySelector('.agitation__transition');
+        if (agitationTransition) agitationTransition.innerHTML = `But there's a reason <strong>${brand}™ works</strong> when others fail...`;
+        
+        const agitationImage = document.querySelector('.agitation__image');
+        if (agitationImage) agitationImage.src = img(CONFIG.AGITATION.IMAGE, '500x500', 'Pain');
+        
+        // ============ DOCTOR ============
+        const doctorImage = document.querySelector('.doctor-section__image');
+        if (doctorImage) {
+            doctorImage.src = img(CONFIG.DOCTOR.IMAGE, '300x300', 'Doctor');
+            doctorImage.alt = CONFIG.DOCTOR.NAME;
+        }
+        
+        const doctorName = document.querySelector('.doctor-section__name');
+        if (doctorName) doctorName.textContent = CONFIG.DOCTOR.NAME + ', MD';
+        
+        const doctorTitle = document.querySelector('.doctor-section__title');
+        if (doctorTitle) doctorTitle.textContent = CONFIG.DOCTOR.TITLE;
+        
+        const doctorNarrative = document.querySelector('.doctor-section__narrative');
+        if (doctorNarrative) {
+            doctorNarrative.innerHTML = `
+                <h2>Why I Created This Formula</h2>
+                <p>After <strong>${CONFIG.DOCTOR.YEARS} years</strong> treating patients, I saw the same frustrating pattern. My patients tried everything. <strong>Nothing worked for long</strong>.</p>
+                <p><strong>Prescription drugs</strong> had too many <strong>side effects</strong>. Over-the-counter pills were <strong>temporary at best</strong>.</p>
+                <div class="doctor-section__quote">"${r(CONFIG.DOCTOR.QUOTE)}"</div>
+                <p>That's why we back it with a <strong>90-day guarantee</strong>.</p>
+            `;
+        }
+        
+        // ============ MECHANISM ============
+        const mechanismTitle = document.querySelector('.mechanism__title');
+        if (mechanismTitle) mechanismTitle.innerHTML = h(CONFIG.MECHANISM.TITLE);
+        
+        const mechanismDiagram = document.querySelector('.mechanism__diagram');
+        if (mechanismDiagram) mechanismDiagram.src = img(CONFIG.MECHANISM.DIAGRAM_IMAGE, '800x400', 'Mechanism');
+        
+        const umpLabel = document.querySelector('.ump-box .mechanism__box-label');
+        if (umpLabel) umpLabel.textContent = CONFIG.MECHANISM.UMP.LABEL;
+        
+        const umpText = document.querySelector('.ump-box .mechanism__box-text');
+        if (umpText) umpText.innerHTML = CONFIG.MECHANISM.UMP.TEXT;
+        
+        const umsLabel = document.querySelector('.ums-box .mechanism__box-label');
+        if (umsLabel) umsLabel.textContent = r(CONFIG.MECHANISM.UMS.LABEL);
+        
+        const umsText = document.querySelector('.ums-box .mechanism__box-text');
+        if (umsText) umsText.innerHTML = r(CONFIG.MECHANISM.UMS.TEXT);
+        
+        // Ingredients accordion
+        const ingredientsContainer = document.querySelector('.ingredient-accordion');
+        if (ingredientsContainer) {
+            ingredientsContainer.innerHTML = CONFIG.MECHANISM.INGREDIENTS.map(ing => `
+                <details>
+                    <summary>
+                        <div class="ing-header">
+                            <span class="ing-name">${ing.NAME}</span>
+                            <span class="ing-benefit">${ing.BENEFIT}</span>
+                        </div>
+                    </summary>
+                    <div class="ing-content">
+                        <p>${ing.DESCRIPTION}</p>
+                        <p><span class="ing-stat">${ing.STAT}</span></p>
+                    </div>
+                </details>
+            `).join('');
+        }
+        
+        const mechanismTransition = document.querySelector('.mechanism__transition');
+        if (mechanismTransition) mechanismTransition.innerHTML = CONFIG.MECHANISM.TRANSITION;
+        
+        const noClaims = document.querySelector('.mechanism__no-claims');
+        if (noClaims) {
+            noClaims.innerHTML = CONFIG.MECHANISM.NO_CLAIMS.map(c => `<span>⊘ ${c.replace(/^NO /, '<strong>NO</strong> ')}</span>`).join('<span>•</span>');
+        }
+        
+        // ============ TESTIMONIALS (Section 9A) ============
+        const testimonialsTitle = document.querySelector('.testimonials__title');
+        if (testimonialsTitle) testimonialsTitle.innerHTML = h(CONFIG.TESTIMONIALS.TITLE);
+        
+        const testimonialsSubtitle = document.querySelector('.testimonials__subtitle');
+        if (testimonialsSubtitle) testimonialsSubtitle.textContent = CONFIG.TESTIMONIALS.SUBTITLE;
+        
+        // Review card renderer — shared by 9A and 9B
+        const renderReviewCard = (rev) => {
+            const imgVal = (rev.IMAGE || '').trim();
+            let imageHtml;
+            if (imgVal === '' || imgVal === 'database') {
+                imageHtml = '<div class="testimonial-card__placeholder">📷 Customer photo — use from database</div>';
+            } else if (imgVal === 'gemini') {
+                imageHtml = '<div class="testimonial-card__placeholder" style="background: var(--theme-primary-light);">🎬 Generate with Gemini API</div>';
+            } else {
+                imageHtml = `<img src="${imgVal}" loading="lazy" alt="Customer review" class="testimonial-card__image">`;
+            }
+            return `
+                <div class="testimonial-card">
+                    ${imageHtml}
+                    <div class="testimonial-card__body">
+                        <p class="testimonial-card__name">${rev.NAME}</p>
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">"${rev.TEXT}"</p>
+                    </div>
+                </div>
+            `;
+        };
+        
+        const testimonialsGrid = document.querySelector('.testimonials__grid');
+        if (testimonialsGrid && CONFIG.TESTIMONIALS.REVIEWS_A) {
+            testimonialsGrid.innerHTML = CONFIG.TESTIMONIALS.REVIEWS_A.map(renderReviewCard).join('');
+        }
+        
+        // ============ TESTIMONIALS (Section 9B — after pricing) ============
+        const testimonialsBTitle = document.querySelector('.testimonials-b__title');
+        if (testimonialsBTitle) testimonialsBTitle.innerHTML = h(CONFIG.TESTIMONIALS.TITLE_B);
+        
+        const testimonialsBGrid = document.querySelector('.testimonials-b__grid');
+        if (testimonialsBGrid && CONFIG.TESTIMONIALS.REVIEWS_B) {
+            testimonialsBGrid.innerHTML = CONFIG.TESTIMONIALS.REVIEWS_B.map(renderReviewCard).join('');
+        }
+        
+        // ============ ALTERNATIVES ============
+        const alternativesTitle = document.querySelector('.alternatives__title');
+        if (alternativesTitle) alternativesTitle.innerHTML = h(CONFIG.ALTERNATIVES.TITLE);
+        
+        const alternativesSubtitle = document.querySelector('.alternatives__subtitle');
+        if (alternativesSubtitle) alternativesSubtitle.textContent = CONFIG.ALTERNATIVES.SUBTITLE;
+        
+        const alternativesImage = document.querySelector('.alternatives__image');
+        if (alternativesImage) alternativesImage.src = img(CONFIG.ALTERNATIVES.DIAGRAM_IMAGE, '800x400', 'Comparison');
+        
+        const alternativesList = document.querySelector('.alternatives__list');
+        if (alternativesList) {
+            alternativesList.innerHTML = CONFIG.ALTERNATIVES.ITEMS.map(item => `
+                <div class="alternative-item">
+                    <span class="alternative-item__icon">✕</span>
+                    <div class="alternative-item__content">
+                        <p style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">${item.NAME}</p>
+                        <p>${item.TEXT}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        const solutionHeadline = document.querySelector('.alternatives__solution h3');
+        if (solutionHeadline) solutionHeadline.textContent = `${brand}™ Is Different`;
+        
+        const solutionText = document.querySelector('.alternatives__solution p');
+        if (solutionText) solutionText.innerHTML = CONFIG.ALTERNATIVES.SOLUTION_TEXT;
+        
+        // ============ TIMELINE ============
+        const timelineTitle = document.querySelector('.timeline__title');
+        if (timelineTitle) timelineTitle.innerHTML = h(CONFIG.TIMELINE.TITLE);
+        
+        const timelineGrid = document.querySelector('.timeline__grid');
+        if (timelineGrid) {
+            timelineGrid.innerHTML = CONFIG.TIMELINE.PHASES.map(phase => `
+                <div class="timeline-phase">
+                    <div class="timeline-phase__period">${phase.PERIOD}</div>
+                    <h3 class="timeline-phase__title">${phase.NAME}</h3>
+                    <p class="timeline-phase__description">${phase.TEXT}</p>
+                </div>
+            `).join('');
+        }
+        
+        // ============ PRICING (Bundle Selector) ============
+        const pricingTitle = document.querySelector('.pricing__title');
+        if (pricingTitle) pricingTitle.innerHTML = h(CONFIG.PRICING.TITLE);
+        
+        // Bundle selector widget — reads from OFFER_SETTINGS
+        (function() {
+            const OS = OFFER_SETTINGS;
+            const cs = SETTINGS_CURRENCY;
+            function fmt(amount) {
+                const num = amount.toFixed(2).replace('.', cs.decimal);
+                return cs.position === 'before' ? cs.symbol + num : num + cs.symbol;
+            }
+            
+            const bundleTags = ["Starter Pack", "Most Popular", "Best Value"];
+            
+            function calcDiscount(original, sale) {
+                return Math.round(((original - sale) / original) * 100);
+            }
+            
+            function calcGiftValue(tier) {
+                return OS.gifts.filter(g => g.unlocksAtBundle <= tier).reduce((sum, g) => sum + g.value, 0);
+            }
+            
+            const maxDiscount = Math.max(...OS.bundles.map(b => calcDiscount(b.originalPrice, b.salePrice)));
+            
+            function generateBundlesHTML() {
+                return OS.bundles.map((bundle, index) => {
+                    const tier = index + 1;
+                    const savings = bundle.originalPrice - bundle.salePrice;
+                    const discount = calcDiscount(bundle.originalPrice, bundle.salePrice);
+                    const giftValue = calcGiftValue(tier);
+                    
+                    const hasDesc = bundle.description && bundle.description.trim() !== '';
+                    const descHTML = hasDesc ? `<div class="du-supply-duration">(${bundle.description})</div>` : '';
+                    const noDescClass = hasDesc ? '' : ' no-description';
+                    
+                    const imageHTML = bundle.image 
+                        ? `<div class="du-product-image"><img src="${bundle.image}" alt="${bundle.name}"></div>`
+                        : `<div class="du-product-image-placeholder">Product Image<br><span style="font-size:7px;opacity:0.7">TRANSPARENT BG</span></div>`;
+                    
+                    return `
+                        <div class="du-product-option" data-tier="${tier}" 
+                             data-price="${bundle.salePrice}" data-original="${bundle.originalPrice}" 
+                             data-savings="${savings.toFixed(2)}" data-gifts="${giftValue.toFixed(2)}" 
+                             data-url="${bundle.checkoutUrl}">
+                            <div class="du-benefit-tag">${bundleTags[index]}</div>
+                            <div class="du-option-content">
+                                <div class="du-checkbox-wrapper"><div class="du-checkbox"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div></div>
+                                ${imageHTML}
+                                <div class="du-product-info${noDescClass}">
+                                    <div class="du-offer-name">${bundle.name}</div>
+                                    ${descHTML}
+                                </div>
+                                <div class="du-pricing-block">
+                                    <div class="du-original-price">${fmt(bundle.originalPrice)}</div>
+                                    <div class="du-discount-percent">${discount}% OFF</div>
+                                    <div class="du-per-unit-price">${bundle.perUnitPrice}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+            
+            function generateGiftsHTML() {
+                if (!OS.gifts || OS.gifts.length === 0) return '';
+                return OS.gifts.map(gift => {
+                    const imageHTML = gift.image
+                        ? `<div class="du-gift-image"><img src="${gift.image}" alt="${gift.name}"></div>`
+                        : `<div class="du-gift-image-placeholder">Gift image</div>`;
+                    return `
+                        <div class="du-free-gift locked" data-unlock="${gift.unlocksAtBundle}">
+                            <div class="du-gift-box">
+                                <div class="du-gift-badge">FREE <span class="du-strike-price">${fmt(gift.value)}</span></div>
+                                <div class="du-gift-stamp">FREE</div>
+                                ${imageHTML}
+                            </div>
+                            <div class="du-gift-name">${gift.name}</div>
+                        </div>
+                    `;
+                }).join('');
+            }
+            
+            const giftsRowHTML = generateGiftsHTML();
+            const giftsSection = giftsRowHTML ? `<div class="du-free-gifts-section"><div class="du-free-gifts-row">${giftsRowHTML}</div></div>` : '';
+            
+            const bundleRoot = document.getElementById('du-bundle-root');
+            if (bundleRoot) {
+                bundleRoot.innerHTML = `
+                    <div class="du-bundle-wrapper">
+                        <div class="du-product-options">${generateBundlesHTML()}</div>
+                        ${giftsSection}
+                    </div>
+                    <div class="du-sticky-cta" id="du-sticky-cta">
+                        <div class="du-sticky-inner">
+                            <div class="du-sticky-savings-row">
+                                <div class="du-sticky-countdown">
+                                    <span class="du-sticky-countdown-icon">⏰</span>
+                                    <span class="du-sticky-countdown-text">Offer ends:</span>
+                                    <span class="du-sticky-countdown-time" id="du-countdown">0:00:00</span>
+                                </div>
+                                <div class="du-sticky-savings-right">
+                                    <span class="du-sticky-you-saved">Total Saved</span>
+                                    <span class="du-sticky-savings-amount" id="du-sticky-savings">-${cs.symbol}0.00</span>
+                                </div>
+                            </div>
+                            <div class="du-sticky-action-row">
+                                <div class="du-sticky-price-block">
+                                    <div class="original" id="du-sticky-original">${cs.symbol}0.00</div>
+                                    <div class="price" id="du-sticky-price">${cs.symbol}0.00</div>
+                                </div>
+                                <a href="#" class="du-btn-checkout" id="du-checkout-btn">Order Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                // Interactive functionality
+                const duOptions = document.querySelectorAll('.du-product-option');
+                const duGifts = document.querySelectorAll('.du-free-gift');
+                const duCheckoutBtn = document.getElementById('du-checkout-btn');
+                const duStickyCta = document.getElementById('du-sticky-cta');
+                const duStickyPrice = document.getElementById('du-sticky-price');
+                const duStickyOriginal = document.getElementById('du-sticky-original');
+                const duStickySavings = document.getElementById('du-sticky-savings');
+                const duCountdownEl = document.getElementById('du-countdown');
+                const duWrapper = document.querySelector('.du-bundle-wrapper');
+                
+                let duHasSelected = false;
+                let duOfferVisible = true;
+                
+                // Countdown
+                const duEnd = new Date();
+                if (OS.countdown && OS.countdown.mode === 'fixed') {
+                    duEnd.setTime(Date.now() + (OS.countdown.fixedMinutes || 30) * 60 * 1000);
+                } else {
+                    duEnd.setHours(24, 0, 0, 0);
+                }
+                function duUpdateCountdown() {
+                    const diff = Math.max(0, duEnd - Date.now());
+                    const h = Math.floor(diff / 3600000);
+                    const m = Math.floor((diff % 3600000) / 60000);
+                    const s = Math.floor((diff % 60000) / 1000);
+                    duCountdownEl.textContent = `${h}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+                }
+                duUpdateCountdown();
+                setInterval(duUpdateCountdown, 1000);
+                
+                // Sticky visibility — shows when AT the bundle widget
+                const duObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        duOfferVisible = entry.isIntersecting;
+                        duStickyCta.classList.toggle('visible', duHasSelected && duOfferVisible);
+                    });
+                }, { threshold: 0 });
+                duObserver.observe(duWrapper);
+                
+                // Bundle selection — updates checkout URL on the <a> tag
+                duOptions.forEach(option => {
+                    option.addEventListener('click', function() {
+                        duOptions.forEach(o => o.classList.remove('selected'));
+                        this.classList.add('selected');
+                        const tier = parseInt(this.dataset.tier);
+                        const price = parseFloat(this.dataset.price);
+                        const original = parseFloat(this.dataset.original);
+                        const prodSave = parseFloat(this.dataset.savings);
+                        const giftSave = parseFloat(this.dataset.gifts);
+                        duCheckoutBtn.href = this.dataset.url;
+                        duStickyPrice.textContent = fmt(price);
+                        duStickyOriginal.textContent = fmt(original);
+                        duStickySavings.textContent = '-' + fmt(prodSave + giftSave);
+                        duHasSelected = true;
+                        if (duOfferVisible) duStickyCta.classList.add('visible');
+                        duGifts.forEach(gift => {
+                            const unlock = parseInt(gift.dataset.unlock);
+                            gift.classList.toggle('locked', unlock > tier);
+                            gift.classList.toggle('unlocked', unlock <= tier);
+                        });
+                    });
+                });
+                
+                // Auto-select second bundle (Most Popular)
+                const duDefault = duOptions[1] || duOptions[0];
+                if (duDefault) duDefault.click();
+            }
+        })();
+        
+        // ============ GUARANTEE ============
+        const guaranteeTitle = document.querySelector('.guarantee__title');
+        if (guaranteeTitle) guaranteeTitle.textContent = `Our 90-Day "${CONFIG.GUARANTEE.NAME}" Guarantee`;
+        
+        const guaranteeText = document.querySelector('.guarantee__text');
+        if (guaranteeText) guaranteeText.innerHTML = `Try ${brand}™ for a <strong>full 90 days</strong>. If you don't feel a <strong>real difference</strong>, simply contact us for a <strong>full refund</strong>. No questions. No hassle.`;
+        
+        // ============ FAQ ============
+        const faqTitle = document.querySelector('.faq__title');
+        if (faqTitle) faqTitle.innerHTML = h(CONFIG.FAQ.TITLE);
+        
+        const faqList = document.querySelector('.faq__list');
+        if (faqList) {
+            faqList.innerHTML = CONFIG.FAQ.ITEMS.map(item => `
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        ${item.Q}
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>${r(item.A)}</p>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Re-attach FAQ accordion
+            faqList.querySelectorAll('.faq-item__question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.parentElement;
+                    const isActive = faqItem.classList.contains('active');
+                    // Close all
+                    faqList.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+                    // Open clicked if wasn't active
+                    if (!isActive) faqItem.classList.add('active');
+                    // Update icon
+                    faqList.querySelectorAll('.faq-item__icon').forEach(icon => icon.textContent = '+');
+                    if (!isActive) button.querySelector('.faq-item__icon').textContent = '−';
+                });
+            });
+        }
+        
+        // ============ MISS (Two Paths) ============
+        const missTitle = document.querySelector('.miss__title');
+        if (missTitle) missTitle.innerHTML = h(CONFIG.MISS.TITLE);
+        
+        const missWithoutLabel = document.querySelector('.miss__without-label');
+        if (missWithoutLabel) missWithoutLabel.textContent = `WITHOUT ${brand}™`;
+        
+        const missWithLabel = document.querySelector('.miss__with-label');
+        if (missWithLabel) missWithLabel.textContent = `WITH ${brand}™`;
+        
+        const missWithoutImage = document.querySelector('.miss__without-image');
+        if (missWithoutImage) missWithoutImage.src = img(CONFIG.MISS.WITHOUT_IMAGE, '400x400', 'Without');
+        
+        const missWithImage = document.querySelector('.miss__with-image');
+        if (missWithImage) missWithImage.src = img(CONFIG.MISS.WITH_IMAGE, '400x400', 'With');
+        
+        const missWithoutList = document.querySelector('.miss__without-list');
+        if (missWithoutList) missWithoutList.innerHTML = CONFIG.MISS.WITHOUT.map(i => `<li>${i}</li>`).join('');
+        
+        const missWithList = document.querySelector('.miss__with-list');
+        if (missWithList) missWithList.innerHTML = CONFIG.MISS.WITH.map(i => `<li>${i}</li>`).join('');
+        
+        const missClosing = document.querySelector('.miss__closing');
+        if (missClosing) missClosing.textContent = CONFIG.MISS.CLOSING;
+        
+        const missCta = document.querySelector('.miss__cta-button');
+        if (missCta) missCta.textContent = `Get ${brand}™ Now — ${CONFIG.URGENCY.DISCOUNT_PERCENT}% Off →`;
+        
+        // ============ FINAL CTA ============
+        const finalTitle = document.querySelector('.final-cta__title');
+        if (finalTitle) finalTitle.innerHTML = h(CONFIG.FINAL_CTA.TITLE);
+        
+        const finalSubtitle = document.querySelector('.final-cta__subtitle');
+        if (finalSubtitle) finalSubtitle.textContent = CONFIG.FINAL_CTA.SUBTITLE;
+        
+        const finalCtaBtn = document.querySelector('.final-cta__button');
+        if (finalCtaBtn) finalCtaBtn.textContent = `Get ${brand}™ Now — ${CONFIG.URGENCY.DISCOUNT_PERCENT}% Off →`;
+        
+        const finalTrust = document.querySelector('.final-cta__trust');
+        if (finalTrust) finalTrust.textContent = CONFIG.FINAL_CTA.TRUST_LINE;
+        
+        // ============ STICKY CTA ============
+        const stickyCta = document.querySelector('.sticky-cta__button');
+        if (stickyCta) stickyCta.textContent = `Try ${brand}™ Risk-Free — ${CONFIG.URGENCY.DISCOUNT_PERCENT}% Off →`;
+        
+        // ============ FOOTER ============
+        const footerCopyright = document.querySelector('.footer__copyright');
+        if (footerCopyright) {
+            footerCopyright.innerHTML = `© ${new Date().getFullYear()} ${brand}™. All Rights Reserved. | 
+                <span style="color: #9ca3af;">Privacy Policy</span> | 
+                <span style="color: #9ca3af;">Terms of Service</span> | 
+                <span style="color: #9ca3af;">Contact Us</span>`;
+        }
+        
+        // ============ SMOOTH SCROLL TO PRICING ============
+        document.querySelectorAll('a[href="#pricing"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.getElementById('pricing');
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+        
+        if (window.location.hash === '#pricing') {
+            const target = document.getElementById('pricing');
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+    </script>
+
+</body>
+</html>
