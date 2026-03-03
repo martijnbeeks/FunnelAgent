@@ -70,7 +70,7 @@ If `output/{run_name}/` already exists (previous run for same product), that's f
 
 ## SUB-AGENT DELEGATION PATTERN
 
-For all sub-steps, use the **Task tool** with `subagent_type: "general-purpose"` and `mode: "bypassPermissions"`. Each sub-agent gets:
+For all sub-steps, use the **Task tool** with `subagent_type: "general-purpose"`, `mode: "bypassPermissions"`, and `model: "sonnet"`. Each sub-agent gets:
 
 1. A clear description of which step to execute
 2. Instructions to read the relevant SKILL.md file first (which itself points to the SOP)
@@ -83,6 +83,7 @@ For all sub-steps, use the **Task tool** with `subagent_type: "general-purpose"`
 Use the Task tool with:
   subagent_type: "general-purpose"
   mode: "bypassPermissions"
+  model: "sonnet"
   prompt: "You are executing [STEP NAME] of the FunnelAgent pipeline.
 
     FIRST: Read the skill file at skills/[skill-name]/SKILL.md — it contains your complete instructions, including which SOP to load.

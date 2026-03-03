@@ -11,8 +11,7 @@ You execute Steps 5.2 and 5.3 of the FunnelAgent pipeline: generating image prom
 
 - `output/05a_sales_page_config.js` — The sales page CONFIG
 - `output/02b_synthesis_phase2.md` — Strategic intelligence brief
-- `output/sales_page.html` — The assembled sales page
-- **Product image** — The product photo (e.g., `{RUN_DIR}/product_image.png` or user-provided path). Required for Hero A, Hero C, mechanism diagram, alternatives diagram, and review product-in-use images.
+- **Product image** — The product photo (e.g., `{RUN_DIR}/product_image.png` or user-provided path). Required for Hero A, Hero B, Hero C, mechanism diagram, alternatives diagram, and review product-in-use images.
 - `GEMINI_API_KEY` must be set in `.env` or environment
 - Python 3.8+ with `google-genai`, `python-dotenv`, and `Pillow` packages installed
 
@@ -37,14 +36,19 @@ output/02b_synthesis_phase2.md
 
 ### 1c. Execute Image Prompt Generation
 
-Follow the SOP exactly. The sales page has more image types than the advertorial:
-- Hero image
-- Agitation image
-- Doctor portrait
-- Mechanism diagram
-- Before/After comparison images (WITHOUT vs WITH)
-- Review card images (follow the distribution: database + Gemini API + AI-generated per section)
-- Alternative comparison diagram
+Follow the SOP exactly. The sales page requires **11 images** (generate 2 variations of every image and pick the best):
+
+- **3 Hero images** (for A/B testing):
+  - Hero A: The First Morning (product on counter)
+  - Hero B: Split Before/After (product as small overlay)
+  - Hero C: Person + Guarantee Badge (product held in hand)
+- Agitation image (pain recognition moment)
+- Doctor portrait (authority figure)
+- Mechanism diagram (UMP→UMS, 16:9)
+- Alternatives diagram (comparison/discredit, 16:9)
+- Two Paths: WITHOUT image (pain state)
+- Two Paths: WITH image (transformation)
+- 2 Review AI images (1 product-in-use + 1 outcome)
 
 Generate prompts for each AI-generated image as specified by the SOP.
 
@@ -63,9 +67,9 @@ Save all generated image prompts to `output/05b_image_prompts_sales_page.md`.
 
 | Image | Product? | Use `--reference-image`? |
 |-------|----------|--------------------------|
-| Hero A: First Morning | **YES** (15%) | **Yes** |
-| Hero B: Reclaimed | NO | No |
-| Hero C: Believer | **YES** (25-30%) | **Yes** |
+| Hero A: First Morning | **YES** (natural placement) | **Yes** |
+| Hero B: Split Before/After | **YES** (overlay) | **Yes** |
+| Hero C: Person + Guarantee Badge | **YES** (in hand, 25-35%) | **Yes** |
 | Agitation | NO | No |
 | Doctor | NO | No |
 | Mechanism diagram | **YES** (name/icon) | **Yes** |
@@ -77,7 +81,7 @@ Save all generated image prompts to `output/05b_image_prompts_sales_page.md`.
 
 Then launch **all** generation commands simultaneously using parallel Bash tool calls (one per image):
 
-**For images WITHOUT product (Hero B, Agitation, Doctor, Without, Review Outcome):**
+**For images WITHOUT product (Agitation, Doctor, Without, Review Outcome):**
 ```bash
 python scripts/generate_image.py \
   --prompt-file output/sales_page_images/_prompt_<image_name>.txt \
@@ -85,7 +89,7 @@ python scripts/generate_image.py \
   --aspect-ratio <ratio_from_sop>
 ```
 
-**For images WITH product (Hero A, Hero C, Mechanism, Alternatives, Review Product-In-Use) — include `--reference-image`:**
+**For images WITH product (Hero A, Hero B, Hero C, Mechanism, Alternatives, Review Product-In-Use) — include `--reference-image`:**
 ```bash
 python scripts/generate_image.py \
   --prompt-file output/sales_page_images/_prompt_<image_name>.txt \
@@ -116,7 +120,9 @@ If CDN URLs were captured in step 1f:
 1. Read `{RUN_DIR}/05a_sales_page_config.js`
 2. Read `{RUN_DIR}/cdn_urls.json`
 3. Replace image values with their CDN URLs:
-   - `HERO.IMAGE` — hero image
+   - `HERO.IMAGE` — hero image A
+   - `HERO.IMAGE_B` — hero image B (split before/after)
+   - `HERO.IMAGE_C` — hero image C (person + guarantee badge)
    - `AGITATION.IMAGE` — agitation section image
    - `DOCTOR.IMAGE` — doctor portrait
    - `MECHANISM.DIAGRAM_IMAGE` — mechanism diagram

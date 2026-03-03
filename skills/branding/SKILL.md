@@ -10,7 +10,6 @@ You execute Step 3 of the FunnelAgent pipeline: creating the brand identity — 
 ## PREREQUISITES
 
 - `output/00_product_info.md` — Product information
-- `output/01_market_research.md` — Raw research data
 - `output/02b_synthesis_phase2.md` — Complete strategic intelligence brief
 - `GEMINI_API_KEY` must be set in `.env` or environment
 - Python 3.8+ with `google-genai` and `python-dotenv` packages installed
@@ -29,7 +28,6 @@ skill_content/PROMPT 3_0_ Brand Name Generation.md
 Read:
 ```
 output/00_product_info.md
-output/01_market_research.md
 output/02b_synthesis_phase2.md
 ```
 

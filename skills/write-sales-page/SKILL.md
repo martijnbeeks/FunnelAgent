@@ -9,7 +9,6 @@ You execute Step 5.1 of the FunnelAgent pipeline: writing the complete sales pag
 
 ## PREREQUISITES
 
-- `output/01_market_research.md` — Raw research data
 - `output/02b_synthesis_phase2.md` — Complete strategic intelligence brief
 - `output/03a_brand_names.md` — Selected brand name
 - `output/03c_color_vars.md` — CSS color variables
@@ -25,20 +24,19 @@ skill_content/PROMPT 5_1_ Sales Page Copywriting SOP.md
 
 This file contains the ENTIRE sales page framework — all page sections, the CONFIG structure, the writing rules, the review card format, the pricing bundle structure, and the output checklist. You MUST read it in full and follow it exactly.
 
-## STEP 2: LOAD THE HTML TEMPLATE
+## STEP 2: LOAD THE CONFIG SCHEMA
 
-Read the HTML template to understand the CONFIG structure it expects:
+Read the CONFIG schema reference to understand the CONFIG + OFFER_SETTINGS + PRODUCT_COLORS structure:
 ```
-templates/sales_page.html
+templates/sales_page_config_schema.md
 ```
 
-Pay attention to the CONFIG object structure in the `<script>` tag and all HTML sections (hero, agitation, doctor, mechanism, testimonials, alternatives, timeline, pricing, FAQ, miss, final CTA).
+This contains all CONFIG keys, types, theme options, and currency presets. Do NOT read the full HTML template here — you only need the template in Step 9 for assembly.
 
 ## STEP 3: LOAD ALL INPUT DATA
 
 Read all source documents:
 ```
-output/01_market_research.md
 output/02b_synthesis_phase2.md
 output/03a_brand_names.md
 output/04a_advertorial_config.js

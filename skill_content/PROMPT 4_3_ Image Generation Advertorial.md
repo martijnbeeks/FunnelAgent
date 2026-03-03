@@ -1,539 +1,1339 @@
-**AI ADVERTORIAL IMAGE PROMPT GENERATION SOP** 
+# ADVERTORIAL IMAGE SOP: Complete Visual Strategy
 
-FOR CLAUDE PROJECT USE NANO BANANA PRO EDITION v4.0 
+## OVERVIEW
 
-**AVATAR IDENTIFICATION ANALYSIS** 
+This SOP generates emotionally resonant images for EVERY section of advertorial copy. The advertorial is 2,100-3,600 words — walls of text are death on mobile. Every section gets visual support.
 
-**BEFORE generating any image prompts, analyze the Strategic Synthesis document to extract:** 
+**The Mix:** Emotional photographs + Mechanism diagrams + Comparison visuals + Product infographics
 
-1\. AVATAR PHYSICAL DESCRIPTION 
+**Outputs:** IMAGE-PROMPTS for 8-10 images per advertorial
 
-Identify the exact physical characteristics of the target customer avatar: 
+**Inputs Required:** Strategic Intelligence Brief + Completed Advertorial Copy + **Product image (user must provide — see Product Image Rule below)**
 
-● Age range 
+---
 
-● Gender 
+# PART 1: THE COMPLETE IMAGE MAP
 
-● Ethnicity/nationality 
+## Every Section Gets Visual Support
 
-● Physical appearance details mentioned in research 
+| Section | Content | Image Type | Visual Style |
+| :---- | :---- | :---- | :---- |
+| **HERO** | After headline | Recognition Portrait | Emotional photograph |
+| **Section 0** | Hook/Lead | Wound Moment | Emotional photograph |
+| **Section 1** | Education/UMP | Problem Mechanism | **DIAGRAM — anatomical attack** |
+| **Section 2** | Discredit | Failed Solutions | **DIAGRAM — comparison** |
+| **Section 3** | Mechanism/UMS | Solution Mechanism | **DIAGRAM — how it works** |
+| **Section 4** | Product | Product + Benefits | **INFOGRAPHIC — ingredients** |
+| **Section 5** | FAQ | Credibility | Expert portrait OR skip |
+| **Section 6** | Transformation | Identity Reclaimed | Emotional photograph (action) |
+| **Section 7** | Offer | Product Shot | **CLEAN PRODUCT PHOTO — USER PROVIDES** |
 
-● Any specific physical traits that define this demographic 
+**Total: 8-10 images** (mix of photos + diagrams + infographics)
 
-This becomes the foundation for the NARRATOR CHARACTER description. 2\. CURRENT IDENTITY (WHO THEY ARE NOW) 
+---
 
-Identify how the avatar currently defines themselves \- their painful present-state identity: 
+## The Visual Mix Explained
 
-● What role are they stuck in? (e.g., "the tired one," "the sick one," "the weak one") ● How do they introduce themselves in relation to this problem? 
+| Type | Sections | Purpose | Tool |
+| :---- | :---- | :---- | :---- |
+| **Emotional Portraits** | Hero, S0, S6 | Feel the pain/transformation | Gemini API |
+| **Mechanism Diagrams** | S1, S3 | Understand problem/solution | Gemini API |
+| **Comparison Diagrams** | S2 | See why other solutions fail | Gemini API |
+| **Product Infographics** | S4 | Trust the instrument | Gemini API |
 
-● What identity label do they fear being defined by? 
+---
 
-● Who have they become that they hate? 
+## Why This Works
 
-This defines the EMOTIONAL STATE in all PROBLEM-ONLY and BEFORE-STATE images. 3\. DESIRED IDENTITY (WHO THEY WANT TO BECOME) 
+**Mobile Reality:** 70%+ traffic is mobile. A 3,000-word article with 2 images is a wall of grey text. With 7-9 images, every scroll reveals something new.
 
-Identify the identity the avatar craves \- their aspirational self-image: 
+**Visual Variety:** Alternating between emotional photographs and educational diagrams keeps attention fresh. The reader never knows what's coming next.
 
-● What role do they want to embody? (e.g., "the energetic grandmother," "the capable protector," "the vibrant participant") 
+**Diagram Power:** Mechanism sections (UMP/UMS) are ABSTRACT. Diagrams make them CONCRETE. "Inflammation attacking your joints" is words. A diagram showing red invaders destroying cartilage is VISCERAL.
 
-● How do they want to be seen by others?  
-● What identity would they be proud to claim? 
+---
 
-● Who is the version of themselves they're fighting to become? 
+# PART 2: RESEARCH EXTRACTION
 
-This defines the EMOTIONAL STATE in all AFTER-STATE and OUTCOME images. IDENTIFICATION PRINCIPLE 
+## 2.1 Demographics for Images
 
-We're not just solving a problem \- we're helping them **become someone**. 
+Target Market: [UK, Netherlands, Israel, Germany, etc.]
 
-The product is the bridge between their current identity (painful) and their desired identity (aspirational). 
+Primary Gender: [e.g., 70% female]
 
-**All images must communicate identity transformation, not just symptom relief.** 
+Age Range: [e.g., 55-75, sweet spot 62]
 
-**PROBLEM images show**: The identity they're trapped in and desperate to escape **OUTCOME images show**: The identity they're fighting to become and reclaim **TRANSFORMATION images show**: The journey from one identity to the other 
+Ethnicity: [Match target — British, Dutch, Israeli, German]
 
-Extract these identities from the Strategic Synthesis before creating any character descriptions or image prompts. 
+Appearance: [e.g., "natural grey hair, warm complexion, soft features"]
 
-**POST-GENERATION QUALITY CHECK** 
+Clothing Style: [e.g., "practical British casual — soft jumpers, comfortable trousers"]
 
-**Complete immediately after writing each image prompt** 
+## 2.2 Cultural Context
 
-**SECTION: \[Headline\]** 
+Home Settings: [British cottage kitchen, Dutch apartment, Israeli balcony]
 
-**Image Type:** ☐ People (Identity) ☐ Diagram (Mechanism) 
+Outdoor Settings: [English garden path, Dutch park bench, Mediterranean terrace]
 
-**SCORING (Required for each image)** 
+Family Markers: [Grandchildren's drawings on fridge, family photos, dog lead by door]
 
-**1\. BIG IDEA TEST** \_\_\_/10 Does this prompt create an image that communicates the headline's core message at first glance? 
+Activities: [Morning tea ritual, garden tending, dog walking]
 
-● 1-3: Confusing. Requires reading to understand. 
+## 2.3 Emotional Triggers
 
-● 4-6: Somewhat related. Takes mental effort to connect. 
+PRIMARY FEAR (for Hero + Wound images):
 
-● 7-8: Clear connection. Message understood immediately. 
+[e.g., "Becoming invisible to my family — present but not participating"]
 
-● 9-10: INSTANT. Image IS the idea. No confusion possible.  
-**Why this score:** 
+SECONDARY FEARS:
 
-**2\. SCROLL TEST** \_\_\_/10 Would this image stop someone mid-scroll on Facebook at 11pm when they're half-asleep? 
+1. [e.g., "Being a burden to my children"]
 
-● 1-3: Invisible. Generic. Forgettable. 
+2. [e.g., "Missing my grandchildren growing up"]
 
-● 4-6: Might pause. Won't feel anything. 
+3. [e.g., "Losing my independence"]
 
-● 7-8: Stops the scroll. Creates curiosity. 
+PRIMARY DESIRE (for Transformation images):
 
-● 9-10: Impossible to look away. Visceral reaction. 
+[e.g., "Being the grandmother who gets on the floor to play"]
 
-**Why this score:** 
+IDENTITY PRISON (who they were forced to become):
 
-**3A. IDENTITY TEST (People images only)** \_\_\_/10 Does the viewer see THEMSELVES or WHO THEY WANT TO BECOME? 
+[e.g., "The fragile one. The one who needs help. The one they plan around."]
 
-**Current Identity (Before/Pain State):** 
+IDENTITY RESTORATION (who they reclaim):
 
-● Is this a moment they've LIVED? 
+[e.g., "The capable one. The adventurous one. The one they call for fun."]
 
-● Does it show their specific fear from research? 
+## 2.4 Mechanism Visuals
 
-● Would they think "How do they know? That's EXACTLY what it's like"? 
+UMP (Unique Mechanism of Problem):
 
-**Desired Identity (After/Aspiration State):** 
+[e.g., "Chronic inflammation destroying joints from inside"]
 
-● Is this who they desperately want to be? 
+Visual Translation: [e.g., "Red armies attacking cartilage, healthy tissue retreating"]
 
-● Does it show the specific transformation they crave? 
+Anatomy: [e.g., "Knee joint cross-section"]
 
-● Can they visualize themselves in this exact moment? 
+UMS (Unique Mechanism of Solution):
 
-**Why this score:** 
+[e.g., "Blocking inflammatory cascade at the source"]
 
-**4\. EMOTION TEST (People images only)** \_\_\_/10 What emotion does this create? Rate intensity. 
+Visual Translation: [e.g., "Golden shield protecting healthy tissue, attackers blocked"]
 
-● Gut-punch recognition? 
+Key Ingredients: [e.g., "Curcumin, Boswellia, Collagen Type II"]
 
-● Chest-tightening fear? 
+---
 
-● Anger at the injustice? 
+# PART 3: TOOL SELECTION
 
-● Desperate hope? 
+All images are generated via the Gemini API through `scripts/generate_image.py`. The SOP uses descriptive style labels to indicate the visual approach for each image type:
 
-● Yearning for that life? 
+| Style Label | Strength | Use For |
+| :---- | :---- | :---- |
+| **Photorealistic Portrait** | Static portraits, editorial, emotional scenes | Hero, Wound, Transformation |
+| **Medical Illustration** | Anatomical, diagrams, infographics | UMP Diagram, Comparison, UMS Diagram, Infographic |
+| **Cinematic Action** | Motion, action, dynamic movement | Hero (aspiration type), Transformation (action) |
 
-● Or... nothing? 
+**Decision Rule:** Active movement needed? → Cinematic action style. Diagram/mechanism? → Medical illustration. Everything else → Photorealistic portrait.
 
-**Primary Emotion Created:** 
+---
 
-**Why this score:** 
+## Visual Standards (ALL Images)
 
-**5\. SPECIFICITY TEST** \_\_\_/10 Is this a SPECIFIC moment or a generic concept?  
-● Generic: "Person looking sad" 
+- **NO TEXT** except: Stat badges, diagram labels, infographic text
+- **Eyes:** Natural only — "soft blue," "warm brown" — NEVER "bright/piercing/vivid"
+- **Expressions:** Dignified emotion — NOT theatrical pain or fake smiles
+- **Demographics:** EXACT match to research
+- **Settings:** CULTURALLY APPROPRIATE to target market
+- **Format:** 16:9 for ALL images EXCEPT Section 7 (Product Shot) which is 1:1
+- **Diagram Labels:** In TARGET LANGUAGE
 
-● Specific: "5:47am, sitting on bed edge, gathering courage for first steps" 
+---
 
-**Why this score:** 
+## TEXT IN IMAGES — MOBILE + 50+ READABILITY RULES
 
-**6\. TECHNICAL EXECUTION (People images only)** \_\_\_/10 
+**These rules are NON-NEGOTIABLE. Our audience is 50+ reading on mobile phones.**
 
-● Expression: Authentic or theatrical? 
+**Diagrams & Infographics (the ONLY images that get text):**
 
-● Eyes: Natural or AI-oversaturated? 
+- **Maximum 30 words total** per image — if you need more, the diagram is too complex, make it a bit more simple
+- **Maximum 9 labels** per diagram — force yourself to pick the 9 that matter
+- **Minimum font size: 48pt equivalent** — if you have to squint on desktop, it's invisible on mobile
+- **Label length: 1–5 words each** — "Inflammation" not "Chronic systemic inflammatory response"
+- **High contrast ONLY** — white text on dark, dark text on light, NO mid-tones, NO text on busy backgrounds
+- **Sans-serif fonts only** — no serifs, no scripts, no decorative fonts
 
-● Lighting: Does it serve the emotion? 
+**The Thumb Test:** View every image at 375px wide (iPhone screen). If ANY text requires zooming to read, it fails. Redesign.
 
-● Composition: Does it draw the eye to the right place? 
+**The Arm's Length Test:** If a 65-year-old can't read every label holding their phone at natural distance — it fails.
 
-● Demographics: Match our target audience from research? 
+**If the diagram needs more than 30 words to make sense, the diagram design is wrong — simplify the visual so it speaks WITHOUT text.**
 
-**Issues identified:** 
+---
 
-**7\. UMP ALIGNMENT** \_\_\_/10 Does this image SET UP our unique mechanism/solution from the research? 
+## PRODUCT IMAGE RULE
 
-● Does the pain/benefit shown connect to what our product specifically solves? ● Will the viewer's problem (as shown) lead naturally to our UMP? 
+**The user MUST provide a real product image/photo.** AI-generated product shots look fake. Sections that require actual product visuals (S4 Infographic, S7 Product Shot) depend on the user supplying a real product photo.
 
-● Does it create the RIGHT kind of desire/pain that our mechanism addresses? **Our UMP:** \[State the unique mechanism\] 
+**When generating image prompts:** If S4 or S7 requires a product image, clearly mark it with:
 
-**Why this score:** 
+**USER ACTION REQUIRED:** Provide your actual product photo for this image. Do NOT generate the product — use the real product image supplied by the client.
 
-**OVERALL RATING** 
+**If no product image has been provided**, flag it at the top of the output:
 
-**TOTAL SCORE:** \_\_\_/70 
+**MISSING INPUT: Product image not provided. S4 (Infographic) and S7 (Product Shot) cannot be completed without a real product photo. Please supply before finalising.**
 
-**DECISION:** 
+---
 
-● ☐ 60-70: APPROVED. Ship it. 
+# PART 4: HERO IMAGE (16:9)
 
-● ☐ 50-59: STRONG. Minor tweaks only. 
+## Always Output 3 Versions
 
-● ☐ 40-49: NEEDS WORK. Fundamental issues. 
+1. **Recognition Hero** — Hits deepest fear (RECOMMENDED for cold traffic)
+2. **Transformation Hero** — Shows mechanism/proof (good for retargeting)
+3. **Aspiration Hero** — Shows desire achieved (A/B test for solution-aware)
 
-● ☐ Below 40: SCRAP. Start over. 
+---
 
-**TECHNICAL CHECKLIST** 
+## HERO TYPE 1: Recognition Heroes
 
-☐ **Character Consistent?** VERBATIM character description included (for people images) ☐ **Style Correct?** Style A: Semirealistic illustration or Style B: Photo Realistic / Realistic photography  
-(profiles) 
+**Style:** Photorealistic Portrait | **Format:** 16:9
 
-☐ **Identity Clear?** Current painful identity OR desired identity explicitly shown ☐ **Emotion Specified?** Facial expression/emotional state written in prompt ☐ **Specific Moment?** Exact situation described (not generic) 
+| Primary Fear | Concept | The Gut-Punch |
+| :---- | :---- | :---- |
+| Missing moments | **1A: Missed Moment** | POV from armchair — grandchildren reaching up |
+| Being a burden | **1B: The Look** | Daughter's exhausted face, forcing a smile |
+| Losing independence | **1C: The Pause** | Bottom of stairs, looking UP |
+| Being left out | **1D: The Window** | Hands on glass, watching life outside |
+| Fear of decline | **1E: The Shadow** | Mobility walker in corner — your FUTURE |
+| Family isolation | **1F: Empty Chair** | Family dinner, one chair empty |
 
-☐ **No Text Clause?** "no text, no labels, no words, no letters, do not generate any text in the image" ☐ **Aspect Ratio?** 16:9 (advertorial) / 1:1 (profiles) 
+### 1A: THE MISSED MOMENT
 
-**FINAL APPROVAL:** 
+Photorealistic POV image. 16:9 format.
 
-● ☐ Score 60+ AND all technical boxes checked \= APPROVED, proceed to next image ● ☐ Score below 60 OR missing technical elements \= REVISE NOW before continuing 
+CAMERA: First-person POV looking DOWN from seated position in armchair.
 
-�� ABSOLUTE NO TEXT RULE APPLIES TO ALL IMAGES �� **CRITICAL: NO TEXT IN ANY IMAGES WHATSOEVER** 
+FOREGROUND: Your own hands — [AGE]-appropriate, [ETHNICITY] skin tone — GRIPPING armrest. Knuckles showing tension. Wedding ring visible.
 
-❌ NO text labels   
-❌ NO words   
-❌ NO letters   
-❌ NO numbers   
-❌ NO product names written in the image   
-❌ NO diagram labels   
-❌ NO captions   
-❌ NO written language of any kind 
+THE FLOOR: [CULTURALLY APPROPRIATE — British carpet, Dutch hardwood]. Grandchildren's toys scattered. Building blocks. Picture book open.
 
-**Every single prompt must end with:**   
-`"no text, no labels, no words, no letters, do not generate any text in the image"` This applies to ALL images without exception. 
+THE CHILDREN: Two grandchildren on floor, looking UP at camera. Arms REACHING. Faces hopeful. "Come play with us."
 
-**CRITICAL RULES** 
+THE GAP: 3 feet between you and everything that matters.
 
-**RULE 1: CHARACTER CONSISTENCY (PEOPLE IMAGES) CRITICAL ALL** 
+LIGHTING: Warm golden light on children. Cooler where you are. The warmth doesn't reach you.
 
-**people's images must show THE EXACT SAME PERSON throughout the entire advertorial.** This is nonnegotiable. 
+EMOTION: Make viewer's hands ACHE with need to let go.
 
-This includes split transformation images they show the SAME person on both sides (problem state vs outcome state), NOT different people. 
+No text. No product.
 
-**CHARACTER REQUIREMENTS:**   
-● Must match the NARRATOR described in the advertorial (age, gender, ethnicity)   
-● Must be the EXACT SAME CHARACTER in every people image  
-● IDENTICAL features in every prompt: exact same hair color, exact same hair length/style, exact same face shape, exact same body type, exact same eye color, exact same skin tone 
+### 1B: THE LOOK
 
-**MECHANISM DIAGRAM GUIDELINES** 
+Photorealistic image. 16:9 format.
 
-CORE PURPOSE 
+COMPOSITION: Over-shoulder shot. Back of [DEMOGRAPHIC]'s head (grey hair, bowed) in soft focus foreground.
 
-**Show the mechanism in action at the cellular level** 
+THE FACE: Adult daughter, 40-45, [ETHNICITY]. SHARP FOCUS.
 
-● Zoom into WHERE the problem happens in the body   
-● Show WHAT is broken or depleted   
-● Show HOW the solution fixes it at the root cause 
+HER EXPRESSION:
 
-KEEP IT SIMPLE 
+- Smile: Present. Forced. A mask.
+- Eyes: EXHAUSTED. Dark circles hidden with makeup.
+- Jaw: Tight. Holding back.
+- Truth: Terrified. For you. You're the CAUSE.
 
-● Show only what's needed to explain the mechanism   
-● Use split-screen for problem vs solution   
-● Simple visual metaphors (batteries \= energy, arrows \= flow) 
+SETTING: [CULTURALLY APPROPRIATE kitchen]. Normal backdrop to private devastation.
 
-COLOR SYSTEM 
+LIGHTING: Flat, honest. Lighting of difficult conversations.
 
-**Problem Side:** 
+EMOTION: Worst pain isn't your body. It's knowing you put that look on your child's face.
 
-● Gray, muted blues, darker tones   
-● Red X marks for damage   
-● Dim, depleted look 
+No text. No product.
 
-**Solution Side:** 
+### 1C: THE PAUSE
 
-● Warm golden yellows, soft oranges   
-● Green checkmarks for health   
-● Bright, glowing elements 
+Photorealistic image. 16:9 format.
 
-VISUAL ELEMENTS 
+SUBJECT: [DEMOGRAPHIC] standing at BOTTOM of staircase.
 
-● Golden arrows for positive flow   
-● Red X for blocked pathways   
-● Simple checkmarks (✓) and X marks   
-● Glowing effects for "active/healthy"   
-● Battery icons for energy levels 
+THE STAIRS: 12-14 steps. Normal stairs that LOOM.
 
-FORMAT 
+BODY LANGUAGE:
 
-● Side-by-side split screens   
-● Left \= Problem (cool, dark)   
-● Right \= Solution (warm, bright)   
-● Same angle/position on both sides 
+- Hand on banister — resting, preparing
+- Weight shifted, testing
+- Head tilted UP, measuring
+- Micro-hesitation before what used to be NOTHING
 
-DETAIL LEVEL 
+EXPRESSION: Not pain. DETERMINATION. Quiet daily courage. Natural [eye color].
 
-● Cellular cross-section or close-up view   
-● Simplified anatomy only   
-● Focus on one mechanism   
-● Avoid medical textbook complexity  
-● Use soft internal glow for solution states 
+SETTING: [CULTURALLY APPROPRIATE hallway]. Family photos going up stairs.
 
-**NUMERIC ELIMINATION RULE** 
+LIGHTING: Light from above. Destination bright. Bottom in shadows.
 
-Add this section after "MECHANISM DIAGRAM GUIDELINES": 
+EMOTION: Everyone with this problem knows this EXACT moment.
 
-�� NO NUMBERS OR MEASUREMENTS IN PROMPTS 
+No text. No product.
 
-**AI will render any numbers in your prompt as visible text in the image.** 
+### 1D: THE WINDOW
 
-BANNED FROM ALL PROMPTS: 
+Photorealistic image. 16:9 format.
 
-❌ Dosages: 1000 IU, 500mg, 10000 IU ❌ Blood levels: 15 ng/mL, 50 ng/mL, 80% ❌ Ages: 50 years old, age 70 ❌ Times/dates: 10:00 AM, 2024 ❌ ANY numeric values whatsoever 
+SUBJECT: [DEMOGRAPHIC] standing at large window. Profile view.
 
-USE INSTEAD: 
+THE GLASS: Dominates image. A barrier. Prison of transparency.
 
-✅ "low dose" not "500mg" ✅ "therapeutic dose" not "5000 IU"   
-✅ "deficient zone" not "15 ng/mL" ✅ "optimal range" not "50 ng/mL" ✅ "barely moved" not "increased 2 points" ✅ "surged dramatically" not "rose from 15 to 50" 
+INSIDE: Darker, muted. Chair they spend too much time in visible.
 
-VISUAL METAPHORS ONLY: 
+OUTSIDE (through window, VIBRANT):
 
-● Tank levels: "nearly empty" → "completely full"   
-● Battery: "severely drained" → "fully charged"   
-● Meters: "deficient red zone" → "optimal green zone"   
-● Flow: "tiny droplet" → "strong golden stream" 
+- Grandchildren playing in garden
+- OR: Neighbors walking together
+- World moving without them
 
-**BEFORE SUBMITTING EACH PROMPT:** Read it aloud. If you speak ANY number \= REWRITE 
+BODY LANGUAGE: Hands FLAT against glass. Leaning toward life.
 
-**MASTER STYLE DESCRIPTIONS** 
+EXPRESSION: Wistful. Hungry. Grief of watching life without you. Natural [eye color].
 
-Create **TWO** master style descriptions at the start of every project. The user chooses which one to use (default \= Style A). 
+LIGHTING: Dark interior, bright exterior. Contrast IS the story.
 
-**STYLE A: SEMIREALISTIC ILLUSTRATION** 
+No text. No product.
 
-STYLE A: Semirealistic illustration with warm painterly aesthetic, clearly illustrated not photographic, soft impressionistic brushwork with atmospheric quality, warm golden color palette with rich saturation especially in hopeful scenes, gentle edge work with natural blending, lifelike proportions while maintaining artistic interpretation, premium editorial illustration quality similar to high-end lifestyle magazine artwork, emphasis on emotional warmth through lighting, clearly hand-painted appearance with romantic artistic rendering, NOT cartoon, NOT photorealistic, maintains emotional authenticity through expressive illustration medium, backgrounds softer and more atmospheric than foreground subjects 
+### 1E: THE SHADOW
 
-**STYLE B: PHOTOREALISTIC RENDER (DEFAULT)**   
-STYLE B: Photorealistic: A photorealistic render aims to replicate exactly what a professional camera would capture in real life. The  
-viewer should not question whether it’s a photo. Skin has natural imperfections. Light behaves realistically. Materials reflect and absorb light correctly. Nothing looks painted or stylized. 
+Photorealistic image. 16:9 format.
 
-It relies on: 
+COMPOSITION: [DEMOGRAPHIC] foreground, in focus. THE THING in background, unmistakable.
 
-● Physically accurate lighting 
+THE THING: Mobility walker. Clean, new. "Gift" from family. NOT YET.
 
-● Real-world textures 
+SUBJECT: Seated or standing, turned toward it. Can't stop looking.
 
-● Proper anatomical proportions 
+EXPRESSION — layers:
 
-● Natural depth and perspective 
+- Defiance: "Not yet. Not me."
+- Fear: "But maybe soon."
+- Determination: "I won't let this happen."
+- Despair: "Will I have a choice?"
 
-● Subtle imperfections (which increase believability) 
+Natural [eye color].
 
-If someone zooms in, it still looks real. 
+SETTING: [CULTURALLY APPROPRIATE living room]. Otherwise LIVED IN.
 
-**RULE 3: SKIPPED SECTIONS** 
+LIGHTING: Walker slightly shadowed — lurking. Waiting.
 
-The following sections do NOT get image prompts: 
+No text. No product.
 
-⏭️ Review sections   
-⏭️ Testimonial sections 
+### 1F: THE EMPTY CHAIR
 
-**RULE 4: ASPECT RATIOS** 
+Photorealistic image. 16:9 format.
 
-**ALL advertorial images: 16:9 aspect ratio** 
+COMPOSITION: Family dinner scene, elevated angle.
 
-**RULE 5: LIGHTING AND SCENES (PEOPLE IMAGES)** 
+THE TABLE: [CULTURALLY APPROPRIATE meal]. 4-5 family members, multiple generations. Engaged. ALIVE.
 
-**PEOPLE IMAGES:** 
+THE FAMILY: Passing dishes. Laughing. Eye contact. Connection.
 
-● Use NORMAL, NATURAL lighting in all people images   
-● Scenes should be EVERYDAY, RELATABLE situations   
-● Avoid overly dramatic, cinematic, or stylized lighting   
-● The EMOTION should come from the FACIAL EXPRESSION, not from lighting effects   
-● Images maintains natural lighting quality 
+THE EMPTY CHAIR: One place at table. Chair pushed back. CONSPICUOUSLY empty.
 
-**Before/Problem side:** Normal scene \+ worried/distressed/sad facial expression   
-**After/Outcome side:** Normal scene \+ happy/joyful/content facial expression 
+THE SUBJECT:
 
-**RULE 6: NO CHILDREN IN PEOPLE IMAGES** 
+- OPTION A: Visible in doorway, watching but not joining
+- OPTION B: Not visible — empty chair IS them
 
-● Do NOT generate children in any prompts with people   
-● When depicting family scenes, show adult family members only   
-● For grandparent scenarios, describe interaction with "adult grandchildren" or "adult family members" ● If the advertorial specifically mentions grandchildren, depict them as young adults (18+) 
+LIGHTING: Warm over table. Cooler at edges. Empty chair where warmth fades.
 
-**IMAGE SEQUENCING STRATEGY** 
+EMOTION: Fear isn't dying alone. It's being alive and watching family learn to live without you.
 
-The advertorial follows a precise 9-section structure. Each section has specific image requirements that align with its persuasion  
-objective.   
-FIRST IDENTIFY THE GENDER OF THE NARRATOR IN THE TEXT, BY THEIR NAME, USE THAT GENDER AS THE PERSON IN THE PHOTOS 
+No text. No product.
 
-**SECTION-BY-SECTION IMAGE REQUIREMENTS** 
+---
 
-SECTION 1: THE HOOK \- INSTANT SYMPTOM RECOGNITION 
+## HERO TYPE 2: Transformation Heroes
 
-INSTRUCTION: 
+**Style:** Photorealistic / Medical Illustration | **Format:** 16:9
 
-Create a tight close-up image showing the PHYSICAL SYMPTOM the avatar sees/feels every day associated with the specific big idea of the advertorial 
+### 2A: SYMBOLIC METAPHOR (Brain, energy, mood)
 
-Not the medical condition name. The thing THEY notice. 
+Split image. 16:9 format. Clean gradient background.
 
-Based this image off the big idea of the 1st headline/subheadline 
+LEFT SIDE — THE PRISON:
 
-EXAMPLES: 
+Human head silhouette in profile.
 
-Don't always use these exact examples but use these to understand what the image should be 
+INSIDE: [Match research problem]
 
-BAD: "Vitamin D deficiency" GOOD: "Dark circles under exhausted-looking eyes, pale skin" BAD: "Poor circulation" GOOD: "Swollen puffy ankles with deep sock indentation marks" BAD: "Inflammation" GOOD: "Red painful-looking knee joint with hand gripping it" BAD: "Gum disease" GOOD: "Bleeding gums, blood visible on toothbrush bristles" BAD: "Psoriasis" GOOD: "Dry scaly flaking skin patches on elbows" BAD: "Brain fog" GOOD: "Person staring blankly at open pill organizer, confused expression, forgot if they took medication" BAD: "Brain fog" GOOD: "Close-up of hands holding car keys in front of car door, frozen confused look, can't remember why they came here" BAD: "Memory loss" GOOD: "Person standing in doorway of room, hand on doorframe, blank confused expression \- forgot why they walked in" BAD: "Memory loss" GOOD: "Close-up of hands scrolling through phone contacts list, frustrated expression, can't remember who they meant to call" BAD: "Poor circulation" GOOD: "Purple-blue tinted fingertips and nail beds, hands look cold" BAD: "Poor circulation" GOOD: "Feet with white pale toes, person rubbing them trying to warm up" BAD: "Varicose veins" GOOD: "Blue-purple bulging twisted veins visible on back of calf" BAD: "Incontinence" GOOD: "Person's hand discreetly checking back of pants/skirt, worried expression" BAD: "Incontinence" GOOD: "Person sitting on edge of chair, shifted forward uncomfortably, worried expression" BAD: "Weak bladder" GOOD: "Woman's face mid-sneeze with hand pressed to lower abdomen, panicked expression" BAD: "Age spots" GOOD: "Close-up of hands with dark brown spots, comparing to younger person's hands" BAD: "Wrinkles" GOOD: "Person's fingers pulling at deep lines around eyes while looking in mirror" BAD: "Dry aging skin" GOOD: "Close-up of face showing flaky dry patches, person applying cream" BAD: "Eczema" GOOD: "Red irritated itchy-looking patches on inner elbow, scratch marks visible" BAD: "Yellow teeth" GOOD: "Close-up of smile showing yellow-stained teeth next to white reference" BAD: "Teeth staining" GOOD: "Person covering mouth while smiling, self-conscious about discolored teeth" BAD: "Joint stiffness" GOOD: "Hands struggling to open a jar lid, knuckles white from gripping, frustrated expression" BAD: "Arthritis" GOOD: "Gnarled fingers with swollen knuckles trying to button a shirt" BAD: "Weak grip" GOOD: "Hands dropping a coffee cup, liquid spilling" BAD: "Balance issues" GOOD: "Hand gripping stair railing tightly, feet positioned carefully on step" BAD: "Vertigo" GOOD: "Person's hand pressed against wall for stability, other hand on forehead, dizzy expression" BAD: "Hearing loss" GOOD: "Person leaning forward cupping ear with hand, confused squinting expression" BAD: "Tinnitus" GOOD: "Close-up of person's face pressing palm against ear, pained frustrated expression" BAD: "Bloating" GOOD: "Person's hands trying to button tight waistband that won't close, bloated stomach visible" BAD: "Digestive issues" GOOD: "Person's hand on distended uncomfortable-looking belly, grimacing" BAD: "Acid reflux" GOOD: "Person's hand pressed to chest, pained expression, glass of water nearby" BAD: "Night sweats" GOOD: "Drenched pillow and sheets with sweat stains, exhausted person sitting up" BAD: "Hot flashes" GOOD: "Woman fanning herself with hand, flushed red face, beads of sweat visible" BAD: "Restless legs" GOOD: "Close-up of legs under covers, feet moving restlessly, person's frustrated face in background" BAD: "Insomnia" GOOD: "Bedside clock showing 3:47 AM, wide-awake exhausted eyes staring at ceiling" BAD: "Hair thinning" GOOD: "Handful of hair in shower drain, person's worried hand collecting it" BAD: "Hair loss" GOOD: "Wide part line on scalp showing thinning hair, person examining in mirror" BAD: "Fatigue" GOOD: "Close-up of person's face falling asleep at desk, coffee cup in hand, mid-afternoon" BAD: "Low energy" GOOD: "Person sitting on couch edge, head in hands, untouched to-do list on table" BAD: "Muscle weakness" GOOD: "Grocery bags slipping from hands, person struggling to hold them" BAD: "Shortness of breath" GOOD: "Person stopped on stairs, hand on chest, breathing heavily, others walking past normally" BAD: "Dry mouth" GOOD: "Person's tongue running over dry cracked lips, water bottle in hand" BAD: "Brittle nails" GOOD: "Close-up of broken jagged fingernails, person filing them down" BAD: "Cold sensitivity" GOOD: "Person wearing sweater indoors, arms wrapped around self, others in t-shirts in background" BAD: "Numb feet" GOOD: "Person pressing fingers into foot checking for sensation, concerned expression" BAD: "Cramps" GOOD: "Close-up of calf muscle visibly tight and contracted, person grimacing reaching to massage it" BAD: "Shaky hands" GOOD: "Close-up of trembling hands trying to thread a needle or sign a document" 
+- Fog → Dense grey fog, suffocating
+- Exhaustion → Dim, flickering lightbulb
+- Memory → Scattered puzzle pieces
+- No energy → Drained battery, cracked
 
-FORMULA: \[TIGHT CLOSE-UP of BODY PART\] showing \[THE VISIBLE SYMPTOM THEY SEE IN THE MIRROR/FEEL  
-DAILY\] Read the Strategic Synthesis. Find the symptom they complain about, check for, or hide from others. Show that. 
+Muted greys, heavy.
 
-**3\. DISCREDIT OTHER SOLUTIONS: PROBLEM ONLY** 
+RIGHT SIDE — THE FREEDOM:
 
-● **Job**: Capture the frustration with other solutions   
-● **Image Type**: **PROBLEM-ONLY people image**   
-● **Character**: **Character**: Same narrator showing the negative emotion tied to the problem, representing the current painful identity of the reader 
+SAME silhouette.
 
-**● Product:** Do not display the product   
-● **Notes:** NO text, NO before and after text 
+INSIDE: [Match desire]
 
-**4\. INTRODUCE THE UNIQUE MECHANISM: MECHANISM DIAGRAM** 
+- Clarity → Golden neural network, electricity flowing
+- Energy → Radiant sun, beams extending
+- Memory → Completed puzzle, glowing
+- Vitality → Fully charged battery, radiating
 
-● **Job**: Visually show the mechanism   
-● **Image Type**: **SOLUTION MECHANISM DIAGRAM**   
-● **Visual Elements**: Green healthy zones, bright clean atmosphere, restoration visible   
-● **Note**: NO people, NO product visible yet (mechanism only, NO text, NO before and after text 
+Vibrant gold, ALIVE.
 
-**5\. SPLIT TRANSFORMATION** 
+TRANSITION: Clean line between sides.
 
-● **Job**: Show the transformation   
-● **Image Type**: **SPLIT TRANSFORMATION people image**   
-● **Character**: Same narrator in both before and after scene   
-● **Left Side**: BEFORE STATE showing the negative emotion tied to the problem in the previous state, representing the current painful identity of the reader. 
+ZERO TEXT. No product.
 
-● **Right Side**: AFTER STATE showing the positive emotion tied to the outcome, representing the identity the reader desires to have 
+### 2B: ANATOMICAL CROSS-SECTION (Joints, arteries)
 
-**● Product:** Do not Display the product   
-● **Notes:** NO text, NO before and after text 
+Split image. 16:9 format. Dark medical background.
 
-**6\. FAQ / OBJECTION HANDLING: MECHANISM DIAGRAM** 
+LEFT SIDE — THE DAMAGE:
 
-● **Job**: Visually show the problem mechanism   
-● **Image Type**: **MECHANISM DIAGRAM (Problem or Solution)**   
-● cheaper alternatives" objections: SPLIT COMPARISON MECHANISM DIAGRAM showing difference **● Product:** Display the product EXACTLY as uploaded as an overlay 
+Medical illustration of [ANATOMY]:
 
-● **Notes:** NO text, NO before and after text 
+- Joint: Cartilage rough, inflamed, eroded. RED inflammation.
+- Artery: Yellow plaque CHOKING passage.
 
-**7\. YOUR TRANSFORMATION (IDENTIFICATION OUTCOME): SPLIT TRANSFORMATION** 
+Sickly yellows, angry reds, bruise purples.
 
-● **Job**: Show the transformation WITH the product   
-● **Image Type**: **SPLIT TRANSFORMATION people image**   
-● **Character**: Same narrator in both before and after scene   
-● **Left Side**: BEFORE STATE showing the negative emotion tied to the problem in the previous state, representing the current painful identity of the reader. 
+RIGHT SIDE — THE RESTORATION:
 
-● **Right Side**: AFTER STATE showing the positive emotion tied to the outcome, representing the identity the reader desires to have 
+SAME anatomy:
 
-● **Critical**: NO ARROWS between sides, SAME character both sides   
-**● Product:** Display the product EXACTLY as uploaded as an overlay   
-● **Notes:** NO text, NO before and after text 
+- Joint: Smooth cartilage, healthy cushion. Blue/gold glow.
+- Artery: Clear passage, smooth flow.
 
-**8\. THE OFFER: OUTCOME STATE IMAGE**   
-● **Job**: Show the outcome WITH the product   
-● **Job**: Make saying "no" feel irrational   
-● **Image Type**: **OUTCOME STATE people image**   
-● **Character**: Same narrator living their desired identity and outcome   
-● **Emotion**: Joy, confidence, vitality – the aspirational end state   
-**● Product:** Display the product EXACTLY as uploaded as an overlay   
-● **Notes:** NO text, NO before and after text 
+Healthy pinks, vibrant blues, golden energy.
 
-**9\. TWO PATHS FORWARD: SPLIT TRANSFORMATION**  
-● **Job**: Show the transformation WITH the product   
-● **Image Type**: **SPLIT TRANSFORMATION people image**   
-● **Character**: Same narrator in both before and after scene   
-● **Left Side**: BEFORE STATE showing the negative emotion tied to the problem in the previous state, representing the current painful identity of the reader. 
+STYLE: Medical illustration — realistic but EMOTIONAL.
 
-● **Right Side**: AFTER STATE showing the positive emotion tied to the outcome, representing the identity the reader desires to have 
+ZERO TEXT. No product.
 
-● **Critical**: NO ARROWS between sides, SAME character both sides   
-**● Product:** Display the product EXACTLY as uploaded as an overlay   
-● **Notes:** NO text, NO before and after text 
+### 2C: REAL SYMPTOM BEFORE/AFTER
 
-**PROFILE PHOTO GENERATION** 
+Split image. 16:9 format.
 
-**NARRATOR PROFILE PHOTO (GENERATE 1x)** 
+LEFT — THE STRUGGLE:
 
-Generate a realistic portrait photograph of the narrator as a professional headshot 
+[DEMOGRAPHIC] in difficulty:
 
-**Requirements**: 
+- Hands pressing armrests, trying to stand
+- Sitting on bed edge, dreading first steps
 
-● Use the EXACT SAME character description as all advertorial people images   
-● Realistic portrait photography style (NOT illustration)   
-● 1:1 square aspect ratio   
-● Looking at camera with confident, professional expression 
+Expression: Dignified struggle.
 
-**EXPERT PROFILE PHOTOS (GENERATE 2x)** 
+Desaturated tones.
 
-Generate realistic portrait photographs for each expert quoted in the advertorial. 
+RIGHT — THE FREEDOM:
 
-**Requirements**: 
+SAME person, SAME setting:
 
-● Age 45-65 years old   
-● Realistic portrait photography style (NOT illustration)   
-● 1:1 square aspect ratio   
-● Looking at camera with confident, professional expression 
+- Rising easily, natural movement
+- Standing with ease
 
-**CRITICAL SEQUENCING RULES** 
+Expression: Simple contentment.
 
-1\. **The Hook (Section 1\)** \= ALWAYS problem-only people image   
-2\. **Education/Logic (Section 2\)** \= ALWAYS problem reverse cascade diagram   
-3\. **Discredit Solutions (Section 3\)** \= ALWAYS problem-only people image   
-4\. **Introduce Mechanism (Section 4\)** \= ALWAYS solution mechanism diagram (NO product yet)   
-5\. **Introduce Product (Section 5\)** \= ALWAYS split transformation OR product mechanism diagram 6\. **FAQ/Objections (Section 6\)** \= ALWAYS mechanism diagram addressing objection 
+Warmer tones.
 
-7\. **Your Transformation (Section 7\)** \= ALWAYS split transformation (identity focus)   
-8\. **The Offer (Section 8\)** \= ALWAYS outcome state image (aspiration only)   
-9\. **Two Paths (Section 9\)** \= ALWAYS split transformation (final contrast)  
-**OUTPUT FORMAT** 
+ZERO TEXT. No product.
 
-ADVERTORIAL IMAGE PROMPT GENERATION 
+---
 
-████████████████████████████████████████████████████████████████ ██ PRODUCT OVERLAY INSTRUCTION 
+## HERO TYPE 3: Aspiration Heroes
 
-██████████████████████████████████████████████████████████████████ 
+**Style:** Cinematic Action (Photorealistic) | **Format:** 16:9
 
-Display the uploaded product bottle EXACTLY ONCE as a photorealistic overlay positioned in \[LOCATION\], sized at \[SIZE\] of image width, maintaining the product's original photographic quality as a real product photo composited over the scene, no product duplicates **CRITICAL: Claude NEVER describes product appearance (bottle shape, label, colors, cap). Only Gemini API sees the uploaded product photo. Upload the same product photo to Gemini API every time.** LOCATION & SIZE BY IMAGE TYPE: Split Transformations: bottom center on dividing line / 25% Outcome States: bottom right corner / 18% Mechanism Diagrams: bottom right corner / 15% 
+### 3A: LIVING THE DESIRE
 
-████████████████████████████████████████████████████████████████ ██ IMAGE STYLE 
+Cinematic photograph. 16:9 format. MOTION visible.
 
-████████████████████████████████████████████████████████████████ SELECTED STYLE: \[A or B\] (A Default) 
+SUBJECT: [DEMOGRAPHIC] in FLUID MOVEMENT during [PRIMARY DESIRE]:
 
-\[PASTE THE COMPLETE STYLE DESCRIPTION HERE\] 
+- Playing on floor with grandchildren — DOWN there, MOVING
+- Walking the dog — STRIDING, not shuffling
+- Tending garden — kneeling, hands in soil
+- Dancing with spouse — spontaneous kitchen dance
 
-████████████████████████████████████████████████████████████████ ██ NARRATOR CHARACTER 
+MOVEMENT: Effortless. Natural. Body that WORKS.
 
-████████████████████████████████████████████████████████████████ 
+EXPRESSION: Genuine joy. Happiness of CAPABILITY restored. Natural [eye color].
 
-FIRST IDENTIFY THE GENDER OF THE NARRATOR IN THE TEXT, BY THEIR NAME, USE THAT GENDER AS THE PERSON IN THE PHOTOS 
+SETTING: [CULTURALLY APPROPRIATE]. Where desire lives.
 
-\[Age\] year old \[ethnicity\] \[gender\], \[EXACT hair color\] \[EXACT hair length and style\], \[EXACT eye color\], \[EXACT face shape with specific features\], \[EXACT skin description\], fit very attractive \[EXACT body type\], \[additional defining features\] 
+LIGHTING: Warm, natural, ALIVE.
 
-EXAMPLE:   
-68 year old Scandinavian woman, warm honey blonde shoulderlength hair with soft waves, bright blue eyes, oval face with high cheekbones and defined jawline, fair skin with light tan and minimal wrinkles for her age, fit very attractive slender athletic build, elegant bone structure, naturally full lips, warm radiant smile 
+No text. No product.
 
-████████████████████████████████████████████████████████████████ **UNIVERSAL SPECIFICATIONS (Required for ALL images)** 
+---
 
-**Every single prompt must end with:** 
+# PART 5: SECTION 0 — WOUND IMAGE (16:9)
 
-16:9 aspect ratio, no text, no labels, no words, no letters, no numbers, no measurements, no values, no "before and after" text, do not generate any text or numbers in the image 
+**Purpose:** Visualize the PRIMARY DESIRE being STOLEN. This is NOT just pain — it's the emotional devastation of watching the life you want slip away. The wound image must make the reader feel the LOSS of their deepest desire in their chest.
 
-════════════════════════════════════════════════════════════════ SECTION NAME: "\[HEADLINE TEXT\]" 
+**Style:** Photorealistic Portrait | **Format:** 16:9
 
-\[�� NANO BANANA PRO 16:9 PEOPLE\] 
+## When to Use
 
-PROMPT:   
-\[PROMPT \[INCLUDE PASTED NARRATOR PROMPT IF THEY ARE SHOWN\] \[INCLUDE PASTED STYLE DESCRIPTION  
-\[UNIVERSAL SPECIFICATIONS\]\] 
+- Always use unless hero already shows same scenario
+- Choose concept that matches the PRIMARY DESIRE being denied — not just the symptom, but the LIFE being taken from them
 
-IMAGE SCORE: (Just the number score for each test, no explanation) 
+## The Core Principle
 
-════════════════════════════════════════════════════════════════ Image with product show: 
+**Every wound image answers one question: "What does it look like when your deepest desire is ripped away from you?"**
 
-SECTION NAME: "\[HEADLINE TEXT\]" 
+If the desire is playing with grandchildren → show the AGONY of being unable to reach them. If the desire is independence → show the HUMILIATION of needing help. If the desire is being the strong one → show the SHAME of being the weak one. If the desire is being active → show the GRIEF of watching your body betray you.
 
-\[�� NANO BANANA PRO 16:9 PEOPLE\] 
+This image must HIT HARDER than the hero. The hero shows the situation. The wound shows what it COSTS emotionally.
 
-���������� UPLOAD PHOTO OF PRODUCT ���������� 
+## Wound Concepts
 
-PROMPT:   
-\[PROMPT \[INCLUDE PASTED NARRATOR PROMPT IF THEY ARE SHOWN\] \[INCLUDE PASTED STYLE DESCRIPTION\] \[INCLUDE PASTED PRODUCT OVERLAY PROMPT\] \[UNIVERSAL SPECIFICATIONS\]\] 
+| Code | Name | Desire Denied | The Gut-Punch |
+| :---- | :---- | :---- | :---- |
+| W1 | The Stolen Moment | Being present with family | The desire is RIGHT THERE — close enough to touch, too far to reach. Grandchild calling, arms out, and you CAN'T. The grief of failing someone who loves you. |
+| W2 | The Private Collapse | Being strong/capable | The moment AFTER the brave face. Door closed. Mask off. The exhaustion of pretending you're fine when your body is screaming. Alone with the truth. |
+| W3 | The Death of Who You Were | Being active/doing what you love | The thing that MADE you who you are — abandoned. Garden overgrown. Walking boots gathering dust. Dance shoes in the back of the closet. You didn't quit. It was TAKEN. |
+| W4 | The Mask | Being happy/joyful | Smiling at a gathering while DYING inside. Everyone sees the performance. Nobody sees the pain behind it. The loneliness of suffering in public. |
+| W5 | The Impossible Choice | Freedom/spontaneity | Grandchild asks "come play?" and your first thought isn't joy — it's CALCULATION. How much will this cost me tomorrow? The cruelty of weighing love against pain. |
 
-IMAGE SCORE: (Just the number score for each test, no explanation) 
+### WOUND Prompt Template
 
-──────────────────────────────────────────────────────────────── \[Continue for all sections that need images...\] 
+Photorealistic image. 16:9 format.
 
-════════════════════════════════════════════════════════════════ GENERATION COMPLETE 
+THE DESIRE DENIED: [PRIMARY DESIRE from research — state it explicitly]
 
-════════════════════════════════════════════════════════════════ Total Prompts Generated: \[\] 
+THIS MOMENT SHOWS: [How that desire is being stolen — the specific emotional devastation]
 
-════════════════════════════════════════════════════════════════
+DEMOGRAPHIC: [From research — exact age, ethnicity, appearance]
+
+THE SCENE: [The private moment where desire meets reality — and reality wins]
+
+EXPRESSION: This is NOT subtle discomfort. This is:
+
+- The face AFTER the brave front drops
+- Eyes that show the WEIGHT of what's being lost
+- Grief that comes from watching yourself become someone you don't recognise
+- The specific pain of WANTING something your body won't let you have
+
+Natural [eye color]. Raw. Unguarded. Devastating.
+
+BODY LANGUAGE: Every part of them should communicate YEARNING — leaning toward what they can't have, hands reaching for what they can't hold, body betraying the desire the condition denies them.
+
+SETTING: [CULTURALLY APPROPRIATE space where the desire SHOULD be fulfilled — making the denial more cruel]
+
+LIGHTING: Harsh where they are. Warm where the desire lives. The light doesn't reach them.
+
+THE VIEWER SHOULD FEEL: A physical ache. Recognition. "That's ME." Not pity — IDENTIFICATION. This image should make someone who lives this reality stop scrolling because they've never seen their private pain shown so accurately.
+
+No text. No product.
+
+---
+
+# PART 6: SECTION 1 — UMP DIAGRAM (16:9)
+
+**Purpose:** Make the PROBLEM MECHANISM visible. Abstract becomes concrete.
+
+**Style:** Medical Illustration | **Format:** 16:9
+
+## This is NOT Optional
+
+Section 1 explains WHY they have the problem. A diagram showing the mechanism is worth 500 words of explanation.
+
+## Diagram Types
+
+| Type | Use When | Visual |
+| :---- | :---- | :---- |
+| **D1: Anatomical Attack** | Physical condition (joints, arteries, gut) | Cross-section showing damage in progress |
+| **D2: Process Diagram** | Cascade/chain reaction | Flow showing how problem develops |
+| **D3: Symbolic Attack** | Abstract problem (stress, fatigue) | Visual metaphor of what's being destroyed |
+
+### D1: ANATOMICAL ATTACK
+
+Medical illustration. 16:9 format. Dark background.
+
+ANATOMY: [Specific body part from UMP — joint, artery, gut, brain region]
+
+THE ATTACK VISIBLE:
+
+- Inflammation: RED markers, swelling, heat indicators
+- Damage: Eroded tissue, rough surfaces, breakdown
+- Progression: Arrows showing spread/worsening
+
+COLOR CODING:
+
+- Healthy tissue: Blues, healthy pinks
+- Damage: Angry reds, sick yellows
+- Attack vectors: Sharp red arrows
+
+LABELS (in [TARGET LANGUAGE]) — max 9 labels, each 1–5 words:
+
+- e.g., "Inflammation" → pointing to damage zone
+- e.g., "Eroded Cartilage" → pointing to breakdown
+- e.g., "Healthy Tissue" → pointing to comparison area
+
+Keep labels SHORT. Use the visual to do the heavy lifting, not words.
+
+TEXT FORMATTING:
+
+- 48pt minimum font size — must be readable at 375px width
+- Sans-serif font only
+- High contrast: white text on dark areas, dark text on light areas
+- No text on busy/detailed backgrounds
+
+STYLE: Medical textbook meets emotional impact. Viewer should feel VIOLATED.
+
+Professional but alarming.
+
+### D2: PROCESS DIAGRAM
+
+Process flow illustration. 16:9 format. Clean background.
+
+THE CASCADE (each step gets ONE label, 1–5 words max):
+
+Step 1: [Trigger] → e.g., "Oxidative Stress"
+
+Step 2: [Initial response] → e.g., "Inflammation Starts"
+
+Step 3: [Escalation] → e.g., "Tissue Breakdown"
+
+Step 4: [Damage] → e.g., "Chronic Damage"
+
+Step 5: [Symptoms they feel] → e.g., "Daily Pain"
+
+VISUAL FLOW:
+
+- Arrows connecting each stage
+- Each stage gets worse (colors darken, imagery intensifies)
+- Final stage shows the symptom they recognize
+- The VISUALS tell the story — labels just NAME each stage
+
+COLOR PROGRESSION:
+
+- Start: Neutral greys
+- Middle: Warning yellows/oranges
+- End: Angry reds, damage visible
+
+TEXT FORMATTING:
+
+- Max 9 labels total across entire image, each 1–5 words
+- 48pt minimum font size — readable at 375px width
+- Sans-serif font only
+- High contrast: white on dark, dark on light
+- Time indicators kept short if used: e.g., "Within Hours" not "Within just a few hours of the trigger"
+
+STYLE: Clean, educational, but ALARMING progression.
+
+### D3: SYMBOLIC ATTACK
+
+Symbolic illustration. 16:9 format.
+
+THE METAPHOR: [Match to abstract problem]
+
+- Energy drain → Battery being drained by dark tendrils
+- Mental fog → Clear head being clouded over
+- Vitality theft → Light being pulled from body
+- Stress damage → Pressure crushing/cracking
+
+VISUAL:
+
+- Clear "before" state (healthy, bright, intact)
+- Active destruction happening (not aftermath — IN PROGRESS)
+- Sense of urgency — this is happening NOW
+
+COLOR:
+
+- Healthy: Golds, vibrant blues, healthy pinks
+- Attacker: Dark, shadowy, consuming
+- Damage: Fading, draining, cracking
+
+EMOTION: Something precious being destroyed. Urgency to stop it.
+
+No text labels needed — visual is self-explanatory.
+
+---
+
+# PART 7: SECTION 2 — COMPARISON DIAGRAM (16:9)
+
+**Purpose:** Show WHY other solutions failed. Visual proof they weren't crazy — they were misled.
+
+**Style:** Medical Illustration | **Format:** 16:9
+
+## The Concept
+
+Section 2 discredits failed solutions. The diagram shows WHAT those solutions target vs WHAT actually causes the problem.
+
+### C1: TARGETING COMPARISON
+
+Comparison diagram. 16:9 format. Clean split or layered design.
+
+LAYOUT: Two-panel or overlay showing contrast
+
+LEFT/TOP — WHAT THEY TARGET (each failed solution gets ONE short label):
+
+- e.g., "Glucosamine" → arrow to "Cartilage" (wrong target)
+- e.g., "Painkillers" → arrow to "Pain Signals" (wrong target)
+- e.g., "Rest" → arrow to "Symptoms" (wrong target)
+
+RIGHT/BOTTOM — THE REAL CAUSE:
+
+- Root cause highlighted in angry red: e.g., "Inflammatory Cascade"
+- Dotted lines + X marks showing failed solutions MISSING this target
+- Visual makes it obvious: nothing above touches the real problem
+
+COLOR CODING:
+
+- Failed solutions: Greyed out, ineffective
+- Wrong targets: Faded, secondary
+- Real cause: Angry red, highlighted, ACTIVE
+- Miss indicators: Dotted lines, X marks
+
+LABELS (in [TARGET LANGUAGE]) — already compliant:
+
+- Each failed solution: 1–2 words (e.g., "Glucosamine", "Painkillers")
+- Each wrong target: 1–3 words (e.g., "Pain Signals")
+- Real cause: 1–5 words (e.g., "Inflammatory Cascade")
+- Miss markers: 1 word (e.g., "MISSED")
+- Max 9 labels total, max 30 words total across entire image
+
+TEXT FORMATTING:
+
+- 48pt minimum font size — readable at 375px width
+- Sans-serif font only
+- High contrast: white on dark, dark on light
+
+STYLE: Clear, damning comparison. Viewer should feel angry at wasted years/money.
+
+### C2: THE SHIELD GAP
+
+Diagram showing protection failure. 16:9 format.
+
+VISUAL CONCEPT:
+
+- Multiple failed solutions shown as weak/partial shields
+- Each shield has GAPS where the real problem gets through
+- Arrows showing problem bypassing each "solution"
+
+THE REAL PROBLEM:
+
+- Shown as attacker easily passing through all defenses
+- Reaching the target (their health) unimpeded
+
+THE MESSAGE:
+
+- Gap in every failed solution visible — the visual tells the story
+
+LABELS (in [TARGET LANGUAGE]) — already compliant:
+
+- Each shield labeled with failed solution name: 1–2 words (e.g., "Glucosamine", "Painkillers", "Rest")
+- Target labeled: 1 word (e.g., "Unprotected" or "Vulnerable")
+- Max 9 labels total, max 30 words total across entire image
+
+TEXT FORMATTING:
+
+- 48pt minimum font size — readable at 375px width
+- Sans-serif font only
+- High contrast: white on dark, dark on light
+
+EMOTION: Realization that they were never actually protected.
+
+---
+
+# PART 8: SECTION 3 — UMS DIAGRAM (16:9)
+
+**Purpose:** Show HOW the solution mechanism works. Hope made visible.
+
+**Style:** Medical Illustration | **Format:** 16:9
+
+## This is the TURN
+
+Section 3 is where despair becomes hope. The diagram shows the mechanism WORKING.
+
+### M1: THE SHIELD (Protection Mechanism)
+
+Medical illustration. 16:9 format.
+
+THE SCENE: [ANATOMY] being PROTECTED by the mechanism.
+
+VISUAL:
+
+- Golden/blue energy shield surrounding healthy tissue
+- Inflammatory attackers being BLOCKED, bouncing off
+- Healthy tissue thriving BEHIND protection
+- Clear contrast: chaos OUTSIDE, peace INSIDE
+
+COLOR:
+
+- Protection: Golden light, healthy blues
+- Attackers: Faded, weakened, held at bay
+- Protected tissue: Vibrant, healthy pinks
+
+LABELS (in [TARGET LANGUAGE]) — already compliant:
+
+- Key ingredient name: 1–3 words (e.g., "Curcumin Shield")
+- Attacker status: 1 word (e.g., "Blocked")
+- Tissue status: 1 word (e.g., "Protected")
+- Max 9 labels total, max 30 words total across entire image
+
+TEXT FORMATTING:
+
+- 48pt minimum font size — readable at 375px width
+- Sans-serif font only
+- High contrast: white on dark, dark on light
+
+EMOTION: RELIEF. Safety. The cavalry arrived.
+
+### M2: THE RESTORATION (Healing Mechanism)
+
+Medical illustration. 16:9 format.
+
+THE SCENE: [ANATOMY] being REBUILT.
+
+VISUAL:
+
+- Damaged tissue being replaced with healthy growth
+- Golden light spreading through damaged area
+- Inflammation retreating
+- Clear progression: damage → healing → restored
+
+STYLE: Timelapse feeling — transformation in progress.
+
+COLOR:
+
+- Healing: Golden glow, healthy pinks returning
+- Damage: Retreating, fading
+- New tissue: Vibrant, strong
+
+LABELS (in [TARGET LANGUAGE]) — already compliant:
+
+- Stage markers: 1 word each (e.g., "Before", "During", "After")
+- Key ingredient action: 1–3 words (e.g., "Collagen Rebuilds")
+- Max 9 labels total, max 30 words total across entire image
+
+TEXT FORMATTING:
+
+- 48pt minimum font size — readable at 375px width
+- Sans-serif font only
+- High contrast: white on dark, dark on light
+
+EMOTION: HOPE. Renewal. Body remembering how to be healthy.
+
+### M3: THE INTERRUPTION (Cascade Blocker)
+
+Process diagram. 16:9 format.
+
+THE CONCEPT: Same cascade from D2 (UMP diagram) but NOW INTERRUPTED.
+
+VISUAL:
+
+- Same process flow as problem diagram
+- But NOW: Intervention point clearly marked
+- Solution STOPS the cascade mid-flow
+- Downstream damage PREVENTED
+
+BEFORE INTERVENTION: Red, angry, progressing
+
+AFTER INTERVENTION: Calm, blue, stopped
+
+LABELS (in [TARGET LANGUAGE]) — already compliant:
+
+- Intervention point: 1–3 words (e.g., "[Product] Blocks")
+- Result markers: 1–2 words each (e.g., "Cascade Stopped", "Damage Prevented")
+- Max 9 labels total, max 30 words total across entire image
+
+TEXT FORMATTING:
+
+- 48pt minimum font size — readable at 375px width
+- Sans-serif font only
+- High contrast: white on dark, dark on light
+
+EMOTION: Control. Finally something that works at the SOURCE.
+
+---
+
+# PART 9: SECTION 4 — PRODUCT INFOGRAPHIC (16:9)
+
+**Purpose:** Show the product as the delivery system. Build trust through transparency.
+
+**Style:** Medical Illustration / Infographic | **Format:** 16:9
+
+### P1: INGREDIENTS INFOGRAPHIC
+
+Product infographic. 16:9 format.
+
+**USER ACTION REQUIRED:** Provide your actual product photo for this image. Do NOT generate the product — use the real product image supplied by the client.
+
+[PRODUCT NAME] bottle CENTER — realistic (30-40% frame height).
+
+BACKGROUND: Clean gradient appropriate to THEME:
+
+- Health: Soft greens to white
+- Medical: Clinical blue gradient
+- Beauty: Dusty rose to cream
+- Energy: Warm orange to white
+- Calm: Soft lavender to white
+
+INGREDIENTS — 3-4 key ingredients with icons radiating from bottle.
+
+Each ingredient gets ONE label of 1–5 words max:
+
+- e.g., "Curcumin — Fights Inflammation" + simple icon
+- e.g., "Boswellia — Joint Shield" + icon
+- e.g., "Collagen II — Rebuilds" + icon
+- e.g., "Vitamin D3 — Absorbs Calcium" + icon
+
+OPTIONAL CALLOUT (only if space allows within 30-word max):
+
+- e.g., "Clinically Studied" badge
+- e.g., "500mg Per Dose" badge
+
+Total text across entire image: max 30 words, max 9 labels, each 1–5 words.
+
+TEXT FORMATTING:
+
+- 48pt minimum font size — readable at 375px width
+- Sans-serif font only
+- High contrast: white on dark, dark on light
+- All text in [TARGET LANGUAGE]
+
+STYLE: Professional photography meets clean infographic. Premium aesthetic.
+
+---
+
+# PART 10: SECTION 5 — FAQ IMAGE (16:9)
+
+**Purpose:** Add credibility. Usually SKIP — text-heavy section.
+
+**Style:** Photorealistic Portrait | **Format:** 16:9
+
+## When to Include
+
+- Only if you have a strong expert quote to visualize
+- Or if section is unusually long and needs visual break
+
+### F1: EXPERT PORTRAIT (Optional)
+
+Professional portrait. 16:9 format.
+
+SUBJECT: [Expert type relevant to mechanism]
+
+- Doctor in white coat
+- Researcher in lab setting
+- Nutritionist in professional setting
+
+APPEARANCE:
+
+- Professional, trustworthy
+- Appropriate age (45-65)
+- [ETHNICITY matching target market]
+- Warm but authoritative expression
+
+SETTING: Professional but not sterile
+
+- Office with books/credentials visible
+- Lab with equipment
+- Clinical but welcoming
+
+LIGHTING: Professional, flattering, trustworthy.
+
+SMALL TEXT OVERLAY (optional):
+
+- Name and credentials
+- Or: Key quote excerpt
+
+EMOTION: "You can trust this information."
+
+### SKIP RATIONALE
+
+Section 5 is FAQ — text-heavy Q&A format. Images can distract from objection-handling. Skip unless:
+
+- Section is very long (5+ FAQs)
+- You have specific expert quote to feature
+- Visual break is needed for flow
+
+---
+
+# PART 11: SECTION 6 — TRANSFORMATION IMAGE (16:9)
+
+**Purpose:** Show WHO they've become. Identity marketing visualized. This is the emotional CLIMAX.
+
+**Style:** Photorealistic / Cinematic Action | **Format:** 16:9
+
+## Always Include — Choose Best Fit
+
+### T1: THE RECLAMATION (Action)
+
+Cinematic photograph. 16:9 format. MOTION and JOY.
+
+SUBJECT: [DEMOGRAPHIC] DOING the thing they couldn't do. FULLY ENGAGED.
+
+THE ACTIVITY: [PRIMARY DESIRE]
+
+- On floor with grandchildren — not watching, PLAYING
+- In garden — kneeling, digging, ALIVE
+- Walking with spouse — MATCHING pace, hand in hand
+- At family gathering — STANDING, CENTER of life
+
+BODY LANGUAGE:
+
+- FLUID movement — no hesitation
+- Open posture — expansive
+- Engaged with others — PARTICIPATING
+
+EXPRESSION: Unguarded joy. Happiness of CAPABILITY restored. Natural [eye color].
+
+SETTING: [CULTURALLY APPROPRIATE]. Location of desire.
+
+LIGHTING: Warm, golden, ALIVE.
+
+No text. Small product in corner optional.
+
+### T2: THE RECOGNITION (Portrait)
+
+Portrait photograph. 16:9 format.
+
+SUBJECT: [DEMOGRAPHIC] in moment of quiet PRIDE.
+
+THE MOMENT: Looking at camera OR mirror — RECOGNIZING themselves.
+
+EXPRESSION:
+
+- Pride: "I did this. I'm back."
+- Peace: No longer fighting every day
+- Confidence: Knowing they can
+- Vitality: Light in eyes
+
+Natural [eye color].
+
+NOT manic happiness. QUIET STRENGTH. Dignity of reclaimed identity.
+
+SETTING: [CULTURALLY APPROPRIATE home]. Their space.
+
+LIGHTING: Warm, flattering. Lighting of good days.
+
+WARDROBE: [CULTURALLY APPROPRIATE]. Intentional — dressed like someone with PLANS.
+
+No text. Small product optional.
+
+### T3: THE WITNESS (Family Recognition)
+
+Photorealistic image. 16:9 format.
+
+COMPOSITION: [DEMOGRAPHIC] foreground. Family member reacting in background.
+
+THE SUBJECT: Doing something they couldn't before. Rising easily. Coming downstairs. Joining activity.
+
+THE WITNESS: Adult child or spouse watching. Expression of:
+
+- Surprise
+- Relief
+- Joy
+- "They're BACK"
+
+Subject may not notice being watched. Just LIVING.
+
+EMOTION: Transformation witnessed. Family seeing who returned.
+
+No text. No product.
+
+---
+
+# PART 12: SECTION 7 — PRODUCT IMAGE (1:1)
+
+**Purpose:** Clean, professional product shot. Reinforces what they're getting before CTA.
+
+**Format:** 1:1 — THE ONLY 1:1 IMAGE
+
+## Always Include
+
+Section 7 is the offer. Show them exactly what they're getting — clean, aspirational, premium.
+
+**USER ACTION REQUIRED:** Provide your actual product photo for this image. Do NOT generate the product — use the real product image supplied by the client.
+
+### O1: CLEAN PRODUCT SHOT
+
+Product photography. 1:1 format.
+
+**USER ACTION REQUIRED:** Use the real product image supplied by the client. Do NOT AI-generate the product.
+
+[PRODUCT NAME] bottle as HERO — centered, prominent (50-60% frame height).
+
+BACKGROUND: Clean, premium, matches THEME:
+
+- Health: Soft green gradient or white with subtle green accents
+- Medical: Clean white/light blue, clinical but warm
+- Beauty: Dusty rose gradient, elegant
+- Energy: Warm cream/orange tones
+- Calm: Soft lavender/white gradient
+
+LIGHTING: Professional studio lighting
+
+- Soft shadows
+- Slight reflection on surface
+- Premium, aspirational feel
+
+COMPOSITION:
+
+- Bottle slightly angled (not flat front)
+- Label clearly visible
+- Clean negative space around product
+
+OPTIONAL ELEMENTS (subtle):
+
+- Single ingredient element (leaf, herb) if natural product
+- Soft glow/highlight around bottle
+- Premium surface (marble, clean white)
+
+STYLE: E-commerce hero shot meets lifestyle premium. This is what arrives at their door.
+
+NO text overlays. NO price. NO badges. Just the product looking its best.
+
+---
+
+# PART 13: OUTPUT FORMAT
+
+# IMAGE PROMPTS: [PRODUCT_NAME] Advertorial
+
+## Research Summary
+
+- Target Market: [Country]
+- Language: [Language]
+- Demographic: [Age] [Gender] [Ethnicity]
+- Primary Fear: [Fear] → Hero Type Selection
+- Primary Desire: [Desire] → Wound + Transformation Type Selection
+- UMP: [Problem mechanism]
+- UMS: [Solution mechanism]
+- Key Ingredients: [List]
+- **Product Image Provided:** [YES / NO — if NO, flag S4 and S7 as incomplete]
+
+---
+
+## HERO VERSION 1 — Recognition (RECOMMENDED)
+
+**Style:** Photorealistic Portrait | **16:9**
+
+**Type:** [1A-1F]
+
+**Fear:** [Specific fear]
+
+[Full prompt]
+
+---
+
+## HERO VERSION 2 — Transformation
+
+**Style:** Photorealistic / Medical Illustration | **16:9**
+
+**Type:** [2A-2C]
+
+**Mechanism:** [UMP visual]
+
+[Full prompt]
+
+---
+
+## HERO VERSION 3 — Aspiration (A/B Test)
+
+**Style:** Cinematic Action | **16:9**
+
+**Desire:** [Primary desire]
+
+[Full prompt]
+
+---
+
+## SECTION 0: Hook/Wound
+Headline title from Copywriting
+
+**Style:** Photorealistic Portrait | **16:9**
+
+**Type:** [W1-W5]
+
+**Desire Denied:** [Primary desire being stolen]
+
+[Full prompt]
+
+---
+
+## SECTION 1: Education/UMP — DIAGRAM
+Headline title from Copywriting
+
+**Style:** Medical Illustration | **16:9**
+
+**Type:** [D1-D3]
+
+**Mechanism:** [UMP]
+
+[Full prompt]
+
+---
+
+## SECTION 2: Discredit — COMPARISON DIAGRAM
+Headline title from Copywriting
+
+**Style:** Medical Illustration | **16:9**
+
+**Type:** [C1-C2]
+
+**Failed Solutions:** [From copy]
+
+[Full prompt]
+
+---
+
+## SECTION 3: Mechanism/UMS — DIAGRAM
+Headline title from Copywriting
+
+**Style:** Medical Illustration | **16:9**
+
+**Type:** [M1-M3]
+
+**Mechanism:** [UMS]
+
+[Full prompt]
+
+---
+
+## SECTION 4: Product — INFOGRAPHIC
+Headline title from Copywriting
+
+**Style:** Infographic | **16:9**
+
+**Type:** P1
+
+**Requires real product image from user**
+
+[Full prompt]
+
+---
+
+## SECTION 5: FAQ
+Headline title from Copywriting
+
+**SKIP** — Text-heavy objection handling. [OR include F1 if needed]
+
+---
+
+## SECTION 6: Transformation
+Headline title from Copywriting
+
+**Style:** Photorealistic / Cinematic Action | **16:9**
+
+**Type:** [T1-T3]
+
+**Identity:** [From Section 6 copy]
+
+[Full prompt]
+
+---
+
+## SECTION 7: Offer — PRODUCT SHOT
+Headline title from Copywriting
+
+**Format:** **1:1** — ONLY 1:1 image
+
+**Type:** O1
+
+**Requires real product image from user**
+
+[Full prompt]
+
+---
+
+# PART 14: QUICK REFERENCE
+
+## Complete Image Map
+
+| Section | Image Type | Format | Product Image Required? |
+| :---- | :---- | :---- | :---- |
+| Hero | Recognition/Transform/Aspire | 16:9 | No |
+| Section 0 | Wound — Desire Denied | 16:9 | No |
+| Section 1 | UMP Diagram | 16:9 | No |
+| Section 2 | Comparison Diagram | 16:9 | No |
+| Section 3 | UMS Diagram | 16:9 | No |
+| Section 4 | Product Infographic | 16:9 | **YES** |
+| Section 5 | Skip (or Expert) | 16:9 | No |
+| Section 6 | Transformation | 16:9 | No |
+| Section 7 | Clean Product Shot | **1:1** | **YES** |
+
+## Diagram Type Selection
+
+| UMP Type | Diagram |
+| :---- | :---- |
+| Physical damage (joints, arteries) | D1: Anatomical Attack |
+| Process/cascade (inflammation, oxidation) | D2: Process Diagram |
+| Abstract (stress, fatigue, brain fog) | D3: Symbolic Attack |
+
+| UMS Type | Diagram |
+| :---- | :---- |
+| Protection/blocking | M1: The Shield |
+| Repair/restoration | M2: The Restoration |
+| Interruption/stopping cascade | M3: The Interruption |
+
+## Fear → Hero Mapping
+
+| Fear | Hero |
+| :---- | :---- |
+| Missing moments | 1A: Missed Moment |
+| Being a burden | 1B: The Look |
+| Losing independence | 1C: The Pause |
+| Being left out | 1D: The Window |
+| Fear of decline | 1E: The Shadow |
+| Family isolation | 1F: Empty Chair |
+
+---
+
+## Final Checklist
+
+**Research Extracted:**
+
+* Demographics exact (age, ethnicity, appearance)
+* Cultural context documented
+* Primary fear → Hero selection
+* Primary desire → Wound selection + Transformation selection
+* UMP → Diagram type selected
+* UMS → Diagram type selected
+* Key ingredients listed
+
+**Inputs Received:**
+
+* Strategic Intelligence Brief
+* Completed Advertorial Copy
+* **Real product image from user (required for S4 + S7)**
+
+**Images Generated:**
+
+* 3 Hero versions (Recognition, Transformation, Aspiration)
+* Section 0: Wound image — desire denied
+* Section 1: UMP Diagram
+* Section 2: Comparison Diagram
+* Section 3: UMS Diagram
+* Section 4: Product Infographic
+* Section 5: Skip justified (or Expert if needed)
+* Section 6: Transformation image
+* Section 7: Clean Product Shot
+
+**Quality Standards:**
+
+* All demographics EXACT match
+* All settings culturally appropriate
+* All eye colors natural
+* All diagram labels in TARGET LANGUAGE
+* No "bright/piercing/vivid" eyes
+* No theatrical expressions
+* Formats correct (16:9 ALL images, 1:1 ONLY for S7 product shot)
+* **All diagram/infographic text: max 30 words, max 9 labels, 1–5 words per label**
+* **All text minimum 48pt equivalent — passes Thumb Test (375px) and Arm's Length Test**
+* **All text high contrast, sans-serif only**
+* **S4 and S7 use real product image (not AI-generated)**
+* **S0 wound image targets PRIMARY DESIRE denied — not just generic pain**
+
+**Total Images: 8-10** (3 hero options + 5-7 section images)
+
+---
+
+## END OF ADVERTORIAL IMAGE SOP

@@ -72,11 +72,11 @@ def generate_with_reference(client, prompt, reference_path, aspect_ratio):
     print(f"Reference image loaded: {reference_path} ({ref_image.size[0]}x{ref_image.size[1]})", file=sys.stderr)
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash-exp-image-generation",
+        model="gemini-2.5-flash-image",
         contents=[prompt, ref_image],
         config=types.GenerateContentConfig(
             response_modalities=["IMAGE"],
-            image_generation_config=types.ImageGenerationConfig(
+            image_config=types.ImageConfig(
                 image_size="1K",
             ),
         ),
