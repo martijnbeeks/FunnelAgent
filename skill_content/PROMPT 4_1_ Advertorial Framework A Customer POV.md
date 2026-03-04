@@ -785,11 +785,13 @@ Avoid generic headlines like "The Discovery That Changed Everything." Instead us
 
 ### Total Word Count
 
+⚠️ **HARD REQUIREMENT: The final advertorial MUST fall within the word count range for its awareness level. Do not exceed the upper limit. Verify your word count before outputting.**
+
 | Awareness Level | Word Count | Focus |
 | :---- | :---- | :---- |
-| Unaware | 3,000–3,600 | Symptoms, problem development, mechanism |
-| Problem Aware | 2,600–3,200 | Problem development, mechanism |
-| Solution Aware | 2,100–2,600 | Failed solutions, mechanism, product |
+| Unaware | 2,400–2,880 | Symptoms, problem development, mechanism |
+| Problem Aware | 2,080–2,560 | Problem development, mechanism |
+| Solution Aware | 1,680–2,080 | Failed solutions, mechanism, product |
 
 **Unaware:** They don't know what the real problem is, why it's happening, or that they should care yet. Spend more time on the symptoms, problem development, and unique mechanism development.
 
@@ -1131,8 +1133,9 @@ Before outputting CONFIG:
 
 **Structure:**
 
-- [ ] THEME matches product category  
-- [ ] HEADLINE under 100 characters, compelling  
+- [ ] Word count is within the hard limit for the awareness level (Unaware: 2,400–2,880 / Problem Aware: 2,080–2,560 / Solution Aware: 1,680–2,080) — **DO NOT output if over the upper limit; trim first**
+- [ ] THEME matches product category
+- [ ] HEADLINE under 100 characters, compelling
 - [ ] SUBHEADLINE creates curiosity gap  
 - [ ] AUTHOR\_NAME matches avatar demographics  
 - [ ] 8 SECTIONS in array (can combine 8+9)  
