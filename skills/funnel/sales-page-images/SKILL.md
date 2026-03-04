@@ -208,19 +208,29 @@ If CDN URLs were captured in step 1f:
 The template's first `<script>` block (containing `const OFFER_SETTINGS`) is the **user-controlled zone** for bundle pricing, gift names, and gift images. It must **never be deleted or replaced**. Only the bundle `image` fields are updated with generated CDN URLs.
 
 1. Read `templates/sales_page.html` into memory.
-2. **Update bundle image fields in the first `<script>` block** — replace the first 3 occurrences of `image:` with an empty value (`image:            "",` or `image: "",`) with the bundle CDN URLs in order (bundle_1month → bundles[0], bundle_2month → bundles[1], bundle_3month → bundles[2]):
+2. **Update bundle image fields in the first `<script>` block** — load `{RUN_DIR}/cdn_urls.json` and look up `bundle_1month.png`, `bundle_2month.png`, `bundle_3month.png` by key, then replace the first 3 occurrences of `image: ""` in order:
    ```python
-   import re
-   for url in [bundle_1month_url, bundle_2month_url, bundle_3month_url]:
-       html = re.sub(r'image:\s*""', f'image: "{url}"', html, count=1)
+   import re, json
+   with open(f'{RUN_DIR}/cdn_urls.json') as f:
+       cdn_urls = json.load(f)
+   for key in ['bundle_1month.png', 'bundle_2month.png', 'bundle_3month.png']:
+       url = cdn_urls.get(key, '')
+       if url:
+           html = re.sub(r'image:\s*""', f'image: "{url}"', html, count=1)
    ```
 3. In the second `<script>` block, locate the two marker lines:
    - `// CONFIG START — PASTE YOUR CONFIG BELOW THIS LINE`
    - `// CONFIG END — DO NOT EDIT BELOW THIS LINE`
-4. Extract only `PRODUCT_COLORS` and `CONFIG` from `{RUN_DIR}/05a_sales_page_config.js` — skip `OFFER_SETTINGS` (it lives in the template). Start extraction from `const PRODUCT_COLORS`:
+4. Extract only `PRODUCT_COLORS` and `CONFIG` from `{RUN_DIR}/05a_sales_page_config.js` — skip `OFFER_SETTINGS` (it lives in the template). Extract each block separately:
    ```python
-   config_start = config.find('const PRODUCT_COLORS')
-   config_to_inject = config[config_start:].strip()
+   # PRODUCT_COLORS block: from 'const PRODUCT_COLORS' up to 'const OFFER_SETTINGS'
+   pc_start = config.find('const PRODUCT_COLORS')
+   pc_end = config.find('const OFFER_SETTINGS')
+   product_colors_block = config[pc_start:pc_end].strip()
+   # CONFIG block: from 'const CONFIG' to end
+   cfg_start = config.find('const CONFIG')
+   config_block = config[cfg_start:].strip()
+   config_to_inject = product_colors_block + "\n\n" + config_block
    ```
 5. Replace everything **between** (not including) those markers with `config_to_inject`.
 6. Do not modify anything outside those markers.

@@ -3108,7 +3108,7 @@
         if (heroSubheadline) heroSubheadline.textContent = CONFIG.HERO.SUBHEADLINE;
         
         const heroBenefits = document.getElementById('hero-benefits');
-        if (heroBenefits) heroBenefits.innerHTML = CONFIG.HERO.BENEFITS.map(b => `<li>${b}</li>`).join('');
+        if (heroBenefits) heroBenefits.innerHTML = CONFIG.HERO.BENEFITS.map(b => `<li><span>${b}</span></li>`).join('');
         
         const heroImage = document.getElementById('hero-image');
         if (heroImage) {
