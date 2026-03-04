@@ -42,11 +42,14 @@ cp .env.example .env   # then add OPENAI_API_KEY and GEMINI_API_KEY
 # Deep research (2-10 min runtime)
 python scripts/deep_research.py --prompt-file <path> --output <path> [--model o3]
 
-# Image generation (text-to-image via Imagen)
+# Image generation (Nano Banana 2 — gemini-3.1-flash-image-preview)
 python scripts/generate_image.py --prompt-file <path> --output <path> [--aspect-ratio 1:1]
 
-# Image generation with product reference (multimodal via Gemini Flash)
+# Image generation with product reference (multimodal, same model)
 python scripts/generate_image.py --prompt-file <path> --output <path> --reference-image <product-photo> [--aspect-ratio 1:1]
+
+# Use a different model (e.g., Nano Banana Pro)
+python scripts/generate_image.py --prompt-file <path> --output <path> [--model gemini-3-pro-image-preview]
 
 # CDN upload (optional, requires R2 credentials in .env)
 python scripts/upload_to_cdn.py --file <path> --key <r2-key>

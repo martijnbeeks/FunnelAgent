@@ -36,8 +36,9 @@ output/02b_synthesis_phase2.md
 
 ### 1c. Execute Image Prompt Generation
 
-Follow the SOP exactly. The sales page requires **11 images** (generate 2 variations of every image and pick the best):
+Follow the SOP exactly. The sales page requires **14 images** total:
 
+**11 sales page section images** (generate 2 variations of every image and pick the best):
 - **3 Hero images** (for A/B testing):
   - Hero A: The First Morning (product on counter)
   - Hero B: Split Before/After (product as small overlay)
@@ -49,6 +50,11 @@ Follow the SOP exactly. The sales page requires **11 images** (generate 2 variat
 - Two Paths: WITHOUT image (pain state)
 - Two Paths: WITH image (transformation)
 - 2 Review AI images (1 product-in-use + 1 outcome)
+
+**3 Bundle product images** (for the pricing section — 1 image each, no variations needed):
+- Bundle 1-Month: 1 product unit on transparent background
+- Bundle 2-Month: 2 product units arranged side-by-side on transparent background
+- Bundle 3-Month: 3 product units arranged in a row on transparent background
 
 Generate prompts for each AI-generated image as specified by the SOP.
 
@@ -78,6 +84,9 @@ Save all generated image prompts to `output/05b_image_prompts_sales_page.md`.
 | Two Paths — With | OPTIONAL | Only if product included |
 | Review: Product In Use | **YES** (30-50%) | **Yes** |
 | Review: Outcome | NO | No |
+| Bundle: 1-Month Supply | **YES** (1 unit) | **Yes** |
+| Bundle: 2-Month Supply | **YES** (2 units) | **Yes** |
+| Bundle: 3-Month Supply | **YES** (3 units) | **Yes** |
 
 Then launch **all** generation commands simultaneously using parallel Bash tool calls (one per image):
 
@@ -100,6 +109,27 @@ python scripts/generate_image.py \
 
 The `--reference-image` flag sends the product photo to Gemini's multimodal API alongside the text prompt, so the model can render the actual product in the scene. **Never describe the product's appearance in the text prompt** — only the Gemini API sees the uploaded photo.
 
+**Bundle product images** (include `--reference-image` — same product photo as section images):
+```bash
+python scripts/generate_image.py \
+  --prompt-file output/sales_page_images/_prompt_bundle_1month.txt \
+  --output output/sales_page_images/bundle_1month.png \
+  --aspect-ratio 1:1 \
+  --reference-image {RUN_DIR}/product_image.png
+
+python scripts/generate_image.py \
+  --prompt-file output/sales_page_images/_prompt_bundle_2month.txt \
+  --output output/sales_page_images/bundle_2month.png \
+  --aspect-ratio 1:1 \
+  --reference-image {RUN_DIR}/product_image.png
+
+python scripts/generate_image.py \
+  --prompt-file output/sales_page_images/_prompt_bundle_3month.txt \
+  --output output/sales_page_images/bundle_3month.png \
+  --aspect-ratio 1:1 \
+  --reference-image {RUN_DIR}/product_image.png
+```
+
 **IMPORTANT:** Do NOT generate images one at a time. Issue all Bash calls in a single response so they run concurrently. Wait for all to complete, then verify each output file exists.
 
 ### 1f. Upload All Sales Page Images to CDN
@@ -120,9 +150,7 @@ If CDN URLs were captured in step 1f:
 1. Read `{RUN_DIR}/05a_sales_page_config.js`
 2. Read `{RUN_DIR}/cdn_urls.json`
 3. Replace image values with their CDN URLs:
-   - `HERO.IMAGE` — hero image A
-   - `HERO.IMAGE_B` — hero image B (split before/after)
-   - `HERO.IMAGE_C` — hero image C (person + guarantee badge)
+   - **Hero images** — Apply the Hero Selection Guide from the SOP to pick the best-suited hero for the product type (e.g., Health/Wellness → Hero A, Mobility/Physical → Hero B, Skeptical audience → Hero C). Assign the winner's CDN URL to `HERO.IMAGE` and the other two to `HERO.IMAGE_B` and `HERO.IMAGE_C` for A/B reference.
    - `AGITATION.IMAGE` — agitation section image
    - `DOCTOR.IMAGE` — doctor portrait
    - `MECHANISM.DIAGRAM_IMAGE` — mechanism diagram
@@ -130,12 +158,26 @@ If CDN URLs were captured in step 1f:
    - `MISS.WITHOUT_IMAGE` — "without" comparison image
    - `MISS.WITH_IMAGE` — "with" comparison image
    - Testimonial `IMAGE` fields where the value is a generated filename (not `"gemini"`, `"database"`, or empty)
-4. If `PRODUCT_IMAGE` or `product_image.png` is in the manifest, use its CDN URL for product image references
+4. Map bundle product images to the pricing section:
+   - `OFFER_SETTINGS.bundles[0].image` — bundle_1month.png CDN URL (1-unit shot)
+   - `OFFER_SETTINGS.bundles[1].image` — bundle_2month.png CDN URL (2-unit shot)
+   - `OFFER_SETTINGS.bundles[2].image` — bundle_3month.png CDN URL (3-unit shot)
 5. Write updated CONFIG back to `{RUN_DIR}/05a_sales_page_config.js`
 
 ### 1h. Reassemble Sales Page HTML
 
-Read `templates/sales_page.html`, replace the example CONFIG block with the updated CONFIG from step 1g, and save as `{RUN_DIR}/sales_page.html`.
+**CRITICAL — Follow this exact procedure to avoid duplicate `const` declarations that break rendering:**
+
+1. Read `templates/sales_page.html` into memory.
+2. **Delete the entire first `<script>` block** (the template's example `OFFER_SETTINGS` block) — from its opening `<script>` to its matching `</script>`.
+3. In the second `<script>` block, locate the two marker lines:
+   - `// CONFIG START — PASTE YOUR CONFIG BELOW THIS LINE`
+   - `// CONFIG END — DO NOT EDIT BELOW THIS LINE`
+4. Replace everything **between** (not including) those markers with the full contents of `{RUN_DIR}/05a_sales_page_config.js` (which contains `PRODUCT_COLORS`, `OFFER_SETTINGS`, and `CONFIG`).
+5. Do not modify anything outside those markers.
+6. Save the result to `{RUN_DIR}/sales_page.html`.
+
+**Validate before saving:** `const CONFIG`, `const PRODUCT_COLORS`, `const OFFER_SETTINGS`, and `const THEMES` must each appear exactly once in the file.
 
 ---
 
@@ -161,10 +203,12 @@ Follow the SOP exactly:
 ### 2c. Save QA Results
 
 Save the hero image review to `output/05c_sp_hero_review.md`, including:
-- Quality scores for each criterion
-- Pass/fail verdict
-- Revision prompts if applicable
-- Final approved image path
+- **All three hero images** shown for comparison (file paths to Hero A, Hero B, Hero C)
+- Quality scores for each hero on all QA criteria
+- Pass/fail verdict for each
+- Which hero was selected as best-suited (per Hero Selection Guide) and why
+- Revised prompt if QA triggered regeneration
+- Path to the revised/final approved image (if different from the original)
 
 ---
 
@@ -172,6 +216,6 @@ Save the hero image review to `output/05c_sp_hero_review.md`, including:
 
 | File | Content |
 |------|---------|
-| `output/05b_image_prompts_sales_page.md` | All image prompts |
-| `output/05c_sp_hero_review.md` | Hero image QA results |
-| `output/sales_page_images/*.png` | Generated images |
+| `output/05b_image_prompts_sales_page.md` | All image prompts (11 section + 3 bundle) |
+| `output/05c_sp_hero_review.md` | Hero QA results — all 3 heroes + selected winner + revised image (if any) |
+| `output/sales_page_images/*.png` | Generated images (section images + bundle_1month.png, bundle_2month.png, bundle_3month.png) |

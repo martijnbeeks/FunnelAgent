@@ -12,7 +12,7 @@ This SOP generates emotionally resonant image prompts for the 55+ Sales Page Tem
 
 **The Mix:** Emotional photographs \+ Split comparisons \+ Mechanism diagrams \+ Product shots \+ Guarantee badges
 
-**Outputs:** IMAGE PROMPTS for 11 images per sales page
+**Outputs:** IMAGE PROMPTS for 14 images per sales page (11 section images + 3 bundle product shots)
 
 **Inputs Required:** Strategic Intelligence Brief \+ Completed CONFIG \+ Product Image (bottle/jar/box photo — MUST be uploaded before generating any product-visible image)
 
@@ -31,6 +31,9 @@ This SOP generates emotionally resonant image prompts for the 55+ Sales Page Tem
 | TWO PATHS: WITH | MISS.WITH\_IMAGE | Transformation Portrait | 1:1 | Gemini | OPT | 2 → best |
 | REVIEW AI A | REVIEWS\_A\[2\].IMAGE | Product In Use / Outcome | 1:1 | Gemini | Depends | 2 → best |
 | REVIEW AI B | REVIEWS\_B\[0\].IMAGE | Product In Use / Outcome | 1:1 | Gemini | Depends | 2 → best |
+| BUNDLE 1-MONTH | OFFER\_SETTINGS.bundles\[0\].image | 1-Unit Product Shot | 1:1 | Gemini | YES | 1 |
+| BUNDLE 2-MONTH | OFFER\_SETTINGS.bundles\[1\].image | 2-Unit Product Shot | 1:1 | Gemini | YES | 1 |
+| BUNDLE 3-MONTH | OFFER\_SETTINGS.bundles\[2\].image | 3-Unit Product Shot | 1:1 | Gemini | YES | 1 |
 
 ## **Emotional Arc**
 
@@ -1373,7 +1376,61 @@ Output: 3 selfie variations → USE ALL 3
 
 * Would pass as a real phone photo — the ultimate test
 
-# **PART 11: OUTPUT FORMAT**
+# **PART 11: BUNDLE PRODUCT IMAGES (Pricing Section)**
+
+**Tool:** Gemini API | 1:1 | 1 image per bundle (no variations needed)
+
+**Product:** YES — reference image required for all three
+
+**CONFIG Fields:** OFFER\_SETTINGS.bundles\[0\].image / \[1\].image / \[2\].image
+
+## **Bundle Image Philosophy**
+
+These are clean cut-out product images with **transparent backgrounds** — showing exactly 1, 2, or 3 units of the rebranded product. They appear in the pricing cards so the product floats cleanly over the card design. No setting, no surface, no props — just the product(s) on a transparent background.
+
+## **Bundle Image Specs**
+
+| Bundle | Units Shown | Arrangement |
+| :---- | :---- | :---- |
+| 1-Month Supply | 1 unit | Single, centered |
+| 2-Month Supply | 2 units | Side by side or slight overlap |
+| 3-Month Supply | 3 units | Row or slight pyramid arrangement |
+
+## **Prompt Template**
+
+Use this prompt structure for all three, adjusting for quantity:
+
+Product cut-out image. 1:1 format. **Transparent background (PNG alpha).**
+
+SUBJECT: \[QUANTITY\] \[product type — e.g., "supplement bottle" / "jar" / "box"\] arranged in a \[single / side-by-side / row\] composition.
+
+Product must exactly replicate the reference image: identical bottle/bag shape, label design, colors, cap style, brand placement, and overall packaging aesthetic — no variations or interpretations allowed.
+
+BACKGROUND: Fully transparent — no surface, no floor, no shadow, no gradient, no setting.
+
+LIGHTING: Clean, even studio-quality lighting on the product(s) only.
+
+QUALITY:
+
+\- Each product unit fully visible and unobstructed
+
+\- No props, ingredients, or decorative elements
+
+\- No text, overlays, or annotations
+
+\- Clean edges suitable for placement on any background
+
+Output: 1 image per bundle — transparent PNG, ready for pricing card use.
+
+## **Generation Notes**
+
+* Generate all three in parallel alongside the other section images
+* No A/B variations needed — one definitive shot per bundle size
+* These are generated via Gemini multimodal (with \`--reference-image\`) so the actual rebranded product is reproduced accurately
+* Do NOT describe the product's appearance in the prompt — the reference image handles that
+* Output as PNG with transparent background — specify this explicitly in the prompt
+
+# **PART 12: OUTPUT FORMAT**
 
 When generating image prompts for a specific product, output in this format:
 
@@ -1463,17 +1520,22 @@ CONFIG Field: HERO.IMAGE\_C
 
 * 8\. Review AI images A \+ B
 
-* 9\. Alternatives Diagram — If time permits
+* 9\. Bundle images (1-month, 2-month, 3-month) — all in parallel
+
+* 10\. Alternatives Diagram — If time permits
 
 ## **CONFIG Integration**
 
 After generation, update CONFIG with image URLs:
 
-HERO.IMAGE: "\[url\]"
+**Hero images — apply Hero Selection Guide first:**
+Apply the Hero Selection Guide (Part 4) to determine the best-suited hero for the product type. Assign the winner's URL to HERO.IMAGE; the other two go to IMAGE\_B and IMAGE\_C for A/B reference.
 
-HERO.IMAGE\_B: "\[url\]"
+HERO.IMAGE: "\[url of best-suited hero\]"
 
-HERO.IMAGE\_C: "\[url\]"
+HERO.IMAGE\_B: "\[url of second hero\]"
+
+HERO.IMAGE\_C: "\[url of third hero\]"
 
 AGITATION.IMAGE: "\[url\]"
 
@@ -1499,6 +1561,14 @@ REVIEWS\_B\[1\].IMAGE: "" (database — funnelbuilder fills)
 
 REVIEWS\_B\[2\].IMAGE: "gemini" (funnelbuilder generates)
 
+**Bundle product images (pricing section):**
+
+OFFER\_SETTINGS.bundles\[0\].image: "\[url — 1-unit shot\]"
+
+OFFER\_SETTINGS.bundles\[1\].image: "\[url — 2-unit shot\]"
+
+OFFER\_SETTINGS.bundles\[2\].image: "\[url — 3-unit shot\]"
+
 # **PART 12: QUICK REFERENCE & CHECKLISTS**
 
 ## **Product Visibility — Per-Image Rules**
@@ -1516,6 +1586,9 @@ REVIEWS\_B\[2\].IMAGE: "gemini" (funnelbuilder generates)
 | WITH | OPTIONAL | If included: subtle background, natural size |
 | REV-PRODUCT | YES 30-50% | Product IS the shot \+ Mandatory Product Spec |
 | REV-OUTCOME | NEVER | "No product. Pure result moment." |
+| BUNDLE 1-MONTH | YES (1 unit) | 1 unit, transparent background \+ Mandatory Product Spec |
+| BUNDLE 2-MONTH | YES (2 units) | 2 units side by side, transparent background \+ Mandatory Product Spec |
+| BUNDLE 3-MONTH | YES (3 units) | 3 units in row, transparent background \+ Mandatory Product Spec |
 
 ## **Final Checklist**
 
@@ -1537,7 +1610,7 @@ REVIEWS\_B\[2\].IMAGE: "gemini" (funnelbuilder generates)
 
 * Condition visibility assessed → A5 if visible, A1-A4 if felt-not-seen
 
-**Prompts Generated (11 images):**
+**Prompts Generated (14 images):**
 
 * Hero A: The First Morning (1:1) — Product YES
 
@@ -1561,6 +1634,12 @@ REVIEWS\_B\[2\].IMAGE: "gemini" (funnelbuilder generates)
 
 * Review AI Image B (1:1) — The other type
 
+* Bundle 1-Month (1:1) — 1-unit studio shot, product YES
+
+* Bundle 2-Month (1:1) — 2-unit studio shot, product YES
+
+* Bundle 3-Month (1:1) — 3-unit studio shot, product YES
+
 **Quality Standards Applied:**
 
 * All demographics EXACT match across all images
@@ -1583,7 +1662,9 @@ REVIEWS\_B\[2\].IMAGE: "gemini" (funnelbuilder generates)
 
 * All images generated with 1K maximum resolution
 
-* 2 variations generated for every image → best selected
+* 2 variations generated for every section image → best selected (bundle images: 1 each)
+
+* Hero Selection Guide applied → best hero assigned to HERO.IMAGE
 
 * Mandatory Product Display Specification on all product-visible prompts
 

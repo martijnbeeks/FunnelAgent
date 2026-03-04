@@ -106,13 +106,48 @@ Run through the SOP's OUTPUT CHECKLIST before saving.
 
 ## STEP 9: SAVE AND ASSEMBLE
 
-1. Save the CONFIG to `output/05a_sales_page_config.js`
-2. Read `templates/sales_page.html`, replace the example CONFIG with the generated CONFIG, and save as `output/sales_page.html`
-3. Tell the user: **"Your sales page is ready! Open `output/sales_page.html` in a browser to preview."**
+### 9a. Save the config file
+
+Save `PRODUCT_COLORS`, `OFFER_SETTINGS`, and `CONFIG` (all three, in that order) to:
+```
+{RUN_DIR}/05a_sales_page_config.js
+```
+
+### 9b. Assemble the HTML — CRITICAL INSTRUCTIONS
+
+The template (`templates/sales_page.html`) has **two `<script>` blocks** in the `<head>`:
+- **Block 1** (first `<script>...</script>`): Contains a hardcoded example `OFFER_SETTINGS`.
+- **Block 2** (second `<script>...</script>`): Contains the "PASTE CONFIG HERE" section, followed by example `PRODUCT_COLORS` and `CONFIG`, then `THEMES` and `CURRENCY_RESOLVER`.
+
+**You MUST follow this assembly procedure exactly — deviating causes duplicate `const` declarations that silently kill all JavaScript rendering:**
+
+1. Read `templates/sales_page.html` into memory.
+
+2. **Delete the entire first `<script>` block** — from `<script>` up to and including its matching `</script>`. This removes the template's example `OFFER_SETTINGS`. Your actual `OFFER_SETTINGS` will live in Block 2.
+
+3. In Block 2, locate these two marker lines:
+   - `// CONFIG START — PASTE YOUR CONFIG BELOW THIS LINE`
+   - `// CONFIG END — DO NOT EDIT BELOW THIS LINE`
+
+4. **Replace everything between (not including) those two markers** with the full contents of `{RUN_DIR}/05a_sales_page_config.js`. This inserts `PRODUCT_COLORS`, `OFFER_SETTINGS`, and `CONFIG` as a single block.
+
+5. Do **not** modify anything outside those markers. `THEMES`, `CURRENCY_RESOLVER`, and the rendering JavaScript that follows `// CONFIG END` must remain intact.
+
+6. Save the result to `{RUN_DIR}/sales_page.html`.
+
+**Validation — verify before saving:**
+- `<script>` appears exactly **2 times** in the file (config block + rendering block)
+- `const CONFIG` appears exactly **1 time** (the comment in the HTML `<!-- ... -->` does not count)
+- `const PRODUCT_COLORS` appears exactly **1 time**
+- `const OFFER_SETTINGS` appears exactly **1 time**
+- `const THEMES` appears exactly **1 time**
+- `BRAND_NAME` in the file matches the selected brand name
+
+7. Tell the user: **"Your sales page is ready! Open `{RUN_DIR}/sales_page.html` in a browser to preview."**
 
 ## OUTPUT
 
 | File | Content |
 |------|---------|
-| `output/05a_sales_page_config.js` | CONFIG + OFFER_SETTINGS JavaScript objects |
-| `output/sales_page.html` | Final assembled HTML |
+| `{RUN_DIR}/05a_sales_page_config.js` | `PRODUCT_COLORS` + `OFFER_SETTINGS` + `CONFIG` JavaScript objects |
+| `{RUN_DIR}/sales_page.html` | Final assembled HTML (single config `<script>` block + rendering `<script>` block) |
