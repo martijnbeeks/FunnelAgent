@@ -252,6 +252,16 @@ Score all 5 combinations using this rubric. Each criterion scored 1–5.
 
 **Tiebreaker:** If two scores are equal, choose the one that a first-time reader would feel in their chest rather than just their head — emotion always beats logic at the top of the page.
 
+**Non-negotiable condition anchor check (apply before finalising any winner):**
+
+The headline + subheadline combination MUST make the specific health condition or primary symptom clear to a cold reader. A cold reader who has never seen this advertorial must be able to identify the body part or problem being addressed within the headline/subheadline pair — without reading a single word of the body copy.
+
+- If the **headline** names or strongly implies the condition → passes
+- If the **headline** is angle/emotion-driven but the **subheadline** explicitly names the symptom or condition → passes
+- If **neither** headline nor subheadline references the condition → **automatic disqualification**, rewrite the subheadline until it anchors to the symptom
+
+The angle and the condition are not the same thing. "It's just your age" is an angle. "Prostate problems", "nightly trips to the toilet", "joint pain after 60" are conditions. The winner must carry both.
+
 ---
 
 ## **STEP 9 — OUTPUT FORMAT**
