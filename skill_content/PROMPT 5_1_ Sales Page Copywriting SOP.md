@@ -389,14 +389,21 @@ document.getElementById('current-month').textContent \= months\[new Date().getMo
 
 ### HEADLINE
 
+**Tone Mandate:** This headline must be aggressive, punchy, and unmistakably direct response. It should hit the reader like a slap — naming their exact pain or the central big idea of the angle with zero softening. No clever wordplay, no ambiguity. Every word earns its place or gets cut.
+
+**What to lock in before writing:**
+1. The #1 pain point from the synthesis "fears" — name it in their exact language, not clinical language
+2. The central big idea / angle from the strategic brief — the headline should feel like the logical first line of that angle
+3. One specific detail (stat, number, timeframe) that makes the claim feel real
+
 **4 U's Checklist (aim for 3 of 4):**
 
-- [ ] **Useful** — Clear benefit promised  
-- [ ] **Urgent** — Timing/scarcity implied  
-- [ ] **Unique** — Different from competitors  
+- [ ] **Useful** — Clear benefit promised
+- [ ] **Urgent** — Timing/scarcity implied
+- [ ] **Unique** — Different from competitors
 - [ ] **Ultra-specific** — Numbers, percentages, timeframes
 
-**Formula Options:**
+**Formula Reference** (use as a structural starting point, not a cage):
 
 For PROBLEM-AWARE traffic (cold):
 
@@ -416,10 +423,17 @@ The \[Mechanism\] Breakthrough Helping 60,000+ Adults Over 55
 
 **What to Extract from Research:**
 
-- Primary pain point (from synthesis "fears")  
-- Specific statistic (from market research)  
-- Realistic timeframe for results  
+- Primary pain point (from synthesis "fears")
+- Specific statistic (from market research)
+- Realistic timeframe for results
 - Target demographic age
+
+**Formula Compliance Check:**
+- [ ] Does the headline structurally resemble one of the formulas above (same pattern, even if not identical wording)?
+- [ ] Does it lead with the angle's central big idea or primary pain point — not a secondary benefit or mechanism?
+- [ ] Would a 55+ reader with this exact problem stop scrolling the moment they read it?
+
+If any box is unchecked, rewrite before moving on.
 
 ---
 
