@@ -1395,7 +1395,7 @@ Use this prompt structure for all three, adjusting for quantity:
 
 Professional product photography. 1:1 format.
 
-SUBJECT: \[QUANTITY\] \[product type — e.g., "supplement bottle" / "jar" / "box"\] arranged in a \[single / side-by-side / row\] composition. Labels facing camera.
+SUBJECT: EXACTLY \[QUANTITY\] \[product type — e.g., "supplement bottle" / "jar" / "box"\] — count: \[QUANTITY\] units, no more, no less. Arranged in a \[single / side-by-side / row\] composition. Labels facing camera. DO NOT add extra units beyond the stated count.
 
 Product must exactly replicate the reference image: identical bottle/bag shape, label design, colors, cap style, brand placement, and overall packaging aesthetic — no variations or interpretations allowed.
 
