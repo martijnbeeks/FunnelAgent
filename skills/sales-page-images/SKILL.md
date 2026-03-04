@@ -197,8 +197,9 @@ skill_content/PROMPT 5_3_ Hero Checking Prompt.md
 Follow the SOP exactly:
 1. Evaluate the generated hero image against the SOP's quality criteria
 2. Score on all dimensions specified in the SOP
-3. If below threshold, generate a revised prompt and re-generate via Gemini API
-4. Iterate until the image passes QA or the user approves
+3. **Hero C specific check — MANDATORY BADGE VALIDATION:** Visually confirm the guarantee badge is present, large (≥20% image width), and clearly readable. If the badge is missing, too small, or unreadable, automatically regenerate with a strengthened prompt before proceeding with other QA steps.
+4. If below threshold on any dimension, generate a revised prompt and re-generate via Gemini API
+5. Iterate until the image passes QA or the user approves
 
 ### 2c. Save QA Results
 

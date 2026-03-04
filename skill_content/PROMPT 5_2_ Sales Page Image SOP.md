@@ -313,7 +313,7 @@ Hands: Natural and relaxed on both sides.
 
 Output: 2 variations (different people, layout, backgrounds) → PICK BEST
 
-## **HERO C: PERSON HOLDING PRODUCT \+ GUARANTEE BADGE (A/B Test)**
+## **HERO C: PERSON HOLDING PRODUCT \+ GUARANTEE BADGE (RECOMMENDED — Always HERO.IMAGE)**
 
 **Tool:** Gemini API | 1:1 | Generate 2 variations → Pick best
 
@@ -321,7 +321,9 @@ Output: 2 variations (different people, layout, backgrounds) → PICK BEST
 
 **Product:** YES — prominently held in hand, 25-35% of frame height
 
-**CONFIG Field:** HERO.IMAGE\_C
+**CONFIG Field:** HERO.IMAGE (primary — always shown on sales page)
+
+**⚠️ GUARANTEE BADGE IS MANDATORY. The image is invalid without a large, clearly readable badge.**
 
 **Prompt Template:**
 
@@ -371,43 +373,33 @@ Background & Setting:
 
 \- Natural lighting from front/side — warm, inviting tone
 
-Guarantee Badge Placement:
+GUARANTEE BADGE — MANDATORY (IMAGE IS INVALID WITHOUT THIS):
 
-\- Prominent badge overlay in BOTTOM THIRD or positioned near product
+\- LARGE gold circular badge in the BOTTOM-RIGHT CORNER of the image
 
-\- Do NOT obscure person's face or product label
+\- Badge must occupy at least 20% of the image width — clearly readable without zooming
 
-\- Badge contains: "90-DAY GUARANTEE" or "90 DAYS RISK FREE" as main headline
+\- Badge text rendered as ACTUAL BOLD TEXT (not implied or symbolic):
 
-\- Supporting text: "Try Risk Free for 90 Days" OR "Get Full Results Within
+    Line 1 (largest): "90-DAY GUARANTEE"
 
-  90 Days or You Don't Pay\!" OR "100% Money Back Guarantee"
+    Line 2 (medium): "Money Back"
 
-\- TEXT IN TARGET LANGUAGE
+\- Style: Gold/yellow circle, white bold text, dark outline for contrast
 
-Badge Design Options:
+\- Do NOT place badge over the person's face or the product label
 
-\- Gold circular badge with white text
+\- If the badge is not clearly visible and readable, regenerate
 
-\- Blue shield-shaped badge with white text
-
-\- Green rounded rectangle with guarantee icon
-
-\- Red/white seal design with ribbon
-
-\- High-visibility colors, clean shape, bold readable typography
-
-Match product color theme in badge colors and background tones.
+Match product color theme in badge and background tones.
 
 Overall: Professional, trustworthy, authentic — NOT overly polished stock photo.
 
 Convey real person testimonial/endorsement vibe.
 
-Balance between professional and relatable/human.
-
 Hands: Holding product naturally with both hands.
 
-Output: 2 variations (different people/genders \+ different badge designs or backgrounds) → PICK BEST
+Output: 2 variations (different people/genders \+ different badge positions or backgrounds) → PICK BEST
 
 # **PART 5: AGITATION IMAGE (1:1)**
 
