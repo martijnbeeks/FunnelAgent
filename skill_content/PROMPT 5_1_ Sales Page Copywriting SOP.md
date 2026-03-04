@@ -432,6 +432,8 @@ The \[Mechanism\] Breakthrough Helping 60,000+ Adults Over 55
 - [ ] Does the headline structurally resemble one of the formulas above (same pattern, even if not identical wording)?
 - [ ] Does it lead with the angle's central big idea or primary pain point — not a secondary benefit or mechanism?
 - [ ] Would a 55+ reader with this exact problem stop scrolling the moment they read it?
+- [ ] **If the headline includes a percentage, is it > 50%?** Percentages ≤ 50% read as weak — find a stat above 50% or restructure the headline.
+- [ ] **Does the headline wrap the 1–4 most important words in `<span class='hero__headline-highlight'>...</span>`?** This MUST be the emotionally strongest phrase (the core result/benefit), not the full statistic clause.
 
 If any box is unchecked, rewrite before moving on.
 
@@ -477,10 +479,11 @@ Without painful injections, addictive medications, or giving up activities you l
 
 **Rules:**
 
-- Exactly 3 bullets  
-- 6-10 words each  
-- Start with action verb or outcome  
+- Exactly 3 bullets
+- **Max 6 words each** (count strictly — every word counts)
+- Start with action verb or outcome
 - NO percentages in bullets
+- **Bold up to 4 important words per bullet** using `<strong>` tags — the most emotionally resonant words (the pain being solved or the result being gained)
 
 **Formula:**
 
@@ -2361,7 +2364,7 @@ const CONFIG \= {
 
     HERO: {
 
-        HEADLINE: "",             // Include \<span class='hero\_\_headline-highlight'\>...\</span\> around key benefit
+        HEADLINE: "",             // REQUIRED: wrap the 1–4 most important words in \<span class='hero\_\_headline-highlight'\>...\</span\>. Any percentage used MUST be > 50%.
 
         BADGE: "",                // Authority badge text
 
@@ -2369,11 +2372,11 @@ const CONFIG \= {
 
         BENEFITS: \[
 
-            "",                   // Benefit 1
+            "",                   // Benefit 1 — max 6 words, bold up to 4 key words with \<strong\>
 
-            "",                   // Benefit 2
+            "",                   // Benefit 2 — max 6 words, bold up to 4 key words with \<strong\>
 
-            ""                    // Benefit 3
+            ""                    // Benefit 3 — max 6 words, bold up to 4 key words with \<strong\>
 
         \],
 
@@ -2960,11 +2963,11 @@ const CONFIG \= {
 
         BENEFITS: \[
 
-            "Reduces joint stiffness and discomfort",
+            "Reduces \<strong\>joint stiffness\</strong\> and discomfort",
 
-            "Supports natural cartilage repair",
+            "Supports \<strong\>natural cartilage repair\</strong\>",
 
-            "Restores mobility for daily activities"
+            "Restores \<strong\>mobility\</strong\> for daily activities"
 
         \],
 

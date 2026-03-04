@@ -72,6 +72,18 @@ Use the selected brand name from `output/03a_brand_names.md` throughout.
 Apply the validated color variables from Step 4.
 Maintain consistency with the advertorial's angle, voice, and messaging.
 
+## CRITICAL FORMATTING RULES (NON-NEGOTIABLE)
+
+Before writing any copy, internalize these rules — they are enforced at QA:
+
+**Hero Headline:**
+- Any percentage used MUST be > 50%. Percentages ≤ 50% read as weak — find a stat above 50% or restructure.
+- MUST wrap the 1–4 most emotionally powerful words in `<span class='hero__headline-highlight'>...</span>` — the core result/benefit phrase, not the full statistic clause.
+
+**Hero Benefits (USPs):**
+- Max 6 words each (count strictly)
+- Bold up to 4 important words per bullet using `<strong>` tags
+
 ## STEP 6: WRITE THE SALES PAGE (Following SOP Structure)
 
 Follow the SOP exactly. Write all sections the SOP specifies:
