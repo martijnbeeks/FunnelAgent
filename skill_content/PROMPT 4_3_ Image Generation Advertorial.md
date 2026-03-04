@@ -188,287 +188,28 @@ All images are generated via the Gemini API through `scripts/generate_image.py`.
 
 # PART 4: HERO IMAGE (16:9)
 
-## Always Output 3 Versions
+**Keep it dead simple.** The hero is a pure scroll-stopper built from the headline. No typologies, no frameworks — just raw emotional impact.
 
-1. **Recognition Hero** — Hits deepest fear (RECOMMENDED for cold traffic)
-2. **Transformation Hero** — Shows mechanism/proof (good for retargeting)
-3. **Aspiration Hero** — Shows desire achieved (A/B test for solution-aware)
+## Process
 
----
+**Step 1 — Generate 4 image prompts**
 
-## HERO TYPE 1: Recognition Heroes
+Using the `HEADLINE` from the advertorial CONFIG, ask yourself:
 
-**Style:** Photorealistic Portrait | **Format:** 16:9
+> "Create a prompt for a scroll-stopping hero image for an advertorial with this headline: [HEADLINE]. Make it extremely emotional, shocking, and scroll-stopping. No text in the image. 16:9 format. Give me 4 different versions."
 
-| Primary Fear | Concept | The Gut-Punch |
-| :---- | :---- | :---- |
-| Missing moments | **1A: Missed Moment** | POV from armchair — grandchildren reaching up |
-| Being a burden | **1B: The Look** | Daughter's exhausted face, forcing a smile |
-| Losing independence | **1C: The Pause** | Bottom of stairs, looking UP |
-| Being left out | **1D: The Window** | Hands on glass, watching life outside |
-| Fear of decline | **1E: The Shadow** | Mobility walker in corner — your FUTURE |
-| Family isolation | **1F: Empty Chair** | Family dinner, one chair empty |
+Write 4 distinct image prompts. Each should attack a different emotional angle — pain, shock, identity threat, visceral fear. No text in any image.
 
-### 1A: THE MISSED MOMENT
+**Step 2 — Pick the winner**
 
-Photorealistic POV image. 16:9 format.
+Score each prompt against one criterion: which one, if generated, would make a 55+ reader stop mid-scroll because it shows something they instantly recognise as their private pain or fear? Pick that one. Note briefly why the others lost.
 
-CAMERA: First-person POV looking DOWN from seated position in armchair.
+**Step 3 — Generate with Nano Banana Pro**
 
-FOREGROUND: Your own hands — [AGE]-appropriate, [ETHNICITY] skin tone — GRIPPING armrest. Knuckles showing tension. Wedding ring visible.
-
-THE FLOOR: [CULTURALLY APPROPRIATE — British carpet, Dutch hardwood]. Grandchildren's toys scattered. Building blocks. Picture book open.
-
-THE CHILDREN: Two grandchildren on floor, looking UP at camera. Arms REACHING. Faces hopeful. "Come play with us."
-
-THE GAP: 3 feet between you and everything that matters.
-
-LIGHTING: Warm golden light on children. Cooler where you are. The warmth doesn't reach you.
-
-EMOTION: Make viewer's hands ACHE with need to let go.
-
-No text. No product.
-
-### 1B: THE LOOK
-
-Photorealistic image. 16:9 format.
-
-COMPOSITION: Over-shoulder shot. Back of [DEMOGRAPHIC]'s head (grey hair, bowed) in soft focus foreground.
-
-THE FACE: Adult daughter, 40-45, [ETHNICITY]. SHARP FOCUS.
-
-HER EXPRESSION:
-
-- Smile: Present. Forced. A mask.
-- Eyes: EXHAUSTED. Dark circles hidden with makeup.
-- Jaw: Tight. Holding back.
-- Truth: Terrified. For you. You're the CAUSE.
-
-SETTING: [CULTURALLY APPROPRIATE kitchen]. Normal backdrop to private devastation.
-
-LIGHTING: Flat, honest. Lighting of difficult conversations.
-
-EMOTION: Worst pain isn't your body. It's knowing you put that look on your child's face.
-
-No text. No product.
-
-### 1C: THE PAUSE
-
-Photorealistic image. 16:9 format.
-
-SUBJECT: [DEMOGRAPHIC] standing at BOTTOM of staircase.
-
-THE STAIRS: 12-14 steps. Normal stairs that LOOM.
-
-BODY LANGUAGE:
-
-- Hand on banister — resting, preparing
-- Weight shifted, testing
-- Head tilted UP, measuring
-- Micro-hesitation before what used to be NOTHING
-
-EXPRESSION: Not pain. DETERMINATION. Quiet daily courage. Natural [eye color].
-
-SETTING: [CULTURALLY APPROPRIATE hallway]. Family photos going up stairs.
-
-LIGHTING: Light from above. Destination bright. Bottom in shadows.
-
-EMOTION: Everyone with this problem knows this EXACT moment.
-
-No text. No product.
-
-### 1D: THE WINDOW
-
-Photorealistic image. 16:9 format.
-
-SUBJECT: [DEMOGRAPHIC] standing at large window. Profile view.
-
-THE GLASS: Dominates image. A barrier. Prison of transparency.
-
-INSIDE: Darker, muted. Chair they spend too much time in visible.
-
-OUTSIDE (through window, VIBRANT):
-
-- Grandchildren playing in garden
-- OR: Neighbors walking together
-- World moving without them
-
-BODY LANGUAGE: Hands FLAT against glass. Leaning toward life.
-
-EXPRESSION: Wistful. Hungry. Grief of watching life without you. Natural [eye color].
-
-LIGHTING: Dark interior, bright exterior. Contrast IS the story.
-
-No text. No product.
-
-### 1E: THE SHADOW
-
-Photorealistic image. 16:9 format.
-
-COMPOSITION: [DEMOGRAPHIC] foreground, in focus. THE THING in background, unmistakable.
-
-THE THING: Mobility walker. Clean, new. "Gift" from family. NOT YET.
-
-SUBJECT: Seated or standing, turned toward it. Can't stop looking.
-
-EXPRESSION — layers:
-
-- Defiance: "Not yet. Not me."
-- Fear: "But maybe soon."
-- Determination: "I won't let this happen."
-- Despair: "Will I have a choice?"
-
-Natural [eye color].
-
-SETTING: [CULTURALLY APPROPRIATE living room]. Otherwise LIVED IN.
-
-LIGHTING: Walker slightly shadowed — lurking. Waiting.
-
-No text. No product.
-
-### 1F: THE EMPTY CHAIR
-
-Photorealistic image. 16:9 format.
-
-COMPOSITION: Family dinner scene, elevated angle.
-
-THE TABLE: [CULTURALLY APPROPRIATE meal]. 4-5 family members, multiple generations. Engaged. ALIVE.
-
-THE FAMILY: Passing dishes. Laughing. Eye contact. Connection.
-
-THE EMPTY CHAIR: One place at table. Chair pushed back. CONSPICUOUSLY empty.
-
-THE SUBJECT:
-
-- OPTION A: Visible in doorway, watching but not joining
-- OPTION B: Not visible — empty chair IS them
-
-LIGHTING: Warm over table. Cooler at edges. Empty chair where warmth fades.
-
-EMOTION: Fear isn't dying alone. It's being alive and watching family learn to live without you.
-
-No text. No product.
-
----
-
-## HERO TYPE 2: Transformation Heroes
-
-**Style:** Photorealistic / Medical Illustration | **Format:** 16:9
-
-### 2A: SYMBOLIC METAPHOR (Brain, energy, mood)
-
-Split image. 16:9 format. Clean gradient background.
-
-LEFT SIDE — THE PRISON:
-
-Human head silhouette in profile.
-
-INSIDE: [Match research problem]
-
-- Fog → Dense grey fog, suffocating
-- Exhaustion → Dim, flickering lightbulb
-- Memory → Scattered puzzle pieces
-- No energy → Drained battery, cracked
-
-Muted greys, heavy.
-
-RIGHT SIDE — THE FREEDOM:
-
-SAME silhouette.
-
-INSIDE: [Match desire]
-
-- Clarity → Golden neural network, electricity flowing
-- Energy → Radiant sun, beams extending
-- Memory → Completed puzzle, glowing
-- Vitality → Fully charged battery, radiating
-
-Vibrant gold, ALIVE.
-
-TRANSITION: Clean line between sides.
-
-ZERO TEXT. No product.
-
-### 2B: ANATOMICAL CROSS-SECTION (Joints, arteries)
-
-Split image. 16:9 format. Dark medical background.
-
-LEFT SIDE — THE DAMAGE:
-
-Medical illustration of [ANATOMY]:
-
-- Joint: Cartilage rough, inflamed, eroded. RED inflammation.
-- Artery: Yellow plaque CHOKING passage.
-
-Sickly yellows, angry reds, bruise purples.
-
-RIGHT SIDE — THE RESTORATION:
-
-SAME anatomy:
-
-- Joint: Smooth cartilage, healthy cushion. Blue/gold glow.
-- Artery: Clear passage, smooth flow.
-
-Healthy pinks, vibrant blues, golden energy.
-
-STYLE: Medical illustration — realistic but EMOTIONAL.
-
-ZERO TEXT. No product.
-
-### 2C: REAL SYMPTOM BEFORE/AFTER
-
-Split image. 16:9 format.
-
-LEFT — THE STRUGGLE:
-
-[DEMOGRAPHIC] in difficulty:
-
-- Hands pressing armrests, trying to stand
-- Sitting on bed edge, dreading first steps
-
-Expression: Dignified struggle.
-
-Desaturated tones.
-
-RIGHT — THE FREEDOM:
-
-SAME person, SAME setting:
-
-- Rising easily, natural movement
-- Standing with ease
-
-Expression: Simple contentment.
-
-Warmer tones.
-
-ZERO TEXT. No product.
-
----
-
-## HERO TYPE 3: Aspiration Heroes
-
-**Style:** Cinematic Action (Photorealistic) | **Format:** 16:9
-
-### 3A: LIVING THE DESIRE
-
-Cinematic photograph. 16:9 format. MOTION visible.
-
-SUBJECT: [DEMOGRAPHIC] in FLUID MOVEMENT during [PRIMARY DESIRE]:
-
-- Playing on floor with grandchildren — DOWN there, MOVING
-- Walking the dog — STRIDING, not shuffling
-- Tending garden — kneeling, hands in soil
-- Dancing with spouse — spontaneous kitchen dance
-
-MOVEMENT: Effortless. Natural. Body that WORKS.
-
-EXPRESSION: Genuine joy. Happiness of CAPABILITY restored. Natural [eye color].
-
-SETTING: [CULTURALLY APPROPRIATE]. Where desire lives.
-
-LIGHTING: Warm, natural, ALIVE.
-
-No text. No product.
+Generate only the winning prompt using:
+- `--model gemini-3-pro-image-preview`
+- `--aspect-ratio 16:9`
+- No `--reference-image` needed
 
 ---
 
@@ -1112,37 +853,22 @@ NO text overlays. NO price. NO badges. Just the product looking its best.
 
 ---
 
-## HERO VERSION 1 — Recognition (RECOMMENDED)
+## HERO IMAGE
 
-**Style:** Photorealistic Portrait | **16:9**
+**Format:** 16:9 | **Model:** Nano Banana Pro (`gemini-3-pro-image-preview`)
 
-**Type:** [1A-1F]
+**Headline used:** [HEADLINE from CONFIG]
 
-**Fear:** [Specific fear]
+**4 Prompts Generated:**
 
-[Full prompt]
+1. [Prompt 1]
+2. [Prompt 2]
+3. [Prompt 3]
+4. [Prompt 4]
 
----
+**Winner:** #[N] — [1-line reason why it stops the scroll]
 
-## HERO VERSION 2 — Transformation
-
-**Style:** Photorealistic / Medical Illustration | **16:9**
-
-**Type:** [2A-2C]
-
-**Mechanism:** [UMP visual]
-
-[Full prompt]
-
----
-
-## HERO VERSION 3 — Aspiration (A/B Test)
-
-**Style:** Cinematic Action | **16:9**
-
-**Desire:** [Primary desire]
-
-[Full prompt]
+[Winning prompt in full]
 
 ---
 
@@ -1250,7 +976,7 @@ Headline title from Copywriting
 
 | Section | Image Type | Format | Product Image Required? |
 | :---- | :---- | :---- | :---- |
-| Hero | Recognition/Transform/Aspire | 16:9 | No |
+| Hero | Scroll-stopper from headline (4 prompts, pick winner) | 16:9 | No |
 | Section 0 | Wound — Desire Denied | 16:9 | No |
 | Section 1 | UMP Diagram | 16:9 | No |
 | Section 2 | Comparison Diagram | 16:9 | No |
@@ -1274,18 +1000,6 @@ Headline title from Copywriting
 | Repair/restoration | M2: The Restoration |
 | Interruption/stopping cascade | M3: The Interruption |
 
-## Fear → Hero Mapping
-
-| Fear | Hero |
-| :---- | :---- |
-| Missing moments | 1A: Missed Moment |
-| Being a burden | 1B: The Look |
-| Losing independence | 1C: The Pause |
-| Being left out | 1D: The Window |
-| Fear of decline | 1E: The Shadow |
-| Family isolation | 1F: Empty Chair |
-
----
 
 ## Final Checklist
 
