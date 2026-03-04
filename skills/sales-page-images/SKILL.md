@@ -158,26 +158,38 @@ If CDN URLs were captured in step 1f:
    - `MISS.WITHOUT_IMAGE` — "without" comparison image
    - `MISS.WITH_IMAGE` — "with" comparison image
    - Testimonial `IMAGE` fields where the value is a generated filename (not `"gemini"`, `"database"`, or empty)
-4. Map bundle product images to the pricing section:
-   - `OFFER_SETTINGS.bundles[0].image` — bundle_1month.png CDN URL (1-unit shot)
-   - `OFFER_SETTINGS.bundles[1].image` — bundle_2month.png CDN URL (2-unit shot)
-   - `OFFER_SETTINGS.bundles[2].image` — bundle_3month.png CDN URL (3-unit shot)
+4. Bundle image CDN URLs are stored for use in step 1h (injected directly into the template's OFFER_SETTINGS — **not** written into the config file):
+   - bundle_1month.png CDN URL → template's bundles[0].image
+   - bundle_2month.png CDN URL → template's bundles[1].image
+   - bundle_3month.png CDN URL → template's bundles[2].image
 5. Write updated CONFIG back to `{RUN_DIR}/05a_sales_page_config.js`
 
 ### 1h. Reassemble Sales Page HTML
 
-**CRITICAL — Follow this exact procedure to avoid duplicate `const` declarations that break rendering:**
+**CRITICAL — Follow this exact procedure:**
+
+The template's first `<script>` block (containing `const OFFER_SETTINGS`) is the **user-controlled zone** for bundle pricing, gift names, and gift images. It must **never be deleted or replaced**. Only the bundle `image` fields are updated with generated CDN URLs.
 
 1. Read `templates/sales_page.html` into memory.
-2. **Delete the entire first `<script>` block** (the template's example `OFFER_SETTINGS` block) — from its opening `<script>` to its matching `</script>`.
+2. **Update bundle image fields in the first `<script>` block** — replace the first 3 occurrences of `image:` with an empty value (`image:            "",` or `image: "",`) with the bundle CDN URLs in order (bundle_1month → bundles[0], bundle_2month → bundles[1], bundle_3month → bundles[2]):
+   ```python
+   import re
+   for url in [bundle_1month_url, bundle_2month_url, bundle_3month_url]:
+       html = re.sub(r'image:\s*""', f'image: "{url}"', html, count=1)
+   ```
 3. In the second `<script>` block, locate the two marker lines:
    - `// CONFIG START — PASTE YOUR CONFIG BELOW THIS LINE`
    - `// CONFIG END — DO NOT EDIT BELOW THIS LINE`
-4. Replace everything **between** (not including) those markers with the full contents of `{RUN_DIR}/05a_sales_page_config.js` (which contains `PRODUCT_COLORS`, `OFFER_SETTINGS`, and `CONFIG`).
-5. Do not modify anything outside those markers.
-6. Save the result to `{RUN_DIR}/sales_page.html`.
+4. Extract only `PRODUCT_COLORS` and `CONFIG` from `{RUN_DIR}/05a_sales_page_config.js` — skip `OFFER_SETTINGS` (it lives in the template). Start extraction from `const PRODUCT_COLORS`:
+   ```python
+   config_start = config.find('const PRODUCT_COLORS')
+   config_to_inject = config[config_start:].strip()
+   ```
+5. Replace everything **between** (not including) those markers with `config_to_inject`.
+6. Do not modify anything outside those markers.
+7. Save the result to `{RUN_DIR}/sales_page.html`.
 
-**Validate before saving:** `const CONFIG`, `const PRODUCT_COLORS`, `const OFFER_SETTINGS`, and `const THEMES` must each appear exactly once in the file.
+**Validate before saving:** `const CONFIG` must appear exactly twice (once in an HTML comment, once in JS), `const PRODUCT_COLORS` exactly once, `const OFFER_SETTINGS` exactly once (from the template's first `<script>`), `const THEMES` exactly once.
 
 ---
 

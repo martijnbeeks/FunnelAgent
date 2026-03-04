@@ -1377,7 +1377,9 @@ Output: 3 selfie variations → USE ALL 3
 
 ## **Bundle Image Philosophy**
 
-These are clean cut-out product images with **transparent backgrounds** — showing exactly 1, 2, or 3 units of the rebranded product. They appear in the pricing cards so the product floats cleanly over the card design. No setting, no surface, no props — just the product(s) on a transparent background.
+These are clean product images on a **pure solid white background** — showing exactly 1, 2, or 3 units of the rebranded product. They appear in the pricing cards. No setting, no surface texture, no props, **absolutely no shadow of any kind** — just the product(s) on a completely flat white background.
+
+⚠️ **CRITICAL: Do NOT use "transparent background" in the prompt.** Gemini cannot produce true alpha transparency — it will render a visible checkerboard pattern instead. Always use "pure solid white background."
 
 ## **Bundle Image Specs**
 
@@ -1391,15 +1393,15 @@ These are clean cut-out product images with **transparent backgrounds** — show
 
 Use this prompt structure for all three, adjusting for quantity:
 
-Product cut-out image. 1:1 format. **Transparent background (PNG alpha).**
+Professional product photography. 1:1 format.
 
-SUBJECT: \[QUANTITY\] \[product type — e.g., "supplement bottle" / "jar" / "box"\] arranged in a \[single / side-by-side / row\] composition.
+SUBJECT: \[QUANTITY\] \[product type — e.g., "supplement bottle" / "jar" / "box"\] arranged in a \[single / side-by-side / row\] composition. Labels facing camera.
 
 Product must exactly replicate the reference image: identical bottle/bag shape, label design, colors, cap style, brand placement, and overall packaging aesthetic — no variations or interpretations allowed.
 
-BACKGROUND: Fully transparent — no surface, no floor, no shadow, no gradient, no setting.
+BACKGROUND: Pure solid WHITE — completely flat, uniform white throughout the entire image. Absolutely NO checkerboard pattern, NO transparency effect, NO gradient, NO surface, NO floor, NO setting of any kind.
 
-LIGHTING: Clean, even studio-quality lighting on the product(s) only.
+LIGHTING: Clean, even studio lighting on the product(s). ZERO shadow — no drop shadow, no cast shadow, no contact shadow, no shadow of any kind anywhere in the image. The background must remain 100% pure white with no grey areas.
 
 QUALITY:
 
@@ -1409,9 +1411,7 @@ QUALITY:
 
 \- No text, overlays, or annotations
 
-\- Clean edges suitable for placement on any background
-
-Output: 1 image per bundle — transparent PNG, ready for pricing card use.
+Output: 1 image per bundle — pure white background, completely shadowless, ready for pricing card use.
 
 ## **Generation Notes**
 
@@ -1419,7 +1419,7 @@ Output: 1 image per bundle — transparent PNG, ready for pricing card use.
 * No A/B variations needed — one definitive shot per bundle size
 * These are generated via Gemini multimodal (with \`--reference-image\`) so the actual rebranded product is reproduced accurately
 * Do NOT describe the product's appearance in the prompt — the reference image handles that
-* Output as PNG with transparent background — specify this explicitly in the prompt
+* NEVER request "transparent background" — always use "pure solid white background"
 
 # **PART 12: OUTPUT FORMAT**
 
@@ -1552,13 +1552,15 @@ REVIEWS\_B\[1\].IMAGE: "" (database — funnelbuilder fills)
 
 REVIEWS\_B\[2\].IMAGE: "gemini" (funnelbuilder generates)
 
-**Bundle product images (pricing section):**
+**Bundle product images — injected into template's OFFER\_SETTINGS:**
 
-OFFER\_SETTINGS.bundles\[0\].image: "\[url — 1-unit shot\]"
+The template's `OFFER_SETTINGS` first `<script>` block is preserved as-is (gifts and bundle pricing stay from template). The bundle CDN image URLs are injected directly into the template's `bundles[x].image` fields during HTML assembly.
 
-OFFER\_SETTINGS.bundles\[1\].image: "\[url — 2-unit shot\]"
+OFFER\_SETTINGS.bundles\[0\].image: "\[url — 1-unit shot, pure white background\]"
 
-OFFER\_SETTINGS.bundles\[2\].image: "\[url — 3-unit shot\]"
+OFFER\_SETTINGS.bundles\[1\].image: "\[url — 2-unit shot, pure white background\]"
+
+OFFER\_SETTINGS.bundles\[2\].image: "\[url — 3-unit shot, pure white background\]"
 
 # **PART 12: QUICK REFERENCE & CHECKLISTS**
 
@@ -1577,9 +1579,9 @@ OFFER\_SETTINGS.bundles\[2\].image: "\[url — 3-unit shot\]"
 | WITH | OPTIONAL | If included: subtle background, natural size |
 | REV-PRODUCT | YES 30-50% | Product IS the shot \+ Mandatory Product Spec |
 | REV-OUTCOME | NEVER | "No product. Pure result moment." |
-| BUNDLE 1-MONTH | YES (1 unit) | 1 unit, transparent background \+ Mandatory Product Spec |
-| BUNDLE 2-MONTH | YES (2 units) | 2 units side by side, transparent background \+ Mandatory Product Spec |
-| BUNDLE 3-MONTH | YES (3 units) | 3 units in row, transparent background \+ Mandatory Product Spec |
+| BUNDLE 1-MONTH | YES (1 unit) | 1 unit, pure white background, zero shadow \+ Mandatory Product Spec |
+| BUNDLE 2-MONTH | YES (2 units) | 2 units side by side, pure white background, zero shadow \+ Mandatory Product Spec |
+| BUNDLE 3-MONTH | YES (3 units) | 3 units in row, pure white background, zero shadow \+ Mandatory Product Spec |
 
 ## **Final Checklist**
 
