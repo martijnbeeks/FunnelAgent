@@ -34,7 +34,44 @@ output/05a_sales_page_config.js
 output/02b_synthesis_phase2.md
 ```
 
-### 1c. Execute Image Prompt Generation
+### 1c. Native Ad Image Selection for Review Slots
+
+The 4 review slots that previously required a funnelbuilder (R1: `REVIEWS_A[0]`, R2: `REVIEWS_A[1]`, R5: `REVIEWS_B[1]`, R6: `REVIEWS_B[2]`) are filled from the native ad image library — realistic selfie photos matched to the target avatar.
+
+**Read the native ad library:**
+```
+20 native ads/descriptions.json
+```
+
+**Determine gender targeting** from the product info and synthesis brief:
+- Gender-specific product (e.g., men's prostate, women's hormones): use all 4 images from that gender
+- Unisex product: use 2 images per gender
+
+**Select 4 images using these criteria (in priority order):**
+1. **Gender match** — hard filter if product is gender-specific
+2. **Age proximity** — closest to the target sweet spot age from the synthesis brief
+3. **Setting variety** — prefer different backgrounds across all 4 (e.g., indoor/outdoor mix)
+4. **Ethnicity diversity** — prioritize the dominant target market ethnicity; include 1 realistic minority image for UK/US/AU markets
+
+**No duplicates — each of the 4 files must be different.**
+
+**Copy selected images to the run directory:**
+```bash
+cp "20 native ads/<selected1>.png" "{RUN_DIR}/sales_page_images/review_native_1.png"
+cp "20 native ads/<selected2>.png" "{RUN_DIR}/sales_page_images/review_native_2.png"
+cp "20 native ads/<selected3>.png" "{RUN_DIR}/sales_page_images/review_native_3.png"
+cp "20 native ads/<selected4>.png" "{RUN_DIR}/sales_page_images/review_native_4.png"
+```
+
+**Update the CONFIG** — replace the 4 review slots with the selected filenames:
+- `REVIEWS_A[0].IMAGE`: `"review_native_1.png"` (was `""`)
+- `REVIEWS_A[1].IMAGE`: `"review_native_2.png"` (was `"gemini"`)
+- `REVIEWS_B[1].IMAGE`: `"review_native_3.png"` (was `""`)
+- `REVIEWS_B[2].IMAGE`: `"review_native_4.png"` (was `"gemini"`)
+
+These filenames will be resolved to full CDN URLs in step 1h when CDN upload runs.
+
+### 1d. Execute Image Prompt Generation
 
 Follow the SOP exactly. The sales page requires **14 images** total:
 
@@ -58,11 +95,11 @@ Follow the SOP exactly. The sales page requires **14 images** total:
 
 Generate prompts for each AI-generated image as specified by the SOP.
 
-### 1d. Save Image Prompts
+### 1e. Save Image Prompts
 
 Save all generated image prompts to `output/05b_image_prompts_sales_page.md`.
 
-### 1e. Generate Images via Gemini API
+### 1f. Generate Images via Gemini API
 
 **Generate all images in parallel.** For each image prompt:
 1. Save the prompt text to a temporary file (e.g., `output/sales_page_images/_prompt_<image_name>.txt`)
@@ -132,7 +169,7 @@ python scripts/generate_image.py \
 
 **IMPORTANT:** Do NOT generate images one at a time. Issue all Bash calls in a single response so they run concurrently. Wait for all to complete, then verify each output file exists.
 
-### 1f. Upload All Sales Page Images to CDN
+### 1g. Upload All Sales Page Images to CDN
 
 If R2 CDN credentials are configured (check for `R2_ACCESS_KEY_ID` in environment), upload all generated images:
 
@@ -144,7 +181,7 @@ python scripts/upload_to_cdn.py \
 
 Capture the JSON output mapping filenames to CDN URLs. Merge these into `{RUN_DIR}/cdn_urls.json` (create if it doesn't exist, merge if it does). If the upload fails or R2 credentials are not set, log a warning and skip CDN URL injection.
 
-### 1g. Update Sales Page CONFIG with CDN URLs
+### 1h. Update Sales Page CONFIG with CDN URLs
 
 If CDN URLs were captured in step 1f:
 1. Read `{RUN_DIR}/05a_sales_page_config.js`
@@ -157,14 +194,14 @@ If CDN URLs were captured in step 1f:
    - `ALTERNATIVES.DIAGRAM_IMAGE` — alternatives comparison diagram
    - `MISS.WITHOUT_IMAGE` — "without" comparison image
    - `MISS.WITH_IMAGE` — "with" comparison image
-   - Testimonial `IMAGE` fields where the value is a generated filename (not `"gemini"`, `"database"`, or empty)
+   - Testimonial `IMAGE` fields where the value is a filename (not `"gemini"`, `"database"`, or empty) — this includes both AI-generated review images and native ad images (`review_native_1.png` through `review_native_4.png`)
 4. Bundle image CDN URLs are stored for use in step 1h (injected directly into the template's OFFER_SETTINGS — **not** written into the config file):
    - bundle_1month.png CDN URL → template's bundles[0].image
    - bundle_2month.png CDN URL → template's bundles[1].image
    - bundle_3month.png CDN URL → template's bundles[2].image
 5. Write updated CONFIG back to `{RUN_DIR}/05a_sales_page_config.js`
 
-### 1h. Reassemble Sales Page HTML
+### 1i. Reassemble Sales Page HTML
 
 **CRITICAL — Follow this exact procedure:**
 
@@ -195,7 +232,7 @@ The template's first `<script>` block (containing `const OFFER_SETTINGS`) is the
 
 ## STEP 2: HERO IMAGE QA (Step 5.3)
 
-**NOTE:** If hero QA triggers regeneration, the regenerated hero image must also be uploaded to CDN (re-run step 1f for just that file using `--file`), and the CONFIG/HTML must be updated again (re-run steps 1g-1h).
+**NOTE:** If hero QA triggers regeneration, the regenerated hero image must also be uploaded to CDN (re-run step 1g for just that file using `--file`), and the CONFIG/HTML must be updated again (re-run steps 1h-1i).
 
 ### 2a. Load the Hero Image QA SOP
 
