@@ -171,14 +171,13 @@ Generate ALL THREE. Testing determines winner.
 
 ## **Hero Selection Guide**
 
+**Hero C (Person + Guarantee Badge) is the recommended default for all product types.** Assign Hero C's URL to `HERO.IMAGE`. Hero A and Hero B go to `IMAGE_B` and `IMAGE_C` for A/B testing.
+
 | Product Type | Lead With | A/B Against |
 | :---- | :---- | :---- |
-| Health/Wellness (mood, energy) | A: First Morning | B and C |
-| Mobility/Physical | B: Split Before/After | A and C |
-| Skeptical audience | C: Guarantee Badge | A and B |
-| Unknown audience | A: First Morning | B and C |
+| All product types | **C: Guarantee Badge (RECOMMENDED)** | A and B |
 
-## **HERO A: THE FIRST MORNING (Recommended Control)**
+## **HERO A: THE FIRST MORNING (A/B Test)**
 
 **Tool:** Gemini API | 1:1 | Generate 2 variations → Pick best
 
@@ -1460,7 +1459,7 @@ When generating image prompts for a specific product, output in this format:
 
 \---
 
-\#\# HERO A — The First Morning (RECOMMENDED CONTROL)
+\#\# HERO A — The First Morning (A/B TEST)
 
 Tool: Gemini API | 1:1 | 2 variations → Pick best
 
@@ -1468,7 +1467,7 @@ Emotion: Relief \+ Disbelief
 
 Product: YES (natural placement)
 
-CONFIG Field: HERO.IMAGE
+CONFIG Field: HERO.IMAGE\_B
 
 \[Full prompt\]
 
@@ -1488,7 +1487,7 @@ CONFIG Field: HERO.IMAGE\_B
 
 \---
 
-\#\# HERO C — Person \+ Guarantee Badge (A/B TEST)
+\#\# HERO C — Person \+ Guarantee Badge (RECOMMENDED)
 
 Tool: Gemini API | 1:1 | 2 variations → Pick best
 
@@ -1496,7 +1495,7 @@ Emotion: Trust \+ Conviction
 
 Product: YES (held in hand) \+ Guarantee badge
 
-CONFIG Field: HERO.IMAGE\_C
+CONFIG Field: HERO.IMAGE (primary — always shown on sales page)
 
 \[Full prompt\]
 
@@ -1528,14 +1527,14 @@ CONFIG Field: HERO.IMAGE\_C
 
 After generation, update CONFIG with image URLs:
 
-**Hero images — apply Hero Selection Guide first:**
-Apply the Hero Selection Guide (Part 4) to determine the best-suited hero for the product type. Assign the winner's URL to HERO.IMAGE; the other two go to IMAGE\_B and IMAGE\_C for A/B reference.
+**Hero images — Hero C is always the recommended default:**
+Assign Hero C's URL to HERO.IMAGE (the image shown on the sales page). Hero A goes to IMAGE\_B and Hero B goes to IMAGE\_C for A/B testing reference.
 
-HERO.IMAGE: "\[url of best-suited hero\]"
+HERO.IMAGE: "\[url of Hero C — Person \+ Guarantee Badge\]"
 
-HERO.IMAGE\_B: "\[url of second hero\]"
+HERO.IMAGE\_B: "\[url of Hero A — The First Morning\]"
 
-HERO.IMAGE\_C: "\[url of third hero\]"
+HERO.IMAGE\_C: "\[url of Hero B — Split Before/After\]"
 
 AGITATION.IMAGE: "\[url\]"
 

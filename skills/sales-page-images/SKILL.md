@@ -150,7 +150,7 @@ If CDN URLs were captured in step 1f:
 1. Read `{RUN_DIR}/05a_sales_page_config.js`
 2. Read `{RUN_DIR}/cdn_urls.json`
 3. Replace image values with their CDN URLs:
-   - **Hero images** — Apply the Hero Selection Guide from the SOP to pick the best-suited hero for the product type (e.g., Health/Wellness → Hero A, Mobility/Physical → Hero B, Skeptical audience → Hero C). Assign the winner's CDN URL to `HERO.IMAGE` and the other two to `HERO.IMAGE_B` and `HERO.IMAGE_C` for A/B reference.
+   - **Hero images** — Hero C (Person + Guarantee Badge) is always the recommended default. Assign Hero C's CDN URL to `HERO.IMAGE` (the image shown on the sales page), Hero A's URL to `HERO.IMAGE_B`, and Hero B's URL to `HERO.IMAGE_C` for A/B testing reference.
    - `AGITATION.IMAGE` — agitation section image
    - `DOCTOR.IMAGE` — doctor portrait
    - `MECHANISM.DIAGRAM_IMAGE` — mechanism diagram
