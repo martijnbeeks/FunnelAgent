@@ -192,17 +192,29 @@ All images are generated via the Gemini API through `scripts/generate_image.py`.
 
 ## Process
 
+**Step 0 — Extract the avatar**
+
+Before writing any prompt, pull the following from the Strategic Intelligence Brief (Part 2: Target Customer Profiles):
+
+- **Gender** — male / female / mixed (use the primary avatar's gender)
+- **Age range** — e.g., "63–75"
+- **Nationality / ethnicity** — e.g., "British", "Dutch", "Israeli"
+- **Appearance notes** — e.g., "grey-haired, weathered but dignified, active-looking"
+- **Typical setting** — e.g., "UK home, GP surgery, garden, living room"
+
+Every prompt must depict this person, in this setting. Getting the wrong gender or ethnicity is a hard failure — the avatar must be recognisable to the reader as themselves.
+
 **Step 1 — Generate 4 image prompts**
 
-Using the `HEADLINE` from the advertorial CONFIG, ask yourself:
-
-> "Create a prompt for a scroll-stopping hero image for an advertorial with this headline: [HEADLINE]. Make it extremely emotional, shocking, and scroll-stopping. No text in the image. 16:9 format. Give me 4 different versions."
-
-Write 4 distinct image prompts. Each should attack a different emotional angle — pain, shock, identity threat, visceral fear. No text in any image.
+Using the `HEADLINE` from the advertorial CONFIG and the avatar extracted above, write 4 distinct image prompts. Each should attack a different emotional angle — pain, shock, identity threat, visceral fear. Every prompt must:
+- Describe the correct avatar (gender, age, ethnicity, appearance)
+- Be set in a culturally appropriate environment for that avatar
+- Contain no text, no product
+- Be 16:9 format
 
 **Step 2 — Pick the winner**
 
-Score each prompt against one criterion: which one, if generated, would make a 55+ reader stop mid-scroll because it shows something they instantly recognise as their private pain or fear? Pick that one. Note briefly why the others lost.
+Score each prompt against one criterion: which one, if generated, would make the target reader stop mid-scroll because it shows something they instantly recognise as their private pain or fear? Pick that one. Note briefly why the others lost.
 
 **Step 3 — Generate with Nano Banana Pro**
 
