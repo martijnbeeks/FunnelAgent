@@ -124,7 +124,7 @@ Use the Task tool with:
   mode: "bypassPermissions"
   prompt: "You are executing product info extraction for the FunnelAgent pipeline.
 
-    FIRST: Read skills/extract-product-info/SKILL.md for your complete instructions.
+    FIRST: Read skills/funnel/00-extract-product-info/SKILL.md for your complete instructions.
 
     Sales Page URL: {url}
 
@@ -182,7 +182,7 @@ Spawn a sub-agent:
 ```
 prompt: "You are executing Step 1 (Deep Research) of the FunnelAgent pipeline.
 
-FIRST: Read skills/deep-research/SKILL.md for your complete instructions.
+FIRST: Read skills/funnel/01-deep-research/SKILL.md for your complete instructions.
 
 RUN_DIR: {RUN_DIR}
 All output/ paths in the skill instructions should be replaced with {RUN_DIR}/.
@@ -213,7 +213,7 @@ Spawn a sub-agent:
 ```
 prompt: "You are executing Step 2.1 (Synthesis Phase 1) of the FunnelAgent pipeline.
 
-FIRST: Read skills/synthesis-phase1/SKILL.md for your complete instructions.
+FIRST: Read skills/funnel/02a-synthesis-phase1/SKILL.md for your complete instructions.
 
 RUN_DIR: {RUN_DIR}
 All output/ paths in the skill instructions should be replaced with {RUN_DIR}/.
@@ -246,7 +246,7 @@ Spawn a sub-agent:
 ```
 prompt: "You are executing Step 2.2 (Synthesis Phase 2) of the FunnelAgent pipeline.
 
-FIRST: Read skills/synthesis-phase2/SKILL.md for your complete instructions.
+FIRST: Read skills/funnel/02b-synthesis-phase2/SKILL.md for your complete instructions.
 
 RUN_DIR: {RUN_DIR}
 All output/ paths in the skill instructions should be replaced with {RUN_DIR}/.
@@ -280,7 +280,7 @@ Spawn a sub-agent:
 ```
 prompt: "You are executing Step 3 (Branding) of the FunnelAgent pipeline.
 
-FIRST: Read skills/branding/SKILL.md for your complete instructions.
+FIRST: Read skills/funnel/03-branding/SKILL.md for your complete instructions.
 
 RUN_DIR: {RUN_DIR}
 run_name: {run_name}
@@ -320,7 +320,7 @@ Record the selected brand name for all downstream steps.
 ```
 prompt: "You are executing Step 4.1 (Write Advertorial Copy) of the FunnelAgent pipeline.
 
-FIRST: Read skills/write-advertorial-copy/SKILL.md for your complete instructions.
+FIRST: Read skills/funnel/04a-write-advertorial-copy/SKILL.md for your complete instructions.
 
 RUN_DIR: {RUN_DIR}
 All output/ paths in the skill instructions should be replaced with {RUN_DIR}/.
@@ -337,7 +337,7 @@ Follow the skill instructions exactly. Save CONFIG to {RUN_DIR}/04a_advertorial_
 ```
 prompt: "You are executing Step 5.1 (Write Sales Page) of the FunnelAgent pipeline.
 
-FIRST: Read skills/write-sales-page/SKILL.md for your complete instructions.
+FIRST: Read skills/funnel/05a-write-sales-page/SKILL.md for your complete instructions.
 
 RUN_DIR: {RUN_DIR}
 All output/ paths in the skill instructions should be replaced with {RUN_DIR}/.
@@ -360,7 +360,7 @@ Run this AFTER Step 4.1 completes (it depends on the advertorial output):
 ```
 prompt: "You are executing Step 4.2 (Headline Optimization) of the FunnelAgent pipeline.
 
-FIRST: Read skills/headline-optimization/SKILL.md for your complete instructions.
+FIRST: Read skills/funnel/04b-headline-optimization/SKILL.md for your complete instructions.
 
 RUN_DIR: {RUN_DIR}
 All output/ paths in the skill instructions should be replaced with {RUN_DIR}/.
@@ -397,7 +397,7 @@ Wait for user approval on BOTH before proceeding to the image phase.
 ```
 prompt: "You are executing Steps 4.3-4.4 (Advertorial Images + Hero QA) of the FunnelAgent pipeline.
 
-FIRST: Read skills/advertorial-images/SKILL.md for your complete instructions.
+FIRST: Read skills/funnel/04c-advertorial-images/SKILL.md for your complete instructions.
 
 RUN_DIR: {RUN_DIR}
 run_name: {run_name}
@@ -412,7 +412,7 @@ Follow the skill instructions exactly. Save prompts to {RUN_DIR}/04c_image_promp
 ```
 prompt: "You are executing Steps 5.2-5.3 (Sales Page Images + Hero QA) of the FunnelAgent pipeline.
 
-FIRST: Read skills/sales-page-images/SKILL.md for your complete instructions.
+FIRST: Read skills/funnel/05b-sales-page-images/SKILL.md for your complete instructions.
 
 RUN_DIR: {RUN_DIR}
 run_name: {run_name}

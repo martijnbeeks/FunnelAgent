@@ -1,5 +1,5 @@
 ---
-name: extract-product-info
+name: 00-extract-product-info
 description: Extracts structured product information from a sales page URL using WebFetch.
 ---
 

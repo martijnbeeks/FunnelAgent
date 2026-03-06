@@ -17,7 +17,7 @@ cp .env.example .env   # then add OPENAI_API_KEY and GEMINI_API_KEY
 
 **Orchestrator delegates, never executes.** The orchestrator (`skills/funnel-orchestrator/SKILL.md`) coordinates the pipeline by spawning sub-agents via the Task tool with `subagent_type: "general-purpose"` and `mode: "bypassPermissions"`. It passes `RUN_DIR=output/{product_name}/` to every sub-agent.
 
-**SOPs are the single source of truth.** The 14 markdown files in `skill_content/` contain all copywriting frameworks, scoring rubrics, and output format specifications. Skills reference these files — they must never paraphrase or duplicate SOP content.
+**Each SKILL.md is self-contained.** SOPs are embedded directly inside the respective `SKILL.md` file under a `## SOP: ...` section. To update a framework or rubric, edit the skill file directly — no separate `skill_content/` file to keep in sync. The `skill_content/` directory is kept as a historical archive only.
 
 **CONFIG-based HTML assembly.** Advertorial and sales page skills produce JavaScript CONFIG objects (`04a_advertorial_config.js`, `05a_sales_page_config.js`) that get injected into the HTML templates (`templates/advertorial_POV.html`, `templates/sales_page.html`) to produce final HTML output.
 
@@ -25,16 +25,16 @@ cp .env.example .env   # then add OPENAI_API_KEY and GEMINI_API_KEY
 
 | Step | Skill | External API | Key Output |
 |------|-------|-------------|------------|
-| 0 | `extract-product-info` | WebFetch | `00_product_info.md` |
-| 1 | `deep-research` | OpenAI (o3/gpt-4o) | `01_market_research.md` |
-| 2.1 | `synthesis-phase1` | — | `02a_synthesis_phase1.md` |
-| 2.2 | `synthesis-phase2` | — | `02b_synthesis_phase2.md` |
-| 3 | `branding` | Gemini | `03a-d` files + `logo.png` + `product_image.png` |
-| 4.1 | `write-advertorial-copy` | — | `04a_advertorial_config.js` + `advertorial.html` |
-| 4.2 | `headline-optimization` | — | `04b_headline_optimized.md` |
-| 4.3-4.4 | `advertorial-images` | Gemini | `advertorial_images/*.png` + `04d_hero_review.md` |
-| 5.1 | `write-sales-page` | — | `05a_sales_page_config.js` + `sales_page.html` |
-| 5.2-5.3 | `sales-page-images` | Gemini | `sales_page_images/*.png` + `05c_sp_hero_review.md` |
+| 0 | `00-extract-product-info` | WebFetch | `00_product_info.md` |
+| 1 | `01-deep-research` | OpenAI (o3/gpt-4o) | `01_market_research.md` |
+| 2.1 | `02a-synthesis-phase1` | — | `02a_synthesis_phase1.md` |
+| 2.2 | `02b-synthesis-phase2` | — | `02b_synthesis_phase2.md` |
+| 3 | `03-branding` | Gemini | `03a-d` files + `logo.png` + `product_image.png` |
+| 4.1 | `04a-write-advertorial-copy` | — | `04a_advertorial_config.js` + `advertorial.html` |
+| 4.2 | `04b-headline-optimization` | — | `04b_headline_optimized.md` |
+| 4.3-4.4 | `04c-advertorial-images` | Gemini | `advertorial_images/*.png` + `04d_hero_review.md` |
+| 5.1 | `05a-write-sales-page` | — | `05a_sales_page_config.js` + `sales_page.html` |
+| 5.2-5.3 | `05b-sales-page-images` | Gemini | `sales_page_images/*.png` + `05c_sp_hero_review.md` |
 
 ## Scripts
 
@@ -62,7 +62,7 @@ All scripts load API keys from `.env` in the project root. `deep_research.py` fa
 
 - **Resume capability**: Before each step, the orchestrator checks if output files already exist and offers to skip or redo.
 - **User decision gates**: The pipeline pauses for user approval after steps 1, 2.1, 2.2, 3, 4.1-4.2, 4.4, 5.1, and 5.3.
-- **Sub-agents read their own SKILL.md first**, which tells them which SOP to load from `skill_content/`.
+- **Sub-agents read their own SKILL.md first** — the SOP is embedded directly in the file, no external load needed.
 - **Only summaries flow back** to the orchestrator — never load full output files into the orchestrator context.
 - **All writing supports the user's target language** — language is confirmed during step 2.2 and carried through all downstream skills.
 - **Hero image QA is iterative** — steps 4.4 and 5.3 score hero images on 5 dimensions and regenerate if below threshold.
