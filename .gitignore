@@ -3,6 +3,7 @@ node_modules/
 *.log
 .env
 output/
+.worktrees/
 .claude/
 __pycache__/
 *.pyc
