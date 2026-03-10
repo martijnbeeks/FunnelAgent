@@ -33,7 +33,7 @@ def main():
     parser = argparse.ArgumentParser(description="Run ChatGPT Deep Research")
     parser.add_argument("--prompt-file", required=True, help="Path to file containing the research prompt")
     parser.add_argument("--output", required=True, help="Path to write the research output")
-    parser.add_argument("--model", default="o3", help="OpenAI model to use (default: o3)")
+    parser.add_argument("--model", default="o4-mini-deep-research", help="OpenAI model to use (default: o4-mini-deep-research)")
     args = parser.parse_args()
 
     api_key = os.environ.get("OPENAI_API_KEY")
@@ -50,8 +50,8 @@ def main():
     prompt = prompt_path.read_text(encoding="utf-8")
     print(f"Prompt loaded ({len(prompt)} chars)", file=sys.stderr)
 
-    # Initialize client
-    client = OpenAI(api_key=api_key)
+    # Initialize client with extended timeout for deep research models (up to 30 min)
+    client = OpenAI(api_key=api_key, timeout=1800.0)
 
     print("Starting deep research (this may take several minutes)...", file=sys.stderr)
 
@@ -88,10 +88,10 @@ def main():
         error_msg = str(e)
         # If o3 fails, suggest alternatives
         if "model" in error_msg.lower() or "not found" in error_msg.lower():
-            print(f"Model '{args.model}' not available. Trying gpt-4o...", file=sys.stderr)
+            print(f"Model '{args.model}' not available. Trying o4-mini-deep-research...", file=sys.stderr)
             try:
                 response = client.responses.create(
-                    model="gpt-4o",
+                    model="o4-mini-deep-research",
                     input=[
                         {
                             "role": "user",

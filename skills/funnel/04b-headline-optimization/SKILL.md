@@ -1,3 +1,21 @@
+---
+name: 04b-headline-optimization
+description: Audits and optimizes the advertorial headline and subheadline, producing 5 ranked variations.
+---
+
+# Headline Optimization Skill
+
+You execute Step 4.2 of the FunnelAgent pipeline: auditing the current headline/subheadline and producing optimized variations.
+
+## PREREQUISITES
+
+- `output/04a_advertorial_config.js` — The advertorial CONFIG (contains current HEADLINE and SUBHEADLINE)
+- `output/02b_synthesis_phase2.md` — Strategic intelligence brief
+
+## SOP: Headline Optimization Framework
+
+The complete Headline Optimization SOP is embedded below. Follow it exactly.
+
 Got it. Here's the expanded version with the headline/subheadline SOP fully integrated and fleshed out:
 
 ---
@@ -320,3 +338,37 @@ CONFIG (updated):
 
 *Feed this SOP research. Follow the steps in order. Do not skip the audit. The goal is not a clever headline — it is a headline so perfectly matched to the reader that moving past it feels impossible.*
 
+
+
+---
+
+## STEP 2: LOAD INPUT DATA
+
+Read both source documents:
+```
+output/04a_advertorial_config.js
+output/02b_synthesis_phase2.md
+```
+
+Extract the current HEADLINE and SUBHEADLINE from the CONFIG object.
+
+## STEP 3: EXECUTE HEADLINE OPTIMIZATION
+
+Follow the SOP exactly:
+
+1. **Audit** the current headline and subheadline against the SOP's criteria
+2. **Generate 5 optimized variations** using different psychological doorways
+3. **Score each variation** on: Scroll Stop, Curiosity Gap, Avatar Resonance, Believability
+4. **Rank all 5** with the winner clearly marked
+
+## STEP 4: SAVE OUTPUT
+
+Save the complete optimization output to `output/04b_headline_optimized.md`, including:
+- Current headline audit
+- All 5 variations with scores
+- Ranked recommendation
+- The winning headline/subheadline pair ready to drop into CONFIG
+
+## OUTPUT
+
+`output/04b_headline_optimized.md` — Headline audit + 5 ranked variations.
