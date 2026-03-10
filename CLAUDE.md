@@ -39,8 +39,8 @@ cp .env.example .env   # then add OPENAI_API_KEY and GEMINI_API_KEY
 ## Scripts
 
 ```bash
-# Deep research (2-10 min runtime)
-python scripts/deep_research.py --prompt-file <path> --output <path> [--model o3]
+# Deep research (background API call, may take several minutes)
+python scripts/deep_research.py --prompt-file <path> --output <path> [--model o3-deep-research]
 
 # Image generation (Nano Banana 2 — gemini-3.1-flash-image-preview)
 python scripts/generate_image.py --prompt-file <path> --output <path> [--aspect-ratio 1:1]
@@ -56,7 +56,7 @@ python scripts/upload_to_cdn.py --file <path> --key <r2-key>
 python scripts/upload_to_cdn.py --directory <path> --prefix <r2-prefix>
 ```
 
-All scripts load API keys from `.env` in the project root. `deep_research.py` falls back to gpt-4o if o3 is unavailable. `upload_to_cdn.py` uses boto3 for S3-compatible R2 uploads.
+All scripts load API keys from `.env` in the project root. `deep_research.py` uses the OpenAI Deep Research API with background polling, web search, and code interpreter enabled. `upload_to_cdn.py` uses boto3 for S3-compatible R2 uploads.
 
 ## Key Conventions
 

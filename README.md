@@ -6,7 +6,7 @@ A Claude Code plugin that generates complete direct-response sales funnels — f
 
 FunnelAgent automates a 5-step copywriting workflow:
 
-1. **Deep Research** — Uses ChatGPT's API with web search to conduct exhaustive market research (Reddit, YouTube, Amazon reviews, forums, competitor ads)
+1. **Deep Research** — Uses the OpenAI Deep Research API with web search and code interpreter to conduct exhaustive market research (Reddit, YouTube, Amazon reviews, forums, competitor ads)
 2. **Synthesis** — Identifies avatar/angle combinations with novelty gap scoring (Phase 1), then creates a 14-part strategic intelligence brief (Phase 2)
 3. **Branding** — Generates brand name options, logo, color palette, and product image via Gemini API
 4. **Advertorial** — Writes a full advertorial as a ready-to-use HTML page, optimizes headlines, and generates all images via Gemini API with iterative hero image QA
@@ -33,7 +33,7 @@ cp .env.example .env
 
 The orchestrator will guide you through:
 - Collecting product info (name, market, problem, ingredients, product image)
-- Running deep research via ChatGPT API
+- Running deep research via the OpenAI Deep Research API
 - Presenting avatar/angle options for your selection
 - Generating the full strategic brief
 - Creating brand identity (name, logo, colors)
@@ -41,6 +41,16 @@ The orchestrator will guide you through:
 - Generating advertorial images + hero image QA
 - Writing the sales page
 - Generating sales page images + hero image QA
+
+### Amazon Session Scraper
+
+If you want to use the first-party Amazon scraper path instead of the Apify wrapper:
+
+```bash
+python scripts/amazon_login.py
+```
+
+That command opens a headed browser, lets you log in manually, and saves reusable session state locally for later scraping commands.
 
 ### 3. Output
 
@@ -59,7 +69,7 @@ Open `output/{product}/advertorial.html` and `output/{product}/sales_page.html` 
 |-------|---------|------|
 | Orchestrator | `/funnel-orchestrator` | Guides the full pipeline |
 | Extract Product Info | `/extract-product-info` | Step 0: Parse product URL |
-| Deep Research | `/deep-research` | Step 1: Market research via ChatGPT API |
+| Deep Research | `/deep-research` | Step 1: Market research via OpenAI Deep Research API |
 | Synthesis P1 | `/synthesis-phase1` | Step 2.1: Avatar/angle identification |
 | Synthesis P2 | `/synthesis-phase2` | Step 2.2: Full strategic brief |
 | Branding | `/branding` | Step 3: Brand name + logo + colors + product image |
@@ -88,7 +98,7 @@ FunnelAgent/
 │   ├── write-sales-page/          # Sales page copy + HTML
 │   └── sales-page-images/         # Sales page images + hero QA
 ├── scripts/
-│   ├── deep_research.py           # OpenAI API caller
+│   ├── deep_research.py           # OpenAI Deep Research API caller
 │   ├── generate_image.py          # Gemini API image generator
 │   └── requirements.txt           # Python dependencies
 ├── skill_content/                 # SOP reference documents (14 files)

@@ -9,3 +9,5 @@ __pycache__/
 *.pyc
 *.zip
 *.pdf
+reddit_scraper/output/
+.google-profile/
