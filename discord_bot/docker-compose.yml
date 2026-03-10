@@ -1,0 +1,16 @@
+services:
+  funnel-bot:
+    build:
+      context: ..
+      dockerfile: discord_bot/Dockerfile
+    env_file: .env
+    volumes:
+      - bot-data:/srv/FunnelAgent/discord_bot/data
+      - bot-output:/srv/FunnelAgent/output
+      - bot-logs:/srv/FunnelAgent/discord_bot/logs
+    restart: always
+
+volumes:
+  bot-data:
+  bot-output:
+  bot-logs:

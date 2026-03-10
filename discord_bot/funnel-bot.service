@@ -1,0 +1,15 @@
+[Unit]
+Description=FunnelAgent Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+User=funnel
+WorkingDirectory=/srv/FunnelAgent
+EnvironmentFile=/srv/FunnelAgent/discord_bot/.env
+ExecStart=/srv/FunnelAgent/venv/bin/python -m discord_bot.app.main
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
