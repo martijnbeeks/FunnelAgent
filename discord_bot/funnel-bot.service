@@ -4,10 +4,9 @@ After=network.target
 
 [Service]
 Type=simple
-User=funnel
-WorkingDirectory=/srv/FunnelAgent
-EnvironmentFile=/srv/FunnelAgent/discord_bot/.env
-ExecStart=/srv/FunnelAgent/venv/bin/python -m discord_bot.app.main
+User=root
+WorkingDirectory=/home/funnel/FunnelAgent
+ExecStart=/home/funnel/FunnelAgent/venv/bin/python -m discord_bot.app.main
 Restart=always
 RestartSec=10
 

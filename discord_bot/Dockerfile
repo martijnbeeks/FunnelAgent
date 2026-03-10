@@ -16,8 +16,10 @@ RUN pip install -r discord_bot/requirements.txt -r scripts/requirements.txt
 # Copy application code
 COPY . .
 
-# Create non-root user
+# Create non-root user and ensure writable dirs
 RUN useradd -m -u 1000 agent && chown -R agent:agent /srv/FunnelAgent
+RUN mkdir -p /srv/FunnelAgent/discord_bot/logs /srv/FunnelAgent/discord_bot/data /srv/FunnelAgent/output && \
+    chown -R agent:agent /srv/FunnelAgent/discord_bot/logs /srv/FunnelAgent/discord_bot/data /srv/FunnelAgent/output
 USER agent
 
 # Persistent volumes for output and database

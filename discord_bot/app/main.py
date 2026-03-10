@@ -12,9 +12,6 @@ from pathlib import Path
 # This var is inherited when the bot is launched from within a Claude Code session.
 os.environ.pop("CLAUDECODE", None)
 
-# Remove ANTHROPIC_API_KEY so the SDK uses its own auth (from `claude login`).
-# The .env file may contain a stale key that would override working auth.
-os.environ.pop("ANTHROPIC_API_KEY", None)
 
 from discord_bot.app.config import Settings
 from discord_bot.app.db import init_db
@@ -51,9 +48,6 @@ def load_environment() -> None:
 
 def create_app() -> App:
     load_environment()
-    # Remove ANTHROPIC_API_KEY after loading .env so the SDK uses its own
-    # auth (from `claude login`) rather than a potentially stale key.
-    os.environ.pop("ANTHROPIC_API_KEY", None)
     settings = Settings.from_env()
     setup_logging(settings.log_dir)
     init_db(settings.db_path)

@@ -62,14 +62,10 @@ class Settings:
         )
 
     def agent_env(self) -> dict[str, str]:
-        """Environment variables to pass through to the Claude Agent SDK.
-
-        Note: ANTHROPIC_API_KEY is intentionally NOT included here.
-        The SDK uses its own auth (from `claude login` / system keychain)
-        which is more reliable than passing a key via env var.
-        Only pass it explicitly if you need to override the default auth.
-        """
+        """Environment variables to pass through to the Claude Agent SDK."""
         env: dict[str, str] = {}
+        if self.anthropic_api_key:
+            env["ANTHROPIC_API_KEY"] = self.anthropic_api_key
         if self.openai_api_key:
             env["OPENAI_API_KEY"] = self.openai_api_key
         if self.gemini_api_key:
