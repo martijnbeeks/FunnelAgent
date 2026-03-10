@@ -1,3 +1,24 @@
+---
+name: 05a-write-sales-page
+description: Writes the complete sales page as a CONFIG object for the sales page HTML template.
+---
+
+# Write Sales Page Skill
+
+You execute Step 5.1 of the FunnelAgent pipeline: writing the complete sales page copy and outputting it as a JavaScript CONFIG object for the sales_page.html template.
+
+## PREREQUISITES
+
+- `output/02b_synthesis_phase2.md` — Complete strategic intelligence brief
+- `output/03a_brand_names.md` — Selected brand name
+- `output/03c_color_vars.md` — CSS color variables
+- `output/04a_advertorial_config.js` — Advertorial CONFIG (for consistency)
+- User has approved the advertorial
+
+## SOP: Sales Page Copywriting Framework
+
+The complete Sales Page Copywriting SOP is embedded below. Follow it exactly.
+
 # 55+ HEALTH & BEAUTY SALES PAGE COPY SOP v1.4
 
 ## High-Converting Sales Pages for Adults 55+ in Sophisticated Markets
@@ -3306,3 +3327,162 @@ const CONFIG \= {
 - Added Accordion Dropdown option for Ingredients section  
 - Updated section map to reflect new flexibility
 
+
+
+---
+
+## STEP 2: LOAD THE CONFIG SCHEMA
+
+Read the CONFIG schema reference to understand the CONFIG + OFFER_SETTINGS + PRODUCT_COLORS structure:
+```
+templates/sales_page_config_schema.md
+```
+
+This contains all CONFIG keys, types, theme options, and currency presets. Do NOT read the full HTML template here — you only need the template in Step 9 for assembly.
+
+## STEP 3: LOAD ALL INPUT DATA
+
+Read all source documents:
+```
+output/02b_synthesis_phase2.md
+output/03a_brand_names.md
+output/04a_advertorial_config.js
+```
+
+Also attempt to read `output/03c_color_vars.md`. If it does not exist, that is fine — you will derive colors in the next step.
+
+## STEP 4: VALIDATE PRODUCT COLORS
+
+**MANDATORY COLOR CHECK — do this before writing any copy.**
+
+1. Read the product image (e.g., `{RUN_DIR}/product_image.png` or `{RUN_DIR}/product_image.jpeg`).
+2. If `output/03c_color_vars.md` exists and contains all four values (`primary`, `primaryDark`, `primaryLight`, `accent`), load them. Otherwise start from scratch.
+3. **The accent color MUST be a color that actually appears on the product packaging.** The accent is used for CTA buttons and must:
+   - Be an actual color visible on the product (cap, label, icon, text, or trim — not the background/white)
+   - Pass WCAG AA contrast with white text (dark enough for readable button text)
+   - **NOT be a generic default** like `#c2410c` (red/orange) or any color not present on the product. If the accent is `#c2410c` or any color not found on the packaging, replace it.
+4. If the product only has one dominant non-white/non-black color, use that color (or its darker shade if needed for contrast) as the accent.
+5. Output the final four `PRODUCT_COLORS` values you will use in the CONFIG:
+   - `primary` — dominant brand color from packaging
+   - `primaryDark` — ~25-30% darker shade of primary
+   - `primaryLight` — very light tint (~90-95% lightness) for section backgrounds
+   - `accent` — a color that appears on the product packaging, dark enough for white button text
+
+## STEP 5: EXTRACT FROM STRATEGIC BRIEF
+
+Follow the SOP's extraction steps exactly. The sales page uses the same strategic brief as the advertorial but structures the content differently:
+- The doctor persona, mechanism explanation, and ingredient details are expanded
+- Testimonials use the 3+3 review card format (database + AI-generated + Gemini API)
+- The pricing bundle requires OFFER_SETTINGS configuration
+
+Use the selected brand name from `output/03a_brand_names.md` throughout.
+Apply the validated color variables from Step 4.
+Maintain consistency with the advertorial's angle, voice, and messaging.
+
+## CRITICAL FORMATTING RULES (NON-NEGOTIABLE)
+
+Before writing any copy, internalize these rules — they are enforced at QA:
+
+**Hero Headline:**
+- Any percentage used MUST be > 50%. Percentages ≤ 50% read as weak — find a stat above 50% or restructure.
+- MUST wrap the 1–4 most emotionally powerful words in `<span class='hero__headline-highlight'>...</span>` — the core result/benefit phrase, not the full statistic clause.
+
+**Hero Benefits (USPs):**
+- Max 6 words each (count strictly)
+- Bold up to 4 important words per bullet using `<strong>` tags
+
+## STEP 6: WRITE THE SALES PAGE (Following SOP Structure)
+
+Follow the SOP exactly. Write all sections the SOP specifies:
+- Hero section with headline, subtitle, trust badges
+- Agitation section
+- Doctor section with credentials and narrative
+- Mechanism section with UMP/UMS, ingredients accordion
+- Our Solution section
+- Testimonials (Section 9A — 3 review cards)
+- Alternatives section with comparison
+- Timeline section
+- Pricing with bundle selector
+- Testimonials (Section 9B — 3 review cards)
+- Guarantee section
+- FAQ accordion
+- Miss section (two paths: WITH vs WITHOUT)
+- Final CTA
+
+Write in the user's specified target language.
+
+## STEP 7: FORMAT AS CONFIG
+
+Before writing the CONFIG, check if `{RUN_DIR}/cdn_urls.json` exists. If it does, read it and use CDN URLs for product image references in the CONFIG and OFFER_SETTINGS bundle images.
+
+Follow the SOP's CONFIG output format exactly. The sales page CONFIG is more complex than the advertorial — it includes nested objects for HERO, AGITATION, DOCTOR, MECHANISM, TESTIMONIALS, ALTERNATIVES, TIMELINE, PRICING, FAQ, MISS, FINAL_CTA, GUARANTEE, and URGENCY.
+
+Also generate the OFFER_SETTINGS and SETTINGS_CURRENCY objects for the pricing bundle selector.
+
+## STEP 8: VERIFY AGAINST CHECKLIST
+
+Run through the SOP's OUTPUT CHECKLIST before saving.
+
+## STEP 9: SAVE AND ASSEMBLE
+
+### 9a. Save the config file
+
+Save `PRODUCT_COLORS`, `OFFER_SETTINGS`, and `CONFIG` (all three, in that order) to:
+```
+{RUN_DIR}/05a_sales_page_config.js
+```
+
+### 9b. Assemble the HTML — USE THIS PYTHON SCRIPT EXACTLY
+
+**Do not attempt manual text substitution.** Use the Bash tool to run this Python script — it is the only safe assembly method.
+
+```python
+import re, sys
+
+TEMPLATE = "templates/sales_page.html"
+CONFIG   = "{RUN_DIR}/05a_sales_page_config.js"
+OUTPUT   = "{RUN_DIR}/sales_page.html"
+
+with open(TEMPLATE) as f:  html   = f.read()
+with open(CONFIG)   as f:  config = f.read()
+
+# Step 1 — Delete Block 1 (hardcoded example OFFER_SETTINGS)
+b1_start = html.find("    <script>")
+b1_end   = html.find("    </script>", b1_start) + len("    </script>")
+html = html[:b1_start] + html[b1_end:]
+
+# Step 2 — Replace between CONFIG START / CONFIG END markers in Block 2
+START = "    // CONFIG START — PASTE YOUR CONFIG BELOW THIS LINE"
+END   = "    // CONFIG END — DO NOT EDIT BELOW THIS LINE"
+s = html.find(START) + len(START)
+e = html.find(END)
+html = html[:s] + "\n" + config + "\n    " + html[e:]
+
+# Validate — count only inside <script> blocks (HTML comments have a false positive)
+js_blocks = "\n".join(re.findall(r"<script>(.*?)</script>", html, re.DOTALL))
+checks = {
+    "<script> count (expected 2)":         html.count("<script>")       == 2,
+    "const CONFIG (expected 1)":           len(re.findall(r"const CONFIG\s*=",         js_blocks)) == 1,
+    "const PRODUCT_COLORS (expected 1)":   len(re.findall(r"const PRODUCT_COLORS\s*=", js_blocks)) == 1,
+    "const OFFER_SETTINGS (expected 1)":   len(re.findall(r"const OFFER_SETTINGS\s*=", js_blocks)) == 1,
+    "const THEMES (expected 1)":           len(re.findall(r"const THEMES\s*=",          js_blocks)) == 1,
+}
+failed = [k for k, v in checks.items() if not v]
+if failed:
+    print("ASSEMBLY FAILED — do not save:", failed, file=sys.stderr)
+    sys.exit(1)
+
+with open(OUTPUT, "w") as f: f.write(html)
+print("Sales page assembled and validated:", OUTPUT)
+```
+
+Replace `{RUN_DIR}` with the actual run directory path before running.
+
+After the script prints success, tell the user: **"Your sales page is ready! Open `{RUN_DIR}/sales_page.html` in a browser to preview."**
+
+## OUTPUT
+
+| File | Content |
+|------|---------|
+| `{RUN_DIR}/05a_sales_page_config.js` | `PRODUCT_COLORS` + `OFFER_SETTINGS` + `CONFIG` JavaScript objects |
+| `{RUN_DIR}/sales_page.html` | Final assembled HTML (single config `<script>` block + rendering `<script>` block) |

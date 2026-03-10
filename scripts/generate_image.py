@@ -2,16 +2,20 @@
 """
 Gemini API image generator for FunnelAgent.
 
+Uses Nano Banana 2 (gemini-3.1-flash-image-preview) for all image generation.
+
 Usage:
-    # Text-to-image (Imagen)
+    # Text-to-image
     python scripts/generate_image.py --prompt-file <path> --output <path> [--aspect-ratio 1:1]
 
-    # Image generation with product reference image (Gemini Flash)
+    # Image generation with product reference image (multimodal)
     python scripts/generate_image.py --prompt-file <path> --output <path> --reference-image <path> [--aspect-ratio 1:1]
 
-When --reference-image is provided, the script uses Gemini's multimodal
-generate_content API to pass the reference image alongside the text prompt.
-This is used for sections that need the product bottle composited into the scene.
+    # Use a different model
+    python scripts/generate_image.py --prompt-file <path> --output <path> --model gemini-3-pro-image-preview
+
+Both paths use generate_content() with response_modalities=["IMAGE", "TEXT"].
+When --reference-image is provided, the reference image is passed alongside the prompt.
 
 Environment:
     GEMINI_API_KEY - Your Gemini API key (or set in .env file)
@@ -43,42 +47,37 @@ except ImportError:
     pass
 
 
-def generate_with_imagen(client, prompt, aspect_ratio, model):
-    """Text-to-image generation using Imagen API."""
-    response = client.models.generate_images(
-        model=model,
-        prompt=prompt,
-        config={
-            "number_of_images": 1,
-            "aspect_ratio": aspect_ratio,
-            "image_size": "1K",
-        },
-    )
+NANO_BANANA_2 = "gemini-3.1-flash-image-preview"
 
-    if not response.generated_images:
-        print("Error: No images returned by the API", file=sys.stderr)
-        sys.exit(1)
-
-    return response.generated_images[0].image.image_bytes
+# Maps --aspect-ratio values to prompt instructions injected before the user prompt.
+# generate_content() has no native aspect ratio param — this is the authoritative way to control it.
+ASPECT_RATIO_INSTRUCTIONS = {
+    "16:9": "Generate a 16:9 widescreen landscape image at 1K resolution (1024×576). ",
+    "1:1":  "Generate a square 1:1 image at 1K resolution (1024×1024). ",
+    "4:3":  "Generate a 4:3 landscape image at 1K resolution (1024×768). ",
+    "9:16": "Generate a 9:16 portrait image at 1K resolution (576×1024). ",
+}
 
 
-def generate_with_reference(client, prompt, reference_path, aspect_ratio):
-    """Image generation with a reference image using Gemini's multimodal API."""
-    if Image is None:
-        print("Error: Pillow package not installed. Run: pip install Pillow", file=sys.stderr)
-        sys.exit(1)
+def generate_with_gemini(client, prompt, aspect_ratio, model, reference_path=None):
+    """Image generation via Gemini generate_content API (supports optional reference image)."""
+    prefix = ASPECT_RATIO_INSTRUCTIONS.get(aspect_ratio, f"Generate a {aspect_ratio} image at 1K resolution. ")
+    full_prompt = prefix + prompt
+    contents = [full_prompt]
 
-    ref_image = Image.open(reference_path)
-    print(f"Reference image loaded: {reference_path} ({ref_image.size[0]}x{ref_image.size[1]})", file=sys.stderr)
+    if reference_path is not None:
+        if Image is None:
+            print("Error: Pillow package not installed. Run: pip install Pillow", file=sys.stderr)
+            sys.exit(1)
+        ref_image = Image.open(reference_path)
+        print(f"Reference image loaded: {reference_path} ({ref_image.size[0]}x{ref_image.size[1]})", file=sys.stderr)
+        contents.append(ref_image)
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash-image",
-        contents=[prompt, ref_image],
+        model=model,
+        contents=contents,
         config=types.GenerateContentConfig(
-            response_modalities=["IMAGE"],
-            image_config=types.ImageConfig(
-                image_size="1K",
-            ),
+            response_modalities=["IMAGE", "TEXT"],
         ),
     )
 
@@ -99,7 +98,7 @@ def main():
     parser.add_argument("--prompt-file", required=True, help="Path to file containing the image prompt")
     parser.add_argument("--output", required=True, help="Path to save the generated image (PNG)")
     parser.add_argument("--aspect-ratio", default="1:1", help="Aspect ratio (default: 1:1)")
-    parser.add_argument("--model", default="imagen-4.0-generate-001", help="Imagen model (used when no reference image)")
+    parser.add_argument("--model", default=NANO_BANANA_2, help="Gemini image model (default: Nano Banana 2)")
     parser.add_argument("--reference-image", help="Path to a reference image (e.g., product photo) to include in the generation request")
     args = parser.parse_args()
 
@@ -127,11 +126,11 @@ def main():
     print("Generating image (this may take a moment)...", file=sys.stderr)
 
     try:
-        if args.reference_image:
+        ref_path = Path(args.reference_image) if args.reference_image else None
+        if ref_path:
             print("Using multimodal generation with reference image", file=sys.stderr)
-            image_bytes = generate_with_reference(client, prompt, Path(args.reference_image), args.aspect_ratio)
-        else:
-            image_bytes = generate_with_imagen(client, prompt, args.aspect_ratio, args.model)
+        print(f"Model: {args.model}", file=sys.stderr)
+        image_bytes = generate_with_gemini(client, prompt, args.aspect_ratio, args.model, ref_path)
 
         output_path = Path(args.output)
         output_path.parent.mkdir(parents=True, exist_ok=True)
