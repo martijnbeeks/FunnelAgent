@@ -457,7 +457,8 @@ def create_discord_bot(app: Any):
 
     @bot.event
     async def on_ready():
-        await bot.tree.sync()
+        # tree.sync() already runs in setup_hook — don't repeat here
+        # as on_ready fires on every reconnect and blocks the event loop
         logger.info("Discord bot connected as %s", bot.user)
         print(f"Discord bot connected as {bot.user}", flush=True)
 
@@ -537,7 +538,8 @@ def create_discord_bot(app: Any):
         prompt: str,
         attachment: discord.Attachment | None = None,
     ):
-        await interaction.response.send_message(
+        await interaction.response.defer(ephemeral=True)
+        await interaction.followup.send(
             "Session starting. Streaming progress to this channel...",
             ephemeral=True,
         )
@@ -567,7 +569,8 @@ def create_discord_bot(app: Any):
         prompt: str,
         attachment: discord.Attachment | None = None,
     ):
-        await interaction.response.send_message(
+        await interaction.response.defer(ephemeral=True)
+        await interaction.followup.send(
             "Funnel pipeline starting. Streaming progress to this channel...",
             ephemeral=True,
         )
@@ -595,7 +598,8 @@ def create_discord_bot(app: Any):
         message: str,
         attachment: discord.Attachment | None = None,
     ):
-        await interaction.response.send_message(
+        await interaction.response.defer(ephemeral=True)
+        await interaction.followup.send(
             "Message sent. Streaming response...",
             ephemeral=True,
         )
