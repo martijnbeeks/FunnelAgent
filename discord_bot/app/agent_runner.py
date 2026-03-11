@@ -95,8 +95,10 @@ class AgentBridge:
             claude_raw_logger.warning("CLI stderr: %s", line.rstrip())
 
         # Unset CLAUDECODE to allow launching from within a Claude Code session
+        # Set IS_SANDBOX=1 to allow bypassPermissions when running as root (Docker)
         agent_env = dict(self.env)
         agent_env["CLAUDECODE"] = ""
+        agent_env["IS_SANDBOX"] = "1"
 
         return ClaudeAgentOptions(
             allowed_tools=[
